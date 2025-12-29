@@ -1,0 +1,221 @@
+{
+  "niche_name": "Agence Web Locale",
+  "domain": "agence-web-locale.fr",
+  "base_path": "/creation-site-internet",
+  "colors": {
+    "primary": "#2c3e50",
+    "primary_light": "#34495e",
+    "secondary": "#e17055",
+    "secondary_light": "#e88a73",
+    "accent": "#27ae60",
+    "dark": "#1e272e",
+    "gray": "#7f8c8d",
+    "light": "#fdfcfb",
+    "cream": "#f8f5f2"
+  },
+  "hero": {
+    "title_static": "Création de Site Internet",
+    "words": [
+      "Professionnel",
+      "E-commerce",
+      "Sur-Mesure",
+      "Moderne"
+    ],
+    "subtitle": "Agence web de proximité • Devis gratuit 24h • 100% français",
+    "badge": "⭐ 4.9/5 - 150+ avis clients"
+  },
+  "stats": [
+    {
+      "label": "Sites créés",
+      "value": 200,
+      "suffix": "+"
+    },
+    {
+      "label": "Clients satisfaits",
+      "value": 150,
+      "suffix": "+"
+    },
+    {
+      "label": "Ans d'expérience",
+      "value": 5,
+      "suffix": ""
+    },
+    {
+      "label": "Taux de succès",
+      "value": 98,
+      "suffix": "%"
+    }
+  ],
+  "services": [
+    {
+      "title": "Site Vitrine Professionnel",
+      "icon": "Monitor",
+      "description": "Présentez votre activité avec élégance. Design moderne, responsive, optimisé pour Google.",
+      "price": "À partir de 1 490€",
+      "link": "services/vitrine"
+    },
+    {
+      "title": "Boutique en Ligne",
+      "icon": "ShoppingBag",
+      "badge": "POPULAIRE",
+      "description": "Vendez 24h/24. Paiement sécurisé, gestion stocks, livraison automatisée.",
+      "price": "À partir de 2 990€",
+      "link": "services/ecommerce"
+    },
+    {
+      "title": "Refonte de Site",
+      "icon": "RefreshCw",
+      "description": "Modernisez votre présence. Design actuel, performances boostées, SEO optimisé.",
+      "price": "À partir de 990€",
+      "link": "services/refonte"
+    },
+    {
+      "title": "Référencement Google",
+      "icon": "TrendingUp",
+      "description": "Soyez trouvé. Audit SEO, optimisation, création de contenu, suivi positions.",
+      "price": "À partir de 490€/mois",
+      "link": "services/seo"
+    }
+  ],
+  "why_us": [
+    {
+      "title": "100% Français",
+      "text": "Équipe locale, communication fluide, pas de sous-traitance"
+    },
+    {
+      "title": "Livraison Express",
+      "text": "Votre site en 2-4 semaines, option 7 jours disponible"
+    },
+    {
+      "title": "Design Sur-Mesure",
+      "text": "Chaque site est unique, à votre image"
+    },
+    {
+      "title": "Mobile First",
+      "text": "60% du trafic est mobile, on s'adapte"
+    },
+    {
+      "title": "SEO Intégré",
+      "text": "Visible sur Google dès le lancement"
+    },
+    {
+      "title": "Support Humain",
+      "text": "Un interlocuteur dédié, réponse sous 24h"
+    }
+  ],
+  "process": [
+    {
+      "step": "01",
+      "title": "Échange",
+      "text": "On discute de votre projet, 15 min pour comprendre vos besoins"
+    },
+    {
+      "step": "02",
+      "title": "Devis",
+      "text": "Proposition détaillée sous 24-48h, prix ferme"
+    },
+    {
+      "step": "03",
+      "title": "Maquette",
+      "text": "Visualisez votre futur site, modifiez jusqu'à satisfaction"
+    },
+    {
+      "step": "04",
+      "title": "Développement",
+      "text": "Notre équipe code, vous suivez en temps réel"
+    },
+    {
+      "step": "05",
+      "title": "Lancement 🚀",
+      "text": "Votre site est en ligne ! Formation incluse"
+    }
+  ],
+  "pricing": [
+    {
+      "name": "ESSENTIEL",
+      "price": "1 490€",
+      "for": "Indépendants, TPE",
+      "features": [
+        "Site 1-5 pages",
+        "Design responsive",
+        "Formulaire contact",
+        "SEO de base",
+        "Hébergement 1 an",
+        "Formation"
+      ]
+    },
+    {
+      "name": "PROFESSIONNEL",
+      "price": "2 990€",
+      "badge": "POPULAIRE",
+      "for": "PME, Commerces",
+      "features": [
+        "Tout Essentiel +",
+        "5-15 pages",
+        "Design premium",
+        "Blog intégré",
+        "Analytics",
+        "Maintenance 3 mois"
+      ]
+    },
+    {
+      "name": "E-COMMERCE",
+      "price": "Sur devis",
+      "for": "Boutiques en ligne",
+      "features": [
+        "Boutique complète",
+        "Jusqu'à 500 produits",
+        "Paiement sécurisé",
+        "Gestion stocks",
+        "Formation complète"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Combien coûte la création d'un site internet ?",
+      "a": "Le coût varie selon la complexité : de 1 490€ pour un site vitrine à plus de 2 990€ pour un e-commerce complet."
+    },
+    {
+      "q": "Quel est le délai de livraison ?",
+      "a": "En moyenne 2 à 4 semaines. Nous proposons une option express en 7 jours pour les projets urgents."
+    },
+    {
+      "q": "Mon site sera-t-il visible sur Google ?",
+      "a": "Oui, l'optimisation SEO technique est incluse de base dans toutes nos créations pour garantir une indexation rapide."
+    },
+    {
+      "q": "Dois-je fournir les textes et images ?",
+      "a": "Vous pouvez nous les fournir, ou nous pouvons nous charger de la rédaction et de la recherche iconographique."
+    },
+    {
+      "q": "Proposez-vous la maintenance ?",
+      "a": "Oui, nous proposons des contrats de maintenance pour assurer la sécurité et la mise à jour de votre site."
+    },
+    {
+      "q": "Le site m'appartient-il ?",
+      "a": "Entièrement. Vous êtes propriétaire du nom de domaine et du code source de votre site."
+    },
+    {
+      "q": "Travaillez-vous avec WordPress ?",
+      "a": "Nous utilisons les outils les plus adaptés à votre besoin, dont WordPress pour sa flexibilité."
+    },
+    {
+      "q": "Intervenez-vous dans toute la France ?",
+      "a": "Absolument. Bien que nous soyons une agence de proximité, nous travaillons avec des clients partout en France."
+    },
+    {
+      "q": "Comment se passe le paiement ?",
+      "a": "Généralement 30% à la commande, le solde à la mise en ligne. Paiement en 3x disponible."
+    },
+    {
+      "q": "Et si je ne suis pas satisfait ?",
+      "a": "Nous travaillons par étapes de validation (maquette, dev) pour s'assurer que le résultat final vous convienne à 100%."
+    }
+  ],
+  "contact": {
+    "email": "contact@agence-web-locale.fr",
+    "phone": "01 XX XX XX XX",
+    "hours": "Lun-Ven 9h-18h"
+  }
+}
