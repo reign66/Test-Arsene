@@ -1,0 +1,25 @@
+{
+    "domain": "agence-web-locale.fr",
+    "base_path": "/creation-site-internet",
+    "contact": {
+        "phone": "01 23 45 67 89",
+        "phone_clic": "+33123456789",
+        "email": "contact@agence-web-locale.fr"
+    },
+    "pricing": {
+        "vitrine": {
+            "creation": 0,
+            "mensuel": 150
+        },
+        "vitrine_plus": {
+            "creation": 0,
+            "mensuel": 250
+        },
+        "ecommerce": {
+            "creation": 0,
+            "mensuel": 350
+        }
+    },
+    "gtm_id": "GTM-XXXXXXX",
+    "year": 2025
+}
