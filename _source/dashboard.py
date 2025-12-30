@@ -97,9 +97,8 @@ class DashboardHandler(http.server.SimpleHTTPRequestHandler):
                         f.write(file_content)
                     print(f"✅ CSV enregistré avec succès.")
 
-                    # Try to run generation (just one example first if needed, but here we run full for simplicity in this script)
-                    # We will modify generate.py later to just do a test if preferred.
-                    subprocess.run([sys.executable, os.path.join(SOURCE_DIR, "csv_to_json.py")], check=True)
+                    # Run the full SEO refresh workflow
+                    subprocess.run([sys.executable, os.path.join(SOURCE_DIR, "refresh_site.py")], check=True)
                     
                     self.send_response(200)
                     self.send_header('Content-type', 'text/html')

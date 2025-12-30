@@ -23,7 +23,7 @@ def run_script(script_name):
     return True
 
 if __name__ == "__main__":
-    if run_script("generate_site.py"):
+    if run_script("generate.py"):
         run_script("generate_departements.py")
         run_script("generate_sitemap.py")
         print("🏁 Full site refresh complete.")
