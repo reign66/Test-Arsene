@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Institut Zen | Beauté & Bien-être</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Quicksand:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --soft-pink: #fef1f2;
+            --rose: #e11d48;
+            --beige: #f5f5f4;
+            --taupe: #44403c;
+            --gold: #c2a35d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: var(--white);
+            color: var(--taupe);
+            line-height: 1.6;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+        }
+
+        .hero {
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            background: linear-gradient(to right, rgba(254, 241, 242, 0.9), rgba(254, 241, 242, 0.1)), url('https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            padding: 0 10%;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            line-height: 1;
+            margin-bottom: 20px;
+            color: var(--taupe);
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 35px;
+            color: #666;
+            font-style: italic;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: var(--taupe);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: 0.3s;
+            border: 1px solid var(--taupe);
+        }
+
+        .btn:hover {
+            background: transparent;
+            color: var(--taupe);
+        }
+
+        .services {
+            padding: 100px 20px;
+            text-align: center;
+            background: #fff;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 50px auto 0;
+        }
+
+        .service-card {
+            padding: 40px;
+            border: 1px solid var(--beige);
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            background: var(--soft-pink);
+            border-color: var(--rose);
+            transform: translateY(-5px);
+        }
+
+        .service-card i {
+            margin-bottom: 20px;
+            color: var(--gold);
+        }
+
+        .service-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .insta-feed {
+            padding: 80px 20px;
+            background: var(--beige);
+            text-align: center;
+        }
+
+        .insta-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        .insta-img {
+            aspect-ratio: 1;
+            background: #ccc;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .insta-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        footer {
+            padding: 60px;
+            text-align: center;
+            border-top: 1px solid var(--beige);
+            color: #999;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav style="padding: 30px; text-align: center;">
+        <h2 style="font-size: 2rem; letter-spacing: 4px;">INSTITUT ZEN</h2>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Révélez votre éclat naturel</h1>
+            <p>Soin visage, massages du monde et épilation haute précision dans un écrin de douceur.</p>
+            <a href="#" class="btn">Réserver mon soin</a>
+        </div>
+    </section>
+
+    <section class="services">
+        <h2>Nos Prestations Signature</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i data-lucide="sparkles" size="32"></i>
+                <h3>Soin Éclat</h3>
+                <p>Un rituel purifiant pour retrouver un teint frais et lumineux.</p>
+            </div>
+            <div class="service-card">
+                <i data-lucide="flower-2" size="32"></i>
+                <h3>Massage Relaxant</h3>
+                <p>60 minutes de déconnexion totale pour libérer vos tensions.</p>
+            </div>
+            <div class="service-card">
+                <i data-lucide="gem" size="32"></i>
+                <h3>Manucure Russe</h3>
+                <p>Une finition parfaite et une tenue longue durée pour vos ongles.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="insta-feed">
+        <h2>Suivez-nous sur Instagram</h2>
+        <div class="insta-grid">
+            <div class="insta-img"><img
+                    src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=40&w=400"
+                    alt="Beauty"></div>
+            <div class="insta-img"><img
+                    src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=40&w=400"
+                    alt="Spa"></div>
+            <div class="insta-img"><img
+                    src="https://images.unsplash.com/photo-1540555700478-4be289aefcf1?auto=format&fit=crop&q=40&w=400"
+                    alt="Relax"></div>
+            <div class="insta-img"><img
+                    src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&q=40&w=400"
+                    alt="Care"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Institut Zen. Pureté & Sérénité.</p>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>

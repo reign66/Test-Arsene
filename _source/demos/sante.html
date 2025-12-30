@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centre Médical Santé+ | Soins & Prévention</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --emerald: #10b981;
+            --blue: #0ea5e9;
+            --slate: #475569;
+            --bg: #f8fafc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: var(--bg);
+            color: var(--slate);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            padding: 20px 0;
+            background: #fff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--emerald);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .hero {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%);
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            color: #1e293b;
+            line-height: 1.2;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 40px;
+            color: #64748b;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 35px;
+            background: var(--emerald);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #059669;
+            transform: translateY(-3px);
+        }
+
+        .services {
+            padding: 100px 0;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            transition: 0.3s;
+            border: 1px solid #f1f5f9;
+        }
+
+        .service-card:hover {
+            border-color: var(--emerald);
+            box-shadow: 0 10px 40px rgba(16, 185, 129, 0.1);
+        }
+
+        .service-card i {
+            color: var(--emerald);
+            margin-bottom: 25px;
+            display: block;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #1e293b;
+        }
+
+        .info-bar {
+            padding: 40px 0;
+            background: #fff;
+            border-top: 1px solid #f1f5f9;
+        }
+
+        .info-grid {
+            display: flex;
+            justify-content: space-around;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .info-item h4 {
+            font-size: 1.1rem;
+            color: #1e293b;
+        }
+
+        footer {
+            padding: 60px 0;
+            text-align: center;
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo"><i data-lucide="activity" size="32"></i> SANTÉ<span>+</span></div>
+            <a href="#" class="btn" style="padding: 10px 20px;">Portail Patient</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <h1>Votre santé, notre priorité absolue</h1>
+                    <p>Un centre multi-disciplinaire moderne pour vous accompagner à chaque étape de votre vie.</p>
+                    <a href="#" class="btn">Prendre Rendez-vous <i data-lucide="calendar"></i></a>
+                </div>
+                <div class="hero-img">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173599211d0?auto=format&fit=crop&q=80&w=600"
+                        alt="Doctor" style="width:100%; border-radius:30px; box-shadow: 0 20px 50px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <div class="services-grid">
+                <div class="service-card">
+                    <i data-lucide="stethoscope" size="40"></i>
+                    <h3>Médecine Générale</h3>
+                    <p>Suivi global, prévention et accompagnement pour toute la famille.</p>
+                </div>
+                <div class="service-card">
+                    <i data-lucide="baby" size="40"></i>
+                    <h3>Pédiatrie</h3>
+                    <p>Des soins adaptés pour le bien-être et la croissance de vos enfants.</p>
+                </div>
+                <div class="service-card">
+                    <i data-lucide="heart-pulse" size="40"></i>
+                    <h3>Cardiologie</h3>
+                    <p>Dépistage et suivi des pathologies cardiovasculaires.</p>
+                </div>
+                <div class="service-card">
+                    <i data-lucide="microscope" size="40"></i>
+                    <h3>Laboratoire</h3>
+                    <p>Analyses rapides et précises directement sur place.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="info-bar">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-item">
+                    <i data-lucide="map-pin" color="#10b981"></i>
+                    <div>
+                        <h4>Notre Centre</h4>
+                        <p>12 Rue de la Santé, Paris</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i data-lucide="clock" color="#10b981"></i>
+                    <div>
+                        <h4>Horaires</h4>
+                        <p>Lun - Sam : 08:00 - 20:00</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i data-lucide="phone" color="#10b981"></i>
+                    <div>
+                        <h4>Contact Rapide</h4>
+                        <p>01 23 45 67 89</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Santé+. Établissement de soins certifié.</p>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>

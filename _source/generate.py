@@ -103,8 +103,15 @@ def normalize_row(row):
     }
 
     for key, source in url_mappings.items():
-        if normalized.get(source):
-            normalized[key] = normalized.get(source)
+        # Map to our own premium demo structure instead of old URLs
+        niche_key = key.replace("url_", "")
+        # Subdomain format: https://[city-slug].[niche-domain].fr
+        # Defaulting to our demo structure
+        normalized[key] = f"https://{normalized.get('slug', 'demo')}.sites-{niche_key.replace('immo', 'immobilier').replace('sante', 'medical').replace('avocat', 'juridique').replace('beaute', 'esthetique')}.fr"
+
+        if normalized.get(source) and "sites-" not in str(normalized.get(source)):
+             # Fallback if specific URL exists in CSV but we still want the subdomain look
+             pass
 
     return normalized
 

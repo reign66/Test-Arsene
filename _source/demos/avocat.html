@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maître Valéry | Cabinet d'Avocats au Conseil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --navy: #1a252f;
+            --gold: #b38b3d;
+            --light: #f4f7f6;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--white);
+            color: var(--navy);
+            line-height: 1.6;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Libre Baskerville', serif;
+        }
+
+        header {
+            padding: 20px 0;
+            background: var(--navy);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .hero {
+            padding: 120px 20px;
+            background: linear-gradient(rgba(26, 37, 47, 0.8), rgba(26, 37, 47, 0.8)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-weight: 300;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 16px 40px;
+            background: var(--gold);
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 700;
+            letter-spacing: 1px;
+            transition: 0.3s;
+            border: 1px solid var(--gold);
+        }
+
+        .btn:hover {
+            background: transparent;
+            color: var(--gold);
+        }
+
+        .expertise {
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .expertise h2 {
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+        }
+
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .expertise-card {
+            padding: 40px;
+            background: var(--light);
+            transition: 0.3s;
+            border-bottom: 4px solid transparent;
+        }
+
+        .expertise-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+        }
+
+        .expertise-card i {
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .expertise-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        .cta {
+            padding: 80px 20px;
+            background: var(--navy);
+            color: var(--white);
+            text-align: center;
+        }
+
+        footer {
+            padding: 40px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #777;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo" style="font-family: 'Libre Baskerville'; font-size: 1.5rem;">VALÉRY & ASSOCIES</div>
+    </header>
+
+    <section class="hero">
+        <h1>Défendre vos intérêts avec prestige</h1>
+        <p>Cabinet d'avocats spécialisé en Droit des Affaires et Droit Civil. Rigueur, Confidentialité et Excellence.
+        </p>
+        <a href="#contact" class="btn">Prendre Rendez-vous</a>
+    </section>
+
+    <section class="expertise">
+        <h2>Domaines d'Intervention</h2>
+        <div class="expertise-grid">
+            <div class="expertise-card">
+                <i data-lucide="briefcase" size="40"></i>
+                <h3>Droit Social</h3>
+                <p>Conseil et contentieux pour entreprises et salariés.</p>
+            </div>
+            <div class="expertise-card">
+                <i data-lucide="scale" size="40"></i>
+                <h3>Droit Civil</h3>
+                <p>Responsabilité, contrats et litiges du quotidien.</p>
+            </div>
+            <div class="expertise-card">
+                <i data-lucide="landmark" size="40"></i>
+                <h3>Patrimoine</h3>
+                <p>Stratégie de transmission et protection de vos actifs.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta" id="contact">
+        <h2>Un litige ? Une question juridique ?</h2>
+        <p style="margin: 20px 0 35px; opacity: 0.8;">Nos experts vous rappellent sous 24 heures pour une première
+            analyse.</p>
+        <a href="tel:0140000000" class="btn">Appeler le Cabinet</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Cabinet Valéry. Tous droits réservés.</p>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>

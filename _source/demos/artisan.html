@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BatiPro | Rénovation & Maçonnerie de Qualité</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --orange: #f39c12;
+            --steel: #2c3e50;
+            --light: #f4f4f4;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: var(--white);
+            color: var(--steel);
+            line-height: 1.6;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+        }
+
+        header {
+            background: var(--steel);
+            color: var(--white);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .hero {
+            padding: 100px 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1541604193435-22287d32c2c2?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            color: var(--orange);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 18px 45px;
+            background: var(--orange);
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #e67e22;
+            transform: scale(1.05);
+        }
+
+        .features {
+            padding: 80px 0;
+            background: var(--light);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: #fff;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .feature-card i {
+            color: var(--orange);
+            margin-bottom: 20px;
+        }
+
+        .stats {
+            padding: 60px 0;
+            background: var(--steel);
+            color: #fff;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .stat-val {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--orange);
+            display: block;
+        }
+
+        footer {
+            padding: 40px;
+            background: #1a252f;
+            color: #7f8c8d;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo" style="font-size: 1.8rem; font-weight: 700;">BATI<span>PRO</span></div>
+            <div class="phone" style="font-weight: 600; color: var(--orange);">📞 06 XX XX XX XX</div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Vos travaux entre de bonnes mains</h1>
+            <p>Rénovation intérieure, maçonnerie et aménagement sur mesure.</p>
+            <a href="#quote" class="btn">Demander mon Devis Gratuit</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i data-lucide="shield-check" size="48"></i>
+                    <h3>Garantie Décennale</h3>
+                    <p>Tous nos ouvrages sont couverts par une assurance professionnelle solide.</p>
+                </div>
+                <div class="feature-card">
+                    <i data-lucide="timer" size="48"></i>
+                    <h3>Délais Respectés</h3>
+                    <p>Nous nous engageons sur une date de fin de chantier ferme et définitive.</p>
+                </div>
+                <div class="feature-card">
+                    <i data-lucide="thumbs-up" size="48"></i>
+                    <h3>Qualité Artisanale</h3>
+                    <p>Le sens du détail et des finitions soignées pour un résultat durable.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div><span class="stat-val">15</span> Ans d'expérience</div>
+                <div><span class="stat-val">450</span> Chantiers livrés</div>
+                <div><span class="stat-val">100%</span> De satisfaction</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 BatiPro SARL. L'excellence au service de votre habitat.</p>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>
