@@ -115,7 +115,7 @@ def generate_maillage_footer():
             depts = json.load(f)
             links = []
             for d in depts:
-                links.append(f'<a href="/departement/{d["slug"]}">{d["nom"]}</a>')
+                links.append(f'<a href="/departement-{d["slug"]}">{d["nom"]}</a>')
             return " ".join(links)
     except:
         return ""
@@ -211,6 +211,8 @@ def generate_site():
         replacements["faq_10_reponse"] = f"Aucun frais caché, c'est notre engagement. Le devis est ferme et définitif. Le tarif mensuel couvre tout : hébergement, maintenance, support technique illimité, mises à jour de sécurité. Pas d'engagement longue durée, résiliable à tout moment avec préavis de 30 jours."
         
         # Computed variables
+        page_url = f"/{dept_slug}/creation-site-internet-{v['slug']}"
+        replacements["url_page"] = page_url
         replacements["slug_departement"] = dept_slug
         replacements["maillage_footer_france"] = maillage_footer
         replacements["timestamp_now"] = str(int(time.time()))

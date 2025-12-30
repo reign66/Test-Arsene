@@ -873,7 +873,7 @@
         "@type": "BreadcrumbList",
         "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://agence-web-locale.fr/"},
-            {"@type": "ListItem", "position": 2, "name": "{{departement_nom}}", "item": "https://agence-web-locale.fr/departement/{{slug_departement}}"},
+            {"@type": "ListItem", "position": 2, "name": "{{departement_nom}}", "item": "https://agence-web-locale.fr/departement-{{slug_departement}}"},
             {"@type": "ListItem", "position": 3, "name": "{{ville}}"}
         ]
     }
@@ -1279,9 +1279,9 @@
                 {{ville}} :</p>
 
             <div class="maillage-links">
-                <a href="/creation-site-internet-{{slug_proche_1}}">{{commune_proche_1}}</a>
-                <a href="/creation-site-internet-{{slug_proche_2}}">{{commune_proche_2}}</a>
-                <a href="/creation-site-internet-{{slug_proche_3}}">{{commune_proche_3}}</a>
+                <a href="/{{slug_departement}}/creation-site-internet-{{slug_proche_1}}">{{commune_proche_1}}</a>
+                <a href="/{{slug_departement}}/creation-site-internet-{{slug_proche_2}}">{{commune_proche_2}}</a>
+                <a href="/{{slug_departement}}/creation-site-internet-{{slug_proche_3}}">{{commune_proche_3}}</a>
             </div>
         </div>
     </section>
