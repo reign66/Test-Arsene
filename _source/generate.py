@@ -115,7 +115,7 @@ def generate_maillage_footer():
             depts = json.load(f)
             links = []
             for d in depts:
-                links.append(f'<a href="/departement-{d["slug"]}">{d["nom"]}</a>')
+                links.append(f'<a href="/departement/{d["slug"]}">{d["nom"]}</a>')
             return " ".join(links)
     except:
         return ""

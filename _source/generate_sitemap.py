@@ -30,7 +30,7 @@ def generate_sitemap():
             dept_name_to_slug = {d["nom"]: d["slug"] for d in depts}
             
             for d in depts:
-                loc = f"{BASE_URL}/departement-{d['slug']}"
+                loc = f"{BASE_URL}/departement/{d['slug']}"
                 sitemap_content.append(f'  <url><loc>{loc}</loc><lastmod>{current_date}</lastmod><priority>0.9</priority></url>')
     else:
         print("⚠️ Warning: departements.json not found.")

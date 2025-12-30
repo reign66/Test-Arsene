@@ -80,7 +80,7 @@ def generate_departements():
             "villes_maillage": villes_html,
             "meta_title": f"Création de Site Internet en {nom} ({code}) | Agence Web Locale",
             "meta_description": f"Besoin d'un site web professionnel en {nom} ? Nous créons des sites optimisés pour les TPE et artisans de toutes les communes du département {code}.",
-            "url_page": f"/departement-{slug}",
+            "url_page": f"/departement/{slug}",
             "dept_slug": slug
         }
 
@@ -89,9 +89,12 @@ def generate_departements():
             placeholder = "{{" + key + "}}"
             content = content.replace(placeholder, str(value))
             
-        # Write file as departement-[slug].html at root of output
-        filename = f"departement-{slug}.html"
-        output_path = os.path.join(OUTPUT_DIR, filename)
+        # Write file as /departement/[slug]/index.html
+        dept_hub_dir = os.path.join(OUTPUT_DIR, "departement", slug)
+        if not os.path.exists(dept_hub_dir):
+            os.makedirs(dept_hub_dir)
+            
+        output_path = os.path.join(dept_hub_dir, "index.html")
         
         with open(output_path, "w", encoding="utf-8") as f:
             f.write(content)

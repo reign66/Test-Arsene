@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Création de Site Internet en Hauts-de-Seine (92) | Agence Web Locale</title>
+    <meta name="description" content="Besoin d'un site web professionnel en Hauts-de-Seine ? Nous créons des sites optimisés pour les TPE et artisans de toutes les communes du département 92.">
+    <link rel="canonical" href="https://agence-web-locale.fr/departement/hauts-de-seine">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --primary-light: #34495e;
+            --secondary: #e17055;
+            --accent: #27ae60;
+            --dark: #1e272e;
+            --gray: #7f8c8d;
+            --gray-light: #f1f2f6;
+            --white: #ffffff;
+            --radius: 12px;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid var(--gray-light);
+            background: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: var(--primary);
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        .hero {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .city-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 60px 0;
+        }
+
+        .city-card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: 0.3s;
+            border: 1px solid transparent;
+        }
+
+        .city-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--secondary);
+        }
+
+        .city-card h3 {
+            font-family: 'DM Sans', sans-serif;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .city-card a {
+            color: var(--secondary);
+            font-weight: 600;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .cta-section {
+            padding: 80px 0;
+            background: var(--primary);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background: var(--secondary);
+            color: var(--white);
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            padding: 40px 0;
+            background: #1a252f;
+            color: rgba(255, 255, 255, 0.6);
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">AgenceWeb<span>Locale</span></div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Expertise Web en Hauts-de-Seine (92)</h1>
+            <p>Nous accompagnons les TPE et indépendants de toute la Hauts-de-Seine dans la création de sites
+                internet performants, optimisés pour le SEO local.</p>
+            <a href="#villes" class="btn">Voir les villes couvertes</a>
+        </div>
+    </section>
+
+    <section class="container" id="villes">
+        <div style="text-align:center; margin-top:40px;">
+            <h2 style="font-family:'DM Sans'; font-size:2rem;">Nos implantations en Hauts-de-Seine</h2>
+            <p style="color:var(--gray); margin-top:10px;">Cliquez sur votre ville pour découvrir nos solutions locales
+                adaptées à votre activité.</p>
+        </div>
+        <div class="city-grid">
+            
+            <div class="city-card">
+                <h3>Antony</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour  de Antony.</p>
+                <a href="/hauts-de-seine/creation-site-internet-antony"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Asnières-sur-Seine</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour  de Asnières-sur-Seine.</p>
+                <a href="/hauts-de-seine/creation-site-internet-asnieres-sur-seine"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Bagneux</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Bagneusiens de Bagneux.</p>
+                <a href="/hauts-de-seine/creation-site-internet-bagneux"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Bois-Colombes</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Colombiens de Bois-Colombes.</p>
+                <a href="/hauts-de-seine/creation-site-internet-bois-colombes"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Boulogne-Billancourt</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour  de Boulogne-Billancourt.</p>
+                <a href="/hauts-de-seine/creation-site-internet-boulogne-billancourt"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Bourg-la-Reine</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Réginaburgiens de Bourg-la-Reine.</p>
+                <a href="/hauts-de-seine/creation-site-internet-bourg-la-reine"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Chaville</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Chavillois de Chaville.</p>
+                <a href="/hauts-de-seine/creation-site-internet-chaville"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Châtenay-Malabry</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Châtenaisiens de Châtenay-Malabry.</p>
+                <a href="/hauts-de-seine/creation-site-internet-chatenay-malabry"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Châtillon</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Châtillonnais de Châtillon.</p>
+                <a href="/hauts-de-seine/creation-site-internet-chatillon"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Clamart</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour  de Clamart.</p>
+                <a href="/hauts-de-seine/creation-site-internet-clamart"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Clichy</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour  de Clichy.</p>
+                <a href="/hauts-de-seine/creation-site-internet-clichy"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Colombes</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour  de Colombes.</p>
+                <a href="/hauts-de-seine/creation-site-internet-colombes"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Courbevoie</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour  de Courbevoie.</p>
+                <a href="/hauts-de-seine/creation-site-internet-courbevoie"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Fontenay-aux-Roses</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Fontenaisiens de Fontenay-aux-Roses.</p>
+                <a href="/hauts-de-seine/creation-site-internet-fontenay-aux-roses"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Garches</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Garchois de Garches.</p>
+                <a href="/hauts-de-seine/creation-site-internet-garches"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Gennevilliers</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Gennevillois de Gennevilliers.</p>
+                <a href="/hauts-de-seine/creation-site-internet-gennevilliers"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Issy-les-Moulineaux</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour  de Issy-les-Moulineaux.</p>
+                <a href="/hauts-de-seine/creation-site-internet-issy-les-moulineaux"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>La Garenne-Colombes</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Garennois de La Garenne-Colombes.</p>
+                <a href="/hauts-de-seine/creation-site-internet-la-garenne-colombes"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Le Plessis-Robinson</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Robinsonnais de Le Plessis-Robinson.</p>
+                <a href="/hauts-de-seine/creation-site-internet-le-plessis-robinson"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Levallois-Perret</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour  de Levallois-Perret.</p>
+                <a href="/hauts-de-seine/creation-site-internet-levallois-perret"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Malakoff</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Malakoffiens de Malakoff.</p>
+                <a href="/hauts-de-seine/creation-site-internet-malakoff"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Meudon</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Meudonnais de Meudon.</p>
+                <a href="/hauts-de-seine/creation-site-internet-meudon"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Montrouge</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Montrougeois de Montrouge.</p>
+                <a href="/hauts-de-seine/creation-site-internet-montrouge"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Nanterre</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour  de Nanterre.</p>
+                <a href="/hauts-de-seine/creation-site-internet-nanterre"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Neuilly-sur-Seine</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour  de Neuilly-sur-Seine.</p>
+                <a href="/hauts-de-seine/creation-site-internet-neuilly-sur-seine"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Puteaux</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Putéoliens de Puteaux.</p>
+                <a href="/hauts-de-seine/creation-site-internet-puteaux"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Rueil-Malmaison</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour  de Rueil-Malmaison.</p>
+                <a href="/hauts-de-seine/creation-site-internet-rueil-malmaison"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Saint-Cloud</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Clodoaldiens de Saint-Cloud.</p>
+                <a href="/hauts-de-seine/creation-site-internet-saint-cloud"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Sceaux</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Scéens de Sceaux.</p>
+                <a href="/hauts-de-seine/creation-site-internet-sceaux"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Suresnes</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Suresnois de Suresnes.</p>
+                <a href="/hauts-de-seine/creation-site-internet-suresnes"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Sèvres</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Sévriens de Sèvres.</p>
+                <a href="/hauts-de-seine/creation-site-internet-sevres"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Vanves</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Vanvéens de Vanves.</p>
+                <a href="/hauts-de-seine/creation-site-internet-vanves"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Ville-d'Avray</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Dagovéraniens de Ville-d'Avray.</p>
+                <a href="/hauts-de-seine/creation-site-internet-ville-d-avray"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Villeneuve-la-Garenne</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Villeneuvois de Villeneuve-la-Garenne.</p>
+                <a href="/hauts-de-seine/creation-site-internet-villeneuve-la-garenne"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Besoin d'un site web pro en Hauts-de-Seine ?</h2>
+            <p style="margin-top:15px; opacity:0.9;">0€ de frais de création. 150€/mois tout compris. En ligne en 15
+                jours.</p>
+            <a href="https://agence-web-locale.fr/#contact" class="btn">Demander un devis gratuit</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Agence Web Locale. Tous droits réservés.</p>
+            <p style="margin-top:10px; font-size:0.8rem;">Expert en référencement local et création de site internet
+                pour TPE/PME.</p>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>

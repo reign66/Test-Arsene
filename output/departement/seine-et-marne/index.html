@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Création de Site Internet en Seine-et-Marne (77) | Agence Web Locale</title>
+    <meta name="description" content="Besoin d'un site web professionnel en Seine-et-Marne ? Nous créons des sites optimisés pour les TPE et artisans de toutes les communes du département 77.">
+    <link rel="canonical" href="https://agence-web-locale.fr/departement/seine-et-marne">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --primary-light: #34495e;
+            --secondary: #e17055;
+            --accent: #27ae60;
+            --dark: #1e272e;
+            --gray: #7f8c8d;
+            --gray-light: #f1f2f6;
+            --white: #ffffff;
+            --radius: 12px;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid var(--gray-light);
+            background: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: var(--primary);
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        .hero {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .city-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 60px 0;
+        }
+
+        .city-card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: 0.3s;
+            border: 1px solid transparent;
+        }
+
+        .city-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--secondary);
+        }
+
+        .city-card h3 {
+            font-family: 'DM Sans', sans-serif;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .city-card a {
+            color: var(--secondary);
+            font-weight: 600;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .cta-section {
+            padding: 80px 0;
+            background: var(--primary);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background: var(--secondary);
+            color: var(--white);
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            padding: 40px 0;
+            background: #1a252f;
+            color: rgba(255, 255, 255, 0.6);
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">AgenceWeb<span>Locale</span></div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Expertise Web en Seine-et-Marne (77)</h1>
+            <p>Nous accompagnons les TPE et indépendants de toute la Seine-et-Marne dans la création de sites
+                internet performants, optimisés pour le SEO local.</p>
+            <a href="#villes" class="btn">Voir les villes couvertes</a>
+        </div>
+    </section>
+
+    <section class="container" id="villes">
+        <div style="text-align:center; margin-top:40px;">
+            <h2 style="font-family:'DM Sans'; font-size:2rem;">Nos implantations en Seine-et-Marne</h2>
+            <p style="color:var(--gray); margin-top:10px;">Cliquez sur votre ville pour découvrir nos solutions locales
+                adaptées à votre activité.</p>
+        </div>
+        <div class="city-grid">
+            
+            <div class="city-card">
+                <h3>Avon</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Avonnais de Avon.</p>
+                <a href="/seine-et-marne/creation-site-internet-avon"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Brie-Comte-Robert</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Briards de Brie-Comte-Robert.</p>
+                <a href="/seine-et-marne/creation-site-internet-brie-comte-robert"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Bussy-Saint-Georges</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Buxangeorgiens de Bussy-Saint-Georges.</p>
+                <a href="/seine-et-marne/creation-site-internet-bussy-saint-georges"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Champs-sur-Marne</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Campésiens de Champs-sur-Marne.</p>
+                <a href="/seine-et-marne/creation-site-internet-champs-sur-marne"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Chelles</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour  de Chelles.</p>
+                <a href="/seine-et-marne/creation-site-internet-chelles"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Claye-Souilly</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Clayois de Claye-Souilly.</p>
+                <a href="/seine-et-marne/creation-site-internet-claye-souilly"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Combs-la-Ville</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Combs-la-Villais de Combs-la-Ville.</p>
+                <a href="/seine-et-marne/creation-site-internet-combs-la-ville"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Coulommiers</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Columériens de Coulommiers.</p>
+                <a href="/seine-et-marne/creation-site-internet-coulommiers"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Dammarie-les-Lys</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Dammariens de Dammarie-les-Lys.</p>
+                <a href="/seine-et-marne/creation-site-internet-dammarie-les-lys"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Fontainebleau</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Bellifontains de Fontainebleau.</p>
+                <a href="/seine-et-marne/creation-site-internet-fontainebleau"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Lagny-sur-Marne</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Latignaciens de Lagny-sur-Marne.</p>
+                <a href="/seine-et-marne/creation-site-internet-lagny-sur-marne"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Le Mée-sur-Seine</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Méens de Le Mée-sur-Seine.</p>
+                <a href="/seine-et-marne/creation-site-internet-le-mee-sur-seine"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Lieusaint</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Lieusaintais de Lieusaint.</p>
+                <a href="/seine-et-marne/creation-site-internet-lieusaint"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Lognes</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Lognots de Lognes.</p>
+                <a href="/seine-et-marne/creation-site-internet-lognes"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Meaux</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour  de Meaux.</p>
+                <a href="/seine-et-marne/creation-site-internet-meaux"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Melun</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Melunais de Melun.</p>
+                <a href="/seine-et-marne/creation-site-internet-melun"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Mitry-Mory</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Mitryens de Mitry-Mory.</p>
+                <a href="/seine-et-marne/creation-site-internet-mitry-mory"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Moissy-Cramayel</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Moisséens de Moissy-Cramayel.</p>
+                <a href="/seine-et-marne/creation-site-internet-moissy-cramayel"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Montereau-Fault-Yonne</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Monterelais de Montereau-Fault-Yonne.</p>
+                <a href="/seine-et-marne/creation-site-internet-montereau-fault-yonne"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Moret-Loing-et-Orvanne</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Moretains de Moret-Loing-et-Orvanne.</p>
+                <a href="/seine-et-marne/creation-site-internet-moret-loing-et-orvanne"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Nemours</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Nemouriens de Nemours.</p>
+                <a href="/seine-et-marne/creation-site-internet-nemours"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Noisiel</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Noisieliens de Noisiel.</p>
+                <a href="/seine-et-marne/creation-site-internet-noisiel"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Ozoir-la-Ferrière</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Ozoiriens de Ozoir-la-Ferrière.</p>
+                <a href="/seine-et-marne/creation-site-internet-ozoir-la-ferriere"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Pontault-Combault</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Pontellois de Pontault-Combault.</p>
+                <a href="/seine-et-marne/creation-site-internet-pontault-combault"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Provins</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Provinois de Provins.</p>
+                <a href="/seine-et-marne/creation-site-internet-provins"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Roissy-en-Brie</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Roisséens de Roissy-en-Brie.</p>
+                <a href="/seine-et-marne/creation-site-internet-roissy-en-brie"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Saint-Fargeau-Ponthierry</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Ferréopontains de Saint-Fargeau-Ponthierry.</p>
+                <a href="/seine-et-marne/creation-site-internet-saint-fargeau-ponthierry"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Savigny-le-Temple</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Savigniens de Savigny-le-Temple.</p>
+                <a href="/seine-et-marne/creation-site-internet-savigny-le-temple"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Torcy</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Torcéens de Torcy.</p>
+                <a href="/seine-et-marne/creation-site-internet-torcy"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Vaires-sur-Marne</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Vairois de Vaires-sur-Marne.</p>
+                <a href="/seine-et-marne/creation-site-internet-vaires-sur-marne"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Vaux-le-Pénil</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Vauxois de Vaux-le-Pénil.</p>
+                <a href="/seine-et-marne/creation-site-internet-vaux-le-penil"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Villeparisis</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Villeparisiens de Villeparisis.</p>
+                <a href="/seine-et-marne/creation-site-internet-villeparisis"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Besoin d'un site web pro en Seine-et-Marne ?</h2>
+            <p style="margin-top:15px; opacity:0.9;">0€ de frais de création. 150€/mois tout compris. En ligne en 15
+                jours.</p>
+            <a href="https://agence-web-locale.fr/#contact" class="btn">Demander un devis gratuit</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Agence Web Locale. Tous droits réservés.</p>
+            <p style="margin-top:10px; font-size:0.8rem;">Expert en référencement local et création de site internet
+                pour TPE/PME.</p>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>

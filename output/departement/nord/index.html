@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Création de Site Internet en Nord (51) | Agence Web Locale</title>
+    <meta name="description" content="Besoin d'un site web professionnel en Nord ? Nous créons des sites optimisés pour les TPE et artisans de toutes les communes du département 51.">
+    <link rel="canonical" href="https://agence-web-locale.fr/departement/nord">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --primary-light: #34495e;
+            --secondary: #e17055;
+            --accent: #27ae60;
+            --dark: #1e272e;
+            --gray: #7f8c8d;
+            --gray-light: #f1f2f6;
+            --white: #ffffff;
+            --radius: 12px;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid var(--gray-light);
+            background: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: var(--primary);
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        .hero {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .city-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 60px 0;
+        }
+
+        .city-card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: 0.3s;
+            border: 1px solid transparent;
+        }
+
+        .city-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--secondary);
+        }
+
+        .city-card h3 {
+            font-family: 'DM Sans', sans-serif;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .city-card a {
+            color: var(--secondary);
+            font-weight: 600;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .cta-section {
+            padding: 80px 0;
+            background: var(--primary);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background: var(--secondary);
+            color: var(--white);
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            padding: 40px 0;
+            background: #1a252f;
+            color: rgba(255, 255, 255, 0.6);
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">AgenceWeb<span>Locale</span></div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Expertise Web en Nord (51)</h1>
+            <p>Nous accompagnons les TPE et indépendants de toute la Nord dans la création de sites
+                internet performants, optimisés pour le SEO local.</p>
+            <a href="#villes" class="btn">Voir les villes couvertes</a>
+        </div>
+    </section>
+
+    <section class="container" id="villes">
+        <div style="text-align:center; margin-top:40px;">
+            <h2 style="font-family:'DM Sans'; font-size:2rem;">Nos implantations en Nord</h2>
+            <p style="color:var(--gray); margin-top:10px;">Cliquez sur votre ville pour découvrir nos solutions locales
+                adaptées à votre activité.</p>
+        </div>
+        <div class="city-grid">
+            
+            <div class="city-card">
+                <h3>Aniche</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Anichois de Aniche.</p>
+                <a href="/nord/creation-site-internet-aniche"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Annœullin</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Annoeullinois de Annœullin.</p>
+                <a href="/nord/creation-site-internet-annoeullin"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Anzin</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Anzinois de Anzin.</p>
+                <a href="/nord/creation-site-internet-anzin"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Armentières</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Armentiérois de Armentières.</p>
+                <a href="/nord/creation-site-internet-armentieres"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Bailleul</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Bailleulois de Bailleul.</p>
+                <a href="/nord/creation-site-internet-bailleul"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Bruay-sur-l'Escaut</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Bruaysiens de Bruay-sur-l'Escaut.</p>
+                <a href="/nord/creation-site-internet-bruay-sur-l-escaut"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Cambrai</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Cambrésiens de Cambrai.</p>
+                <a href="/nord/creation-site-internet-cambrai"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Caudry</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Caudrésiens de Caudry.</p>
+                <a href="/nord/creation-site-internet-caudry"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Comines</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Cominois de Comines.</p>
+                <a href="/nord/creation-site-internet-comines"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Coudekerque-Branche</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Coudekerquois de Coudekerque-Branche.</p>
+                <a href="/nord/creation-site-internet-coudekerque-branche"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Croix</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Croixois de Croix.</p>
+                <a href="/nord/creation-site-internet-croix"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Denain</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Denaisiens de Denain.</p>
+                <a href="/nord/creation-site-internet-denain"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Douai</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Douaisiens de Douai.</p>
+                <a href="/nord/creation-site-internet-douai"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Douchy-les-Mines</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Douchynois de Douchy-les-Mines.</p>
+                <a href="/nord/creation-site-internet-douchy-les-mines"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Dunkerque</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour  de Dunkerque.</p>
+                <a href="/nord/creation-site-internet-dunkerque"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Faches-Thumesnil</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Faches-Thumesnilois de Faches-Thumesnil.</p>
+                <a href="/nord/creation-site-internet-faches-thumesnil"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Fourmies</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Fourmisiens de Fourmies.</p>
+                <a href="/nord/creation-site-internet-fourmies"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Grande-Synthe</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Synthois de Grande-Synthe.</p>
+                <a href="/nord/creation-site-internet-grande-synthe"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Gravelines</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Gravelinois de Gravelines.</p>
+                <a href="/nord/creation-site-internet-gravelines"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Halluin</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Halluinois de Halluin.</p>
+                <a href="/nord/creation-site-internet-halluin"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Haubourdin</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Haubourdinois de Haubourdin.</p>
+                <a href="/nord/creation-site-internet-haubourdin"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Hautmont</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Hautmontois de Hautmont.</p>
+                <a href="/nord/creation-site-internet-hautmont"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Hazebrouck</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Hazebrouckois de Hazebrouck.</p>
+                <a href="/nord/creation-site-internet-hazebrouck"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Hem</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Hémois de Hem.</p>
+                <a href="/nord/creation-site-internet-hem"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>La Madeleine</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Madeleinois de La Madeleine.</p>
+                <a href="/nord/creation-site-internet-la-madeleine"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Lambersart</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Lambersartois de Lambersart.</p>
+                <a href="/nord/creation-site-internet-lambersart"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Lille</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour  de Lille.</p>
+                <a href="/nord/creation-site-internet-lille"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Loos</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Loossois de Loos.</p>
+                <a href="/nord/creation-site-internet-loos"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Lys-lez-Lannoy</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Lyssois de Lys-lez-Lannoy.</p>
+                <a href="/nord/creation-site-internet-lys-lez-lannoy"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Marcq-en-Barœul</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Marcquois de Marcq-en-Barœul.</p>
+                <a href="/nord/creation-site-internet-marcq-en-baroeul"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Marly</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Marlysiens de Marly.</p>
+                <a href="/nord/creation-site-internet-marly"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Marquette-lez-Lille</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Marquettois de Marquette-lez-Lille.</p>
+                <a href="/nord/creation-site-internet-marquette-lez-lille"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Maubeuge</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Maubeugeois de Maubeuge.</p>
+                <a href="/nord/creation-site-internet-maubeuge"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Mons-en-Barœul</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Monsois de Mons-en-Barœul.</p>
+                <a href="/nord/creation-site-internet-mons-en-baroeul"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Mouvaux</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Mouvallois de Mouvaux.</p>
+                <a href="/nord/creation-site-internet-mouvaux"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Neuville-en-Ferrain</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Neuvillois de Neuville-en-Ferrain.</p>
+                <a href="/nord/creation-site-internet-neuville-en-ferrain"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Raismes</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Raismois de Raismes.</p>
+                <a href="/nord/creation-site-internet-raismes"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Ronchin</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Ronchinois de Ronchin.</p>
+                <a href="/nord/creation-site-internet-ronchin"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Roncq</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Roncquois de Roncq.</p>
+                <a href="/nord/creation-site-internet-roncq"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Roubaix</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour  de Roubaix.</p>
+                <a href="/nord/creation-site-internet-roubaix"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Saint-Amand-les-Eaux</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Amandinois de Saint-Amand-les-Eaux.</p>
+                <a href="/nord/creation-site-internet-saint-amand-les-eaux"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Saint-André-lez-Lille</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Andréens de Saint-André-lez-Lille.</p>
+                <a href="/nord/creation-site-internet-saint-andre-lez-lille"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Saint-Saulve</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Saint-Saulviens de Saint-Saulve.</p>
+                <a href="/nord/creation-site-internet-saint-saulve"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Seclin</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Seclinois de Seclin.</p>
+                <a href="/nord/creation-site-internet-seclin"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Sin-le-Noble</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Sinnois de Sin-le-Noble.</p>
+                <a href="/nord/creation-site-internet-sin-le-noble"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Somain</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Sominois de Somain.</p>
+                <a href="/nord/creation-site-internet-somain"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Tourcoing</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour  de Tourcoing.</p>
+                <a href="/nord/creation-site-internet-tourcoing"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Valenciennes</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Valenciennois de Valenciennes.</p>
+                <a href="/nord/creation-site-internet-valenciennes"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Villeneuve-d'Ascq</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour  de Villeneuve-d'Ascq.</p>
+                <a href="/nord/creation-site-internet-villeneuve-d-ascq"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Wambrechies</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Wambrecitains de Wambrechies.</p>
+                <a href="/nord/creation-site-internet-wambrechies"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Wasquehal</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Wasquehaliens de Wasquehal.</p>
+                <a href="/nord/creation-site-internet-wasquehal"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Wattignies</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Wattignisiens de Wattignies.</p>
+                <a href="/nord/creation-site-internet-wattignies"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Wattrelos</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Wattrelosiens de Wattrelos.</p>
+                <a href="/nord/creation-site-internet-wattrelos"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Besoin d'un site web pro en Nord ?</h2>
+            <p style="margin-top:15px; opacity:0.9;">0€ de frais de création. 150€/mois tout compris. En ligne en 15
+                jours.</p>
+            <a href="https://agence-web-locale.fr/#contact" class="btn">Demander un devis gratuit</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Agence Web Locale. Tous droits réservés.</p>
+            <p style="margin-top:10px; font-size:0.8rem;">Expert en référencement local et création de site internet
+                pour TPE/PME.</p>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>

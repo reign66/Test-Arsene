@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Création de Site Internet en Essonne (91) | Agence Web Locale</title>
+    <meta name="description" content="Besoin d'un site web professionnel en Essonne ? Nous créons des sites optimisés pour les TPE et artisans de toutes les communes du département 91.">
+    <link rel="canonical" href="https://agence-web-locale.fr/departement/essonne">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --primary-light: #34495e;
+            --secondary: #e17055;
+            --accent: #27ae60;
+            --dark: #1e272e;
+            --gray: #7f8c8d;
+            --gray-light: #f1f2f6;
+            --white: #ffffff;
+            --radius: 12px;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid var(--gray-light);
+            background: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: var(--primary);
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        .hero {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .city-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 60px 0;
+        }
+
+        .city-card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: 0.3s;
+            border: 1px solid transparent;
+        }
+
+        .city-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--secondary);
+        }
+
+        .city-card h3 {
+            font-family: 'DM Sans', sans-serif;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .city-card a {
+            color: var(--secondary);
+            font-weight: 600;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .cta-section {
+            padding: 80px 0;
+            background: var(--primary);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background: var(--secondary);
+            color: var(--white);
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            padding: 40px 0;
+            background: #1a252f;
+            color: rgba(255, 255, 255, 0.6);
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">AgenceWeb<span>Locale</span></div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Expertise Web en Essonne (91)</h1>
+            <p>Nous accompagnons les TPE et indépendants de toute la Essonne dans la création de sites
+                internet performants, optimisés pour le SEO local.</p>
+            <a href="#villes" class="btn">Voir les villes couvertes</a>
+        </div>
+    </section>
+
+    <section class="container" id="villes">
+        <div style="text-align:center; margin-top:40px;">
+            <h2 style="font-family:'DM Sans'; font-size:2rem;">Nos implantations en Essonne</h2>
+            <p style="color:var(--gray); margin-top:10px;">Cliquez sur votre ville pour découvrir nos solutions locales
+                adaptées à votre activité.</p>
+        </div>
+        <div class="city-grid">
+            
+            <div class="city-card">
+                <h3>Arpajon</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Arpajonnais de Arpajon.</p>
+                <a href="/essonne/creation-site-internet-arpajon"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Athis-Mons</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Athégiens de Athis-Mons.</p>
+                <a href="/essonne/creation-site-internet-athis-mons"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Brunoy</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Brunoyens de Brunoy.</p>
+                <a href="/essonne/creation-site-internet-brunoy"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Brétigny-sur-Orge</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Brétignolais de Brétigny-sur-Orge.</p>
+                <a href="/essonne/creation-site-internet-bretigny-sur-orge"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Chilly-Mazarin</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Chiroquois de Chilly-Mazarin.</p>
+                <a href="/essonne/creation-site-internet-chilly-mazarin"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Corbeil-Essonnes</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Corbeil‑Essonnesois de Corbeil-Essonnes.</p>
+                <a href="/essonne/creation-site-internet-corbeil-essonnes"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Courcouronnes</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Courcouronnais de Courcouronnes.</p>
+                <a href="/essonne/creation-site-internet-courcouronnes"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Dourdan</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Dourdannais de Dourdan.</p>
+                <a href="/essonne/creation-site-internet-dourdan"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Draveil</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Draveillois de Draveil.</p>
+                <a href="/essonne/creation-site-internet-draveil"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Gif-sur-Yvette</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Giffois de Gif-sur-Yvette.</p>
+                <a href="/essonne/creation-site-internet-gif-sur-yvette"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Grigny</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Grignois de Grigny.</p>
+                <a href="/essonne/creation-site-internet-grigny"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Igny</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Ignissois de Igny.</p>
+                <a href="/essonne/creation-site-internet-igny"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Juvisy-sur-Orge</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Juvisiens de Juvisy-sur-Orge.</p>
+                <a href="/essonne/creation-site-internet-juvisy-sur-orge"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Les Ulis</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Ulissiens de Les Ulis.</p>
+                <a href="/essonne/creation-site-internet-les-ulis"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Longjumeau</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Longjumellois de Longjumeau.</p>
+                <a href="/essonne/creation-site-internet-longjumeau"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Massy</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Massicois de Massy.</p>
+                <a href="/essonne/creation-site-internet-massy"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Mennecy</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Menneçois de Mennecy.</p>
+                <a href="/essonne/creation-site-internet-mennecy"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Montgeron</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Montgeronnais de Montgeron.</p>
+                <a href="/essonne/creation-site-internet-montgeron"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Morangis</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Morangissois de Morangis.</p>
+                <a href="/essonne/creation-site-internet-morangis"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Morsang-sur-Orge</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Morsaintois de Morsang-sur-Orge.</p>
+                <a href="/essonne/creation-site-internet-morsang-sur-orge"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Orsay</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Orséiens de Orsay.</p>
+                <a href="/essonne/creation-site-internet-orsay"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Palaiseau</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Palaisiens de Palaiseau.</p>
+                <a href="/essonne/creation-site-internet-palaiseau"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Ris-Orangis</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Rissois de Ris-Orangis.</p>
+                <a href="/essonne/creation-site-internet-ris-orangis"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Saint-Michel-sur-Orge</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Saint-Michellois de Saint-Michel-sur-Orge.</p>
+                <a href="/essonne/creation-site-internet-saint-michel-sur-orge"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Saint-Pierre-du-Perray</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Saint-Perreyens de Saint-Pierre-du-Perray.</p>
+                <a href="/essonne/creation-site-internet-saint-pierre-du-perray"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Sainte-Geneviève-des-Bois</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Génovéfains de Sainte-Geneviève-des-Bois.</p>
+                <a href="/essonne/creation-site-internet-sainte-genevieve-des-bois"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Savigny-sur-Orge</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Saviniens de Savigny-sur-Orge.</p>
+                <a href="/essonne/creation-site-internet-savigny-sur-orge"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Verrières-le-Buisson</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Verriérois de Verrières-le-Buisson.</p>
+                <a href="/essonne/creation-site-internet-verrieres-le-buisson"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Vigneux-sur-Seine</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Vigneusiens de Vigneux-sur-Seine.</p>
+                <a href="/essonne/creation-site-internet-vigneux-sur-seine"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Villebon-sur-Yvette</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Villebonnais de Villebon-sur-Yvette.</p>
+                <a href="/essonne/creation-site-internet-villebon-sur-yvette"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Viry-Châtillon</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Viryssois de Viry-Châtillon.</p>
+                <a href="/essonne/creation-site-internet-viry-chatillon"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Yerres</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Yerrois de Yerres.</p>
+                <a href="/essonne/creation-site-internet-yerres"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Épinay-sous-Sénart</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Spinoliens de Épinay-sous-Sénart.</p>
+                <a href="/essonne/creation-site-internet-epinay-sous-senart"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Épinay-sur-Orge</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Épinéens de Épinay-sur-Orge.</p>
+                <a href="/essonne/creation-site-internet-epinay-sur-orge"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Étampes</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Étampois de Étampes.</p>
+                <a href="/essonne/creation-site-internet-etampes"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Évry</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour  de Évry.</p>
+                <a href="/essonne/creation-site-internet-evry"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Besoin d'un site web pro en Essonne ?</h2>
+            <p style="margin-top:15px; opacity:0.9;">0€ de frais de création. 150€/mois tout compris. En ligne en 15
+                jours.</p>
+            <a href="https://agence-web-locale.fr/#contact" class="btn">Demander un devis gratuit</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Agence Web Locale. Tous droits réservés.</p>
+            <p style="margin-top:10px; font-size:0.8rem;">Expert en référencement local et création de site internet
+                pour TPE/PME.</p>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>

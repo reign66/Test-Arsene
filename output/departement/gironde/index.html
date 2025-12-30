@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Création de Site Internet en Gironde (33) | Agence Web Locale</title>
+    <meta name="description" content="Besoin d'un site web professionnel en Gironde ? Nous créons des sites optimisés pour les TPE et artisans de toutes les communes du département 33.">
+    <link rel="canonical" href="https://agence-web-locale.fr/departement/gironde">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --primary-light: #34495e;
+            --secondary: #e17055;
+            --accent: #27ae60;
+            --dark: #1e272e;
+            --gray: #7f8c8d;
+            --gray-light: #f1f2f6;
+            --white: #ffffff;
+            --radius: 12px;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid var(--gray-light);
+            background: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: var(--primary);
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        .hero {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .city-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 60px 0;
+        }
+
+        .city-card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: 0.3s;
+            border: 1px solid transparent;
+        }
+
+        .city-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--secondary);
+        }
+
+        .city-card h3 {
+            font-family: 'DM Sans', sans-serif;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .city-card a {
+            color: var(--secondary);
+            font-weight: 600;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .cta-section {
+            padding: 80px 0;
+            background: var(--primary);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background: var(--secondary);
+            color: var(--white);
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            padding: 40px 0;
+            background: #1a252f;
+            color: rgba(255, 255, 255, 0.6);
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">AgenceWeb<span>Locale</span></div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Expertise Web en Gironde (33)</h1>
+            <p>Nous accompagnons les TPE et indépendants de toute la Gironde dans la création de sites
+                internet performants, optimisés pour le SEO local.</p>
+            <a href="#villes" class="btn">Voir les villes couvertes</a>
+        </div>
+    </section>
+
+    <section class="container" id="villes">
+        <div style="text-align:center; margin-top:40px;">
+            <h2 style="font-family:'DM Sans'; font-size:2rem;">Nos implantations en Gironde</h2>
+            <p style="color:var(--gray); margin-top:10px;">Cliquez sur votre ville pour découvrir nos solutions locales
+                adaptées à votre activité.</p>
+        </div>
+        <div class="city-grid">
+            
+            <div class="city-card">
+                <h3>Ambarès-et-Lagrave</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Ambarésiens de Ambarès-et-Lagrave.</p>
+                <a href="/gironde/creation-site-internet-ambares-et-lagrave"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Andernos-les-Bains</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Andernosien de Andernos-les-Bains.</p>
+                <a href="/gironde/creation-site-internet-andernos-les-bains"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Arcachon</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Arcachonnais de Arcachon.</p>
+                <a href="/gironde/creation-site-internet-arcachon"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Biganos</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Biganosais de Biganos.</p>
+                <a href="/gironde/creation-site-internet-biganos"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Blanquefort</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Blanquefortais de Blanquefort.</p>
+                <a href="/gironde/creation-site-internet-blanquefort"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Bordeaux</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour  de Bordeaux.</p>
+                <a href="/gironde/creation-site-internet-bordeaux"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Bruges</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Brugesois de Bruges.</p>
+                <a href="/gironde/creation-site-internet-bruges"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Bègles</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Béglais de Bègles.</p>
+                <a href="/gironde/creation-site-internet-begles"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Cenon</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Cenonais de Cenon.</p>
+                <a href="/gironde/creation-site-internet-cenon"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Cestas</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Cestadais de Cestas.</p>
+                <a href="/gironde/creation-site-internet-cestas"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Eysines</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Eysinais de Eysines.</p>
+                <a href="/gironde/creation-site-internet-eysines"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Floirac</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Floiracais de Floirac.</p>
+                <a href="/gironde/creation-site-internet-floirac"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Gradignan</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Gradignanais de Gradignan.</p>
+                <a href="/gironde/creation-site-internet-gradignan"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Gujan-Mestras</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Gujanais de Gujan-Mestras.</p>
+                <a href="/gironde/creation-site-internet-gujan-mestras"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>La Teste-de-Buch</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Testerins de La Teste-de-Buch.</p>
+                <a href="/gironde/creation-site-internet-la-teste-de-buch"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Le Bouscat</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Bouscatais de Le Bouscat.</p>
+                <a href="/gironde/creation-site-internet-le-bouscat"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Le Haillan</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Haillanais de Le Haillan.</p>
+                <a href="/gironde/creation-site-internet-le-haillan"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Libourne</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Libournais de Libourne.</p>
+                <a href="/gironde/creation-site-internet-libourne"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Lormont</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Lormontais de Lormont.</p>
+                <a href="/gironde/creation-site-internet-lormont"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Mérignac</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour  de Mérignac.</p>
+                <a href="/gironde/creation-site-internet-merignac"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Pessac</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour  de Pessac.</p>
+                <a href="/gironde/creation-site-internet-pessac"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Saint-André-de-Cubzac</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Cubzaciens de Saint-André-de-Cubzac.</p>
+                <a href="/gironde/creation-site-internet-saint-andre-de-cubzac"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Saint-Médard-en-Jalles</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Saint-Médardais de Saint-Médard-en-Jalles.</p>
+                <a href="/gironde/creation-site-internet-saint-medard-en-jalles"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Talence</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Talencéens de Talence.</p>
+                <a href="/gironde/creation-site-internet-talence"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+            <div class="city-card">
+                <h3>Villenave-d'Ornon</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour Villenavais de Villenave-d'Ornon.</p>
+                <a href="/gironde/creation-site-internet-villenave-d-ornon"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Besoin d'un site web pro en Gironde ?</h2>
+            <p style="margin-top:15px; opacity:0.9;">0€ de frais de création. 150€/mois tout compris. En ligne en 15
+                jours.</p>
+            <a href="https://agence-web-locale.fr/#contact" class="btn">Demander un devis gratuit</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Agence Web Locale. Tous droits réservés.</p>
+            <p style="margin-top:10px; font-size:0.8rem;">Expert en référencement local et création de site internet
+                pour TPE/PME.</p>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>
