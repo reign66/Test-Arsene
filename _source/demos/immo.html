@@ -854,11 +854,18 @@
                 </ul>
             </div>
             <div class="f-col">
-                <h4 class="f-title">Bureaux</h4>
+                <h4 class="f-title">Coordonnées</h4>
                 <ul class="f-links">
-                    <li>Siège : {{demo_address}}</li>
-                    <li>Email : {{demo_email}}</li>
-                    <li>Tel : {{demo_phone}}</li>
+                    <li><i data-lucide="map-pin"></i> {{demo_address}}</li>
+                    <li><i data-lucide="phone"></i> {{demo_phone}}</li>
+                    <li><i data-lucide="mail"></i> {{demo_email}}</li>
+                    <li
+                        style="margin-top:20px; color:#27ae60; font-size:0.9em; border-top:1px solid #333; padding-top:15px;">
+                        Expert Immobilier à <strong>{{ville}}</strong><br>
+                        Besoin de visibilité ? <a
+                            href="https://agence-web-locale.fr/{{departement_slug}}/creation-site-internet-{{ville_slug}}"
+                            style="color:#fff; text-decoration:underline;">Agence Web {{ville}}</a>
+                    </li>
                 </ul>
             </div>
         </div>

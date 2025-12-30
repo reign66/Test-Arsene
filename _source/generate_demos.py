@@ -113,10 +113,13 @@ def generate_demos():
             with open(path, "r", encoding="utf-8") as f:
                 templates[niche] = f.read()
     
+    # Load department slugs
+    with open(os.path.join(BASE_DIR, "departements.json"), "r", encoding="utf-8") as f:
+        depts_data = json.load(f)
+    dept_name_to_slug = {d["nom"]: d["slug"] for d in depts_data}
+    
     # Generate for each city
     count = 0
-    # For now, let's limit to Top 20 or all if they want "TOTAL"
-    # User said "TOTAL", so we do all. (971 is fine)
     
     # Mapping between niche key and CSV column prefix
     NICHE_TO_COL = {
@@ -130,6 +133,8 @@ def generate_demos():
     
     for row in villes:
         city_slug = row.get("slug")
+        dept_nom = row.get("departement_nom")
+        dept_slug = dept_name_to_slug.get(dept_nom, slugify(dept_nom))
         
         for niche, template_content in templates.items():
             # Get brand name from CSV URL
@@ -146,6 +151,10 @@ def generate_demos():
             # Prepare data
             data = generate_professional_data(row, niche)
             data["demo_brand_name"] = brand_name
+            data["ville_slug"] = city_slug
+            data["departement_slug"] = dept_slug
+            data["quartiers"] = row.get("quartiers", "")
+            data["fait_local"] = row.get("fait_local", "")
             
             # Split brand name for logo if possible
             parts = brand_name.split()
@@ -158,8 +167,8 @@ def generate_demos():
 
             # Variables for template
             content = template_content
-            for k, v in data.items():
-                content = content.replace("{{" + k + "}}", str(v))
+            for key, value in data.items():
+                content = content.replace("{{" + key + "}}", str(value))
             
             # Output path
             # Strategy: /output/demos/[niche]/[brand-slug]/index.html

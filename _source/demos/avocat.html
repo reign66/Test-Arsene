@@ -668,11 +668,18 @@
                 </ul>
             </div>
             <div class="f-col">
-                <h4>Bureaux</h4>
+                <h4 class="f-title">Coordonnées</h4>
                 <ul class="f-links">
-                    <li>{{ville}} : {{demo_address}}</li>
-                    <li>Tel : {{demo_phone}}</li>
-                    <li>Email : {{demo_email}}</li>
+                    <li><i data-lucide="map-pin"></i> {{demo_address}}</li>
+                    <li><i data-lucide="phone"></i> {{demo_phone}}</li>
+                    <li><i data-lucide="mail"></i> {{demo_email}}</li>
+                    <li
+                        style="margin-top:20px; color:#c5a059; font-size:0.9em; border-top:1px solid #333; padding-top:15px;">
+                        Avocat Conseil à <strong>{{ville}}</strong><br>
+                        Création site cabinet : <a
+                            href="https://agence-web-locale.fr/{{departement_slug}}/creation-site-internet-{{ville_slug}}"
+                            style="color:#fff; text-decoration:underline;">Digital {{ville}}</a>
+                    </li>
                 </ul>
             </div>
             <div class="f-col">
