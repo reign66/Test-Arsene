@@ -4,24 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centre Médical Santé+ | Soins & Prévention</title>
+    <title>SANTÉ+ | Centre Médical d'Excellence & Urgences PRO</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         :root {
-            --emerald: #10b981;
-            --blue: #0ea5e9;
-            --slate: #475569;
+            --emerald: #059669;
+            --emerald-light: #ecfdf5;
+            --blue: #0284c7;
+            --slate: #1e293b;
+            --gray: #64748b;
             --bg: #f8fafc;
+            --white: #ffffff;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -31,234 +38,564 @@
             line-height: 1.6;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        header {
-            padding: 20px 0;
-            background: #fff;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-            position: sticky;
+        /* Navigation */
+        nav {
+            position: fixed;
+            width: 100%;
             top: 0;
-            z-index: 100;
-        }
-
-        .header-content {
+            z-index: 1000;
+            padding: 20px 60px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e2e8f0;
         }
 
         .logo {
             font-size: 1.5rem;
-            font-weight: 700;
+            font-weight: 800;
             color: var(--emerald);
             display: flex;
             align-items: center;
             gap: 10px;
+            text-decoration: none;
         }
 
+        .nav-links {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--slate);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--emerald);
+        }
+
+        /* Urgent Banner */
+        .urgent-bar {
+            background: #ef4444;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            position: relative;
+            top: 80px;
+            z-index: 1;
+        }
+
+        /* Hero */
         .hero {
-            padding: 100px 0;
+            padding: 200px 20px 100px;
             background: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%);
             display: flex;
             align-items: center;
         }
 
         .hero-grid {
+            max-width: 1200px;
+            margin: 0 auto;
             display: grid;
             grid-template-columns: 1.2fr 1fr;
-            gap: 60px;
+            gap: 80px;
             align-items: center;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            color: #1e293b;
-            line-height: 1.2;
-            margin-bottom: 25px;
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            font-weight: 800;
+            color: #0f172a;
         }
 
         .hero p {
-            font-size: 1.25rem;
-            margin-bottom: 40px;
-            color: #64748b;
+            font-size: 1.3rem;
+            margin-bottom: 45px;
+            color: var(--gray);
+            font-weight: 400;
         }
 
         .btn {
             display: inline-flex;
             align-items: center;
-            gap: 10px;
-            padding: 16px 35px;
+            gap: 12px;
+            padding: 20px 45px;
             background: var(--emerald);
             color: #fff;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
             border-radius: 12px;
             transition: 0.3s;
         }
 
         .btn:hover {
-            background: #059669;
+            background: #047857;
             transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(5, 150, 105, 0.2);
         }
 
-        .services {
-            padding: 100px 0;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .service-card {
+        /* Stats */
+        .stats {
+            padding: 80px 0;
             background: #fff;
-            padding: 40px;
-            border-radius: 20px;
-            transition: 0.3s;
-            border: 1px solid #f1f5f9;
+            border-bottom: 1px solid #f1f5f9;
         }
 
-        .service-card:hover {
-            border-color: var(--emerald);
-            box-shadow: 0 10px 40px rgba(16, 185, 129, 0.1);
-        }
-
-        .service-card i {
-            color: var(--emerald);
-            margin-bottom: 25px;
-            display: block;
-        }
-
-        .service-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            color: #1e293b;
-        }
-
-        .info-bar {
-            padding: 40px 0;
-            background: #fff;
-            border-top: 1px solid #f1f5f9;
-        }
-
-        .info-grid {
+        .stats-grid {
             display: flex;
             justify-content: space-around;
-            gap: 30px;
-            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
         }
 
-        .info-item {
+        .stat-item h3 {
+            font-size: 3rem;
+            color: var(--emerald);
+            font-weight: 800;
+        }
+
+        .stat-item p {
+            color: var(--gray);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        /* Departments */
+        .section {
+            padding: 140px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-header h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .dept-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .dept-card {
+            background: #fff;
+            padding: 50px;
+            border-radius: 24px;
+            border: 1px solid #f1f5f9;
+            transition: 0.4s;
+        }
+
+        .dept-card:hover {
+            border-color: var(--emerald);
+            transform: translateY(-10px);
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.05);
+        }
+
+        .dept-card i {
+            color: var(--emerald);
+            margin-bottom: 30px;
+        }
+
+        .dept-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .dept-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+        }
+
+        .dept-card a {
+            color: var(--emerald);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 8px;
         }
 
-        .info-item h4 {
-            font-size: 1.1rem;
-            color: #1e293b;
+        /* Team */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
         }
 
-        footer {
-            padding: 60px 0;
+        .team-card {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid #f1f5f9;
             text-align: center;
-            color: #94a3b8;
+            padding-bottom: 30px;
+        }
+
+        .team-img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .team-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .team-card p {
+            color: var(--emerald);
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+
+        /* Technology */
+        .tech-section {
+            background: var(--slate);
+            color: #fff;
+            border-radius: 40px;
+            padding: 100px 60px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .tech-text h2 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            line-height: 1.1;
+        }
+
+        .tech-list {
+            list-style: none;
+            margin-top: 40px;
+        }
+
+        .tech-list li {
+            margin-bottom: 25px;
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .tech-btn {
+            width: 40px;
+            height: 40px;
+            background: var(--emerald);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        /* Contact Box */
+        .contact-box {
+            background: #fff;
+            border-radius: 30px;
+            padding: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+            box-shadow: 0 40px 100px rgba(0, 0, 0, 0.05);
+            margin-top: -100px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Footer */
+        footer {
+            padding: 150px 50px 50px;
+            background: #fff;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 80px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 30px;
+            font-weight: 800;
             font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-col li {
+            list-style: none;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        @media (max-width: 1000px) {
+
+            .hero-grid,
+            .dept-grid,
+            .team-grid,
+            .footer-grid,
+            .tech-section,
+            .contact-box {
+                grid-template-columns: 1fr;
+                flex-direction: column;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            nav {
+                padding: 20px 30px;
+            }
+
+            .nav-links {
+                display: none;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <header>
-        <div class="container header-content">
-            <div class="logo"><i data-lucide="activity" size="32"></i> SANTÉ<span>+</span></div>
-            <a href="#" class="btn" style="padding: 10px 20px;">Portail Patient</a>
-        </div>
-    </header>
+    <nav>
+        <a href="#" class="logo"><i data-lucide="heart-pulse"></i> SANTÉ<span>+</span></a>
+        <ul class="nav-links">
+            <li><a href="#specialites">Spécialités</a></li>
+            <li><a href="#equipe">Médecins</a></li>
+            <li><a href="#tech">Plateau Technique</a></li>
+            <li><a href="#rdv">Prendre RDV</a></li>
+        </ul>
+        <a href="#rdv" class="btn" style="padding: 12px 25px; font-size: 0.8rem; border-radius: 8px;">Portail
+            Patient</a>
+    </nav>
+
+    <div class="urgent-bar">
+        ⚠️ URGENCE VITALE : Composez le 15 immédiatement. Pour les petites urgences, notre centre vous accueille sans
+        RDV de 8h à 20h.
+    </div>
 
     <section class="hero">
-        <div class="container">
-            <div class="hero-grid">
-                <div class="hero-text">
-                    <h1>Votre santé, notre priorité absolue</h1>
-                    <p>Un centre multi-disciplinaire moderne pour vous accompagner à chaque étape de votre vie.</p>
-                    <a href="#" class="btn">Prendre Rendez-vous <i data-lucide="calendar"></i></a>
+        <div class="hero-grid">
+            <div data-aos="fade-right">
+                <h1>Soigner avec excellence, accompagner avec humanité.</h1>
+                <p>Découvrez un pôle médical multidisciplinaire de pointe au service de votre santé et de celle de vos
+                    proches.</p>
+                <div style="display: flex; gap: 20px;">
+                    <a href="#rdv" class="btn">Prendre RDV en ligne</a>
+                    <a href="#" class="btn"
+                        style="background: var(--white); color: var(--slate); border: 2px solid #e2e8f0;">Faire un
+                        don</a>
                 </div>
-                <div class="hero-img">
-                    <img src="https://images.unsplash.com/photo-1576091160550-2173599211d0?auto=format&fit=crop&q=80&w=600"
-                        alt="Doctor" style="width:100%; border-radius:30px; box-shadow: 0 20px 50px rgba(0,0,0,0.1);">
-                </div>
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="200">
+                <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=1200"
+                    alt="Clinic" style="width: 100%; border-radius: 40px; box-shadow: 0 40px 100px rgba(0,0,0,0.1);">
             </div>
         </div>
     </section>
 
-    <section class="services">
-        <div class="container">
-            <div class="services-grid">
-                <div class="service-card">
-                    <i data-lucide="stethoscope" size="40"></i>
-                    <h3>Médecine Générale</h3>
-                    <p>Suivi global, prévention et accompagnement pour toute la famille.</p>
-                </div>
-                <div class="service-card">
-                    <i data-lucide="baby" size="40"></i>
-                    <h3>Pédiatrie</h3>
-                    <p>Des soins adaptés pour le bien-être et la croissance de vos enfants.</p>
-                </div>
-                <div class="service-card">
-                    <i data-lucide="heart-pulse" size="40"></i>
-                    <h3>Cardiologie</h3>
-                    <p>Dépistage et suivi des pathologies cardiovasculaires.</p>
-                </div>
-                <div class="service-card">
-                    <i data-lucide="microscope" size="40"></i>
-                    <h3>Laboratoire</h3>
-                    <p>Analyses rapides et précises directement sur place.</p>
-                </div>
+    <div class="stats">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h3>45</h3>
+                <p>Médecins Spécialistes</p>
+            </div>
+            <div class="stat-item">
+                <h3>12</h3>
+                <p>Pôles d'Excellence</p>
+            </div>
+            <div class="stat-item">
+                <h3>20k</h3>
+                <p>Patients Annuels</p>
+            </div>
+            <div class="stat-item">
+                <h3>100%</h3>
+                <p>Accompagnement</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="section container" id="specialites">
+        <div class="section-header" data-aos="fade-up">
+            <h2>Pôles de Spécialités</h2>
+            <p style="color: var(--gray); max-width: 600px; margin: 0 auto;">Un diagnostic précis grâce à l'expertise
+                combinée de nos meilleurs praticiens.</p>
+        </div>
+        <div class="dept-grid">
+            <div class="dept-card" data-aos="fade-up" data-aos-delay="100">
+                <i data-lucide="activity" size="48"></i>
+                <h3>Cardiologie</h3>
+                <p>Diagnostic et traitement des pathologies cardiaques avec nos équipements ECG et échographie de
+                    dernière génération.</p>
+                <a href="#">En savoir plus <i data-lucide="arrow-right" size="16"></i></a>
+            </div>
+            <div class="dept-card" data-aos="fade-up" data-aos-delay="200">
+                <i data-lucide="baby" size="48"></i>
+                <h3>Pédiatrie</h3>
+                <p>Un environnement bienveillant dédié à la croissance et à la santé de vos enfants, de la naissance à
+                    l'adolescence.</p>
+                <a href="#">En savoir plus <i data-lucide="arrow-right" size="16"></i></a>
+            </div>
+            <div class="dept-card" data-aos="fade-up" data-aos-delay="300">
+                <i data-lucide="brain" size="48"></i>
+                <h3>Neurologie</h3>
+                <p>Prise en charge experte des troubles du système nerveux central et périphérique par nos neurologues
+                    certifiés.</p>
+                <a href="#">En savoir plus <i data-lucide="arrow-right" size="16"></i></a>
             </div>
         </div>
     </section>
 
-    <section class="info-bar">
-        <div class="container">
-            <div class="info-grid">
-                <div class="info-item">
-                    <i data-lucide="map-pin" color="#10b981"></i>
-                    <div>
-                        <h4>Notre Centre</h4>
-                        <p>12 Rue de la Santé, Paris</p>
-                    </div>
+    <section class="section container" id="equipe">
+        <div class="section-header" data-aos="fade-up">
+            <h2>Nos Praticiens Référents</h2>
+        </div>
+        <div class="team-grid">
+            <div class="team-card" data-aos="zoom-in">
+                <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=600"
+                    class="team-img" alt="Doctor">
+                <h4>Dr. Marc Simon</h4>
+                <p>Chirurgien Orthopédiste</p>
+            </div>
+            <div class="team-card" data-aos="zoom-in" data-aos-delay="100">
+                <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=600"
+                    class="team-img" alt="Doctor">
+                <h4>Dr. Sarah Leroy</h4>
+                <p>Cardiologue Clinique</p>
+            </div>
+            <div class="team-card" data-aos="zoom-in" data-aos-delay="200">
+                <img src="https://images.unsplash.com/photo-1559839734-2b71f1536780?auto=format&fit=crop&q=80&w=600"
+                    class="team-img" alt="Doctor">
+                <h4>Dr. Anne Valéry</h4>
+                <p>Pédiatrie & Néonatalogie</p>
+            </div>
+            <div class="team-card" data-aos="zoom-in" data-aos-delay="300">
+                <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=600"
+                    class="team-img" alt="Doctor">
+                <h4>Dr. Jean Roche</h4>
+                <p>Médecine Interne</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section container" id="tech">
+        <div class="tech-section" data-aos="fade-up">
+            <div class="tech-text">
+                <h2>L'innovation au service de votre diagnostic.</h2>
+                <p style="opacity: 0.8; font-size: 1.1rem;">Nous investissons chaque année dans les technologies les
+                    plus avancées pour garantir une précision absolue et une sécurité maximale à nos patients.</p>
+                <div class="tech-list">
+                    <li>
+                        <div class="tech-btn"><i data-lucide="check" size="20"></i></div>
+                        <div><strong>IRM 3 Tesla</strong> : Imagerie haute définition pour un dépistage précoce.</div>
+                    </li>
+                    <li>
+                        <div class="tech-btn"><i data-lucide="check" size="20"></i></div>
+                        <div><strong>Radiologie Numérique</strong> : Dose de rayons X réduite de 80%.</div>
+                    </li>
+                    <li>
+                        <div class="tech-btn"><i data-lucide="check" size="20"></i></div>
+                        <div><strong>Laboratoire Robotisé</strong> : Résultats d'analyses sous 4h.</div>
+                    </li>
                 </div>
-                <div class="info-item">
-                    <i data-lucide="clock" color="#10b981"></i>
-                    <div>
-                        <h4>Horaires</h4>
-                        <p>Lun - Sam : 08:00 - 20:00</p>
-                    </div>
+            </div>
+            <div class="tech-img">
+                <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=1200"
+                    alt="Tech" style="width: 100%; border-radius: 20px;">
+            </div>
+        </div>
+    </section>
+
+    <section class="section container" id="rdv" style="padding-top: 0;">
+        <div class="contact-box" data-aos="fade-up">
+            <div style="max-width: 500px;">
+                <h3 style="font-size: 2rem; margin-bottom: 20px;">Organisez votre consultation</h3>
+                <p style="color: var(--gray);">Notre secrétariat vous accompagne dans vos démarches administratives.
+                    Liaison directe avec la CPAM et toutes les mutuelles.</p>
+            </div>
+            <div style="display: flex; gap: 30px; align-items: center;">
+                <div style="text-align: right;">
+                    <span style="display: block; font-size: 1.8rem; font-weight: 800; color: var(--emerald);">01 45 66
+                        77 88</span>
+                    <span
+                        style="font-size: 0.8rem; font-weight: 700; color: var(--gray); text-transform: uppercase;">Lundi
+                        au Samedi | 8h - 20h</span>
                 </div>
-                <div class="info-item">
-                    <i data-lucide="phone" color="#10b981"></i>
-                    <div>
-                        <h4>Contact Rapide</h4>
-                        <p>01 23 45 67 89</p>
-                    </div>
-                </div>
+                <a href="#" class="btn">Prendre RDV Maintenant</a>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 Santé+. Établissement de soins certifié.</p>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <div class="logo" style="margin-bottom: 30px;">SANTÉ<span>+</span></div>
+                <p>Établissement conventionné secteur 1 & 2. Centre médical accrédité par l'ARS pour la qualité des
+                    soins et la sécurité des patients.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Hôpital</h4>
+                <li>Consultations</li>
+                <li>Urgences Proximité</li>
+                <li>Hospitalisation</li>
+                <li>Soins de Suite</li>
+            </div>
+            <div class="footer-col">
+                <h4>Patient</h4>
+                <li>Droits du Patient</li>
+                <li>Facturation & Mutuelles</li>
+                <li>Accès & Parking</li>
+                <li>Plan du Centre</li>
+            </div>
+            <div class="footer-col">
+                <h4>Rejoindre</h4>
+                <li>Dépôt de Candidature</li>
+                <li>Espace Praticiens</li>
+                <li>Formation Continue</li>
+                <li>Partenariats</li>
+            </div>
+        </div>
+        <div
+            style="border-top: 1px solid #eee; margin-top: 80px; padding-top: 40px; text-align: center; color: #cbd5e1; font-size: 0.8rem;">
+            &copy; 2025 Centre Médical Santé+. Tous droits réservés. Design Premium par Agence Web Locale.
+        </div>
     </footer>
 
-    <script>lucide.createIcons();</script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+        lucide.createIcons();
+    </script>
 </body>
 
 </html>

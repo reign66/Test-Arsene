@@ -4,20 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L'Institut Zen | Beauté & Bien-être</title>
+    <title>Sérénité d'Or | Institut de Beauté & Spa Haut de Gamme</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Quicksand:wght@300;400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@200;300;400;600&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         :root {
-            --soft-pink: #fef1f2;
-            --rose: #e11d48;
-            --beige: #f5f5f4;
-            --taupe: #44403c;
-            --gold: #c2a35d;
+            --rose: #fdf2f2;
+            --taupe: #4a4542;
+            --gold: #d4af37;
+            --white: #ffffff;
+            --beige: #f9f6f3;
         }
 
         * {
@@ -26,197 +26,506 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: 'Quicksand', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             background: var(--white);
             color: var(--taupe);
-            line-height: 1.6;
+            line-height: 1.8;
         }
 
         h1,
         h2,
-        h3 {
+        h3,
+        h4 {
             font-family: 'Cormorant Garamond', serif;
-            font-weight: 600;
+            font-weight: 500;
+            font-style: italic;
         }
 
-        .hero {
-            height: 90vh;
+        /* Navigation */
+        nav {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 25px 50px;
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            justify-content: flex-start;
-            background: linear-gradient(to right, rgba(254, 241, 242, 0.9), rgba(254, 241, 242, 0.1)), url('https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format&fit=crop&q=80&w=2000');
-            background-size: cover;
-            background-position: center;
-            padding: 0 10%;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--rose);
         }
 
-        .hero-content {
-            max-width: 600px;
-        }
-
-        .hero h1 {
-            font-size: 4.5rem;
-            line-height: 1;
-            margin-bottom: 20px;
+        .logo {
+            font-size: 1.8rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            text-decoration: none;
             color: var(--taupe);
         }
 
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--taupe);
+            text-decoration: none;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Hero */
+        .hero {
+            height: 95vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.2)), url('https://images.unsplash.com/photo-1540555700478-4be289aefcf1?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            border-bottom: 20px solid var(--rose);
+        }
+
+        .hero-inner {
+            max-width: 800px;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            line-height: 1;
+            margin-bottom: 30px;
+        }
+
         .hero p {
-            font-size: 1.4rem;
-            margin-bottom: 35px;
-            color: #666;
+            font-size: 1.2rem;
+            margin-bottom: 50px;
             font-style: italic;
+            color: #777;
+            letter-spacing: 1px;
         }
 
         .btn {
             display: inline-block;
-            padding: 15px 40px;
+            padding: 20px 50px;
             background: var(--taupe);
             color: #fff;
             text-decoration: none;
-            border-radius: 50px;
-            font-weight: 500;
-            transition: 0.3s;
-            border: 1px solid var(--taupe);
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 3px;
+            transition: 0.4s;
+            border-radius: 0;
         }
 
         .btn:hover {
-            background: transparent;
-            color: var(--taupe);
+            background: var(--gold);
+            border-radius: 40px;
         }
 
-        .services {
-            padding: 100px 20px;
+        /* Sections */
+        .section {
+            padding: 140px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
             text-align: center;
-            background: #fff;
+            margin-bottom: 100px;
         }
 
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            max-width: 1100px;
-            margin: 50px auto 0;
-        }
-
-        .service-card {
-            padding: 40px;
-            border: 1px solid var(--beige);
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-
-        .service-card:hover {
-            background: var(--soft-pink);
-            border-color: var(--rose);
-            transform: translateY(-5px);
-        }
-
-        .service-card i {
+        .section-header h2 {
+            font-size: 3.5rem;
             margin-bottom: 20px;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
             color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 4px;
         }
 
-        .service-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-        }
-
-        .insta-feed {
-            padding: 80px 20px;
-            background: var(--beige);
-            text-align: center;
-        }
-
-        .insta-grid {
+        /* Treatment Categories */
+        .category-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
-            max-width: 1000px;
-            margin: 40px auto;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
         }
 
-        .insta-img {
-            aspect-ratio: 1;
-            background: #ccc;
-            border-radius: 4px;
+        .category-card {
+            position: relative;
+            height: 500px;
             overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+            padding: 40px;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
         }
 
-        .insta-img img {
+        .category-card img {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
             object-fit: cover;
+            z-index: 1;
+            transition: 0.7s;
         }
 
-        footer {
-            padding: 60px;
+        .category-card:hover img {
+            transform: scale(1.1);
+            filter: brightness(0.7);
+        }
+
+        .category-card h3 {
+            position: relative;
+            z-index: 2;
+            font-size: 2.2rem;
+        }
+
+        .category-card span {
+            position: relative;
+            z-index: 2;
+            display: block;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+
+        /* Pricing Area */
+        .pricing {
+            background: var(--beige);
+            padding: 100px 20px;
+        }
+
+        .pricing-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .price-item h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .price-val {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: var(--gold);
+        }
+
+        /* Expert Team */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .team-card {
             text-align: center;
-            border-top: 1px solid var(--beige);
+        }
+
+        .team-img {
+            width: 100%;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 15px solid var(--rose);
+        }
+
+        .team-card h4 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+
+        .team-card p {
+            font-size: 0.8rem;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* FAQ */
+        .faq-area {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--rose);
+        }
+
+        .faq-item h4 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: var(--taupe);
+        }
+
+        /* Footer */
+        footer {
+            padding: 100px 50px 50px;
+            background: #fff;
+            border-top: 5px solid var(--rose);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 80px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+            color: var(--gold);
+            font-family: 'Montserrat';
+            font-weight: 600;
+        }
+
+        .footer-col li {
+            list-style: none;
+            margin-bottom: 12px;
+            font-size: 0.85rem;
             color: #999;
+        }
+
+        @media (max-width: 900px) {
+
+            .category-grid,
+            .pricing-list,
+            .footer-grid,
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+
+            nav {
+                padding: 20px;
+            }
+
+            .nav-links {
+                display: none;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <nav style="padding: 30px; text-align: center;">
-        <h2 style="font-size: 2rem; letter-spacing: 4px;">INSTITUT ZEN</h2>
+    <nav>
+        <a href="#" class="logo">SÉRÉNITÉ D'OR</a>
+        <ul class="nav-links">
+            <li><a href="#rituels">Rituels</a></li>
+            <li><a href="#prestations">Tarifs</a></li>
+            <li><a href="#experts">Experts</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i data-lucide="shopping-bag" size="20"></i>
     </nav>
 
     <section class="hero">
-        <div class="hero-content">
-            <h1>Révélez votre éclat naturel</h1>
-            <p>Soin visage, massages du monde et épilation haute précision dans un écrin de douceur.</p>
-            <a href="#" class="btn">Réserver mon soin</a>
+        <div class="hero-inner" data-aos="fade-up">
+            <h1>Le luxe de prendre son temps</h1>
+            <p>Une parenthèse enchantée au cœur de la ville, dédiée à l'éclat de votre visage et au repos de votre
+                esprit.</p>
+            <a href="#prestations" class="btn">Nos Rituels Beauté</a>
         </div>
     </section>
 
-    <section class="services">
-        <h2>Nos Prestations Signature</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <i data-lucide="sparkles" size="32"></i>
-                <h3>Soin Éclat</h3>
-                <p>Un rituel purifiant pour retrouver un teint frais et lumineux.</p>
+    <section class="section container" id="rituels">
+        <div class="section-header" data-aos="fade-up">
+            <p>Découvrir</p>
+            <h2>Nos Univers de Soins</h2>
+        </div>
+        <div class="category-grid">
+            <a href="#" class="category-card" data-aos="fade-up" data-aos-delay="100">
+                <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=800"
+                    alt="Face">
+                <div><span>Eclat & Pureté</span>
+                    <h3>Visage</h3>
+                </div>
+            </a>
+            <a href="#" class="category-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=800"
+                    alt="Body">
+                <div><span>Détente Absolue</span>
+                    <h3>Corps</h3>
+                </div>
+            </a>
+            <a href="#" class="category-card" data-aos="fade-up" data-aos-delay="300">
+                <img src="https://images.unsplash.com/photo-1604654894610-df4906687103?auto=format&fit=crop&q=80&w=800"
+                    alt="Nails">
+                <div><span>Finition Parfaite</span>
+                    <h3>Mains & Pieds</h3>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section class="pricing" id="prestations">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Rituels & Tarifs</h2>
             </div>
-            <div class="service-card">
-                <i data-lucide="flower-2" size="32"></i>
-                <h3>Massage Relaxant</h3>
-                <p>60 minutes de déconnexion totale pour libérer vos tensions.</p>
-            </div>
-            <div class="service-card">
-                <i data-lucide="gem" size="32"></i>
-                <h3>Manucure Russe</h3>
-                <p>Une finition parfaite et une tenue longue durée pour vos ongles.</p>
+            <div class="pricing-list" data-aos="fade-up">
+                <div>
+                    <h3 style="margin-bottom: 30px; border-left: 3px solid var(--gold); padding-left: 20px;">Visage</h3>
+                    <div class="price-item">
+                        <h4>Soin Hydrafacial (60 min)</h4><span class="price-val">120€</span>
+                    </div>
+                    <div class="price-item">
+                        <h4>Rituel Anti-Âge Global</h4><span class="price-val">95€</span>
+                    </div>
+                    <div class="price-item">
+                        <h4>Cure Éclat (3 séances)</h4><span class="price-val">250€</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 style="margin-bottom: 30px; border-left: 3px solid var(--gold); padding-left: 20px;">Corps</h3>
+                    <div class="price-item">
+                        <h4>Massage Signature (90 min)</h4><span class="price-val">140€</span>
+                    </div>
+                    <div class="price-item">
+                        <h4>Gommage & Enveloppement</h4><span class="price-val">85€</span>
+                    </div>
+                    <div class="price-item">
+                        <h4>Réflexologie Plantaire</h4><span class="price-val">65€</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="insta-feed">
-        <h2>Suivez-nous sur Instagram</h2>
-        <div class="insta-grid">
-            <div class="insta-img"><img
-                    src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=40&w=400"
-                    alt="Beauty"></div>
-            <div class="insta-img"><img
-                    src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=40&w=400"
-                    alt="Spa"></div>
-            <div class="insta-img"><img
-                    src="https://images.unsplash.com/photo-1540555700478-4be289aefcf1?auto=format&fit=crop&q=40&w=400"
-                    alt="Relax"></div>
-            <div class="insta-img"><img
-                    src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&q=40&w=400"
-                    alt="Care"></div>
+    <section class="section container" id="experts">
+        <div class="section-header" data-aos="fade-up">
+            <h2>Nos Maîtres Praticiens</h2>
+        </div>
+        <div class="team-grid">
+            <div class="team-card" data-aos="zoom-in">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=400"
+                    class="team-img" alt="Therapist">
+                <h4>Élise</h4>
+                <p>Experte Visage</p>
+            </div>
+            <div class="team-card" data-aos="zoom-in" data-aos-delay="100">
+                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=400"
+                    class="team-img" alt="Therapist">
+                <h4>Clara</h4>
+                <p>Spécialiste Massages</p>
+            </div>
+            <div class="team-card" data-aos="zoom-in" data-aos-delay="200">
+                <img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?auto=format&fit=crop&q=80&w=400"
+                    class="team-img" alt="Therapist">
+                <h4>Julie</h4>
+                <p>Nail Artist</p>
+            </div>
+            <div class="team-card" data-aos="zoom-in" data-aos-delay="300">
+                <img src="https://images.unsplash.com/photo-1549473408-963d3509939e?auto=format&fit=crop&q=80&w=400"
+                    class="team-img" alt="Therapist">
+                <h4>Léa</h4>
+                <p>Responsable Spa</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section container">
+        <div class="faq-area" data-aos="fade-up">
+            <h2 style="text-align: center; margin-bottom: 60px;">Questions Fréquentes</h2>
+            <div class="faq-item">
+                <h4>Faut-il arriver en avance ?</h4>
+                <p>Nous vous conseillons d'arriver 15 minutes avant le début de votre soin pour profiter de notre espace
+                    détente et remplir votre fiche beauté.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Puis-je offrir un soin ?</h4>
+                <p>Absolument. Nos cartes cadeaux sont valables 1 an sur l'ensemble de nos prestations et produits de
+                    vente.</p>
+            </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 Institut Zen. Pureté & Sérénité.</p>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <div class="logo" style="margin-bottom: 30px;">SÉRÉNITÉ d'OR</div>
+                <p>Votre refuge de bien-être urbain. Soins holistiques et expertise dermatologique pour une beauté
+                    rayonnante.</p>
+            </div>
+            <div class="footer-col">
+                <h4>L'Institut</h4>
+                <li>Charte Qualité</li>
+                <li>Espace Boutique</li>
+                <li>Chèques Cadeaux</li>
+                <li>Recrutement</li>
+            </div>
+            <div class="footer-col">
+                <h4>Prestations</h4>
+                <li>Femme</li>
+                <li>Homme</li>
+                <li>Soin Duo</li>
+                <li>Privatisation</li>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <li>25 Place de la Paix, 75001 Paris</li>
+                <li>01 40 41 42 43</li>
+                <li>spa@serenite-or.fr</li>
+            </div>
+        </div>
+        <div
+            style="text-align: center; margin-top: 80px; font-size: 0.7rem; color: #ccc; text-transform: uppercase; letter-spacing: 2px;">
+            &copy; 2025 Sérénité d'Or Spa. Design par Agence Web Locale.
+        </div>
     </footer>
 
-    <script>lucide.createIcons();</script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+        lucide.createIcons();
+    </script>
 </body>
 
 </html>

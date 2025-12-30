@@ -4,19 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maître Valéry | Cabinet d'Avocats au Conseil</title>
+    <title>Valéry & Associés | Cabinet d'Avocats de Prestige</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@200;300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         :root {
-            --navy: #1a252f;
-            --gold: #b38b3d;
-            --light: #f4f7f6;
+            --navy: #0f172a;
+            --navy-soft: #1e293b;
+            --gold: #c5a059;
+            --gold-light: #e2c99d;
             --white: #ffffff;
+            --slate: #f8fafc;
         }
 
         * {
@@ -25,167 +27,535 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Montserrat', sans-serif;
             background: var(--white);
             color: var(--navy);
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
         h1,
         h2,
-        h3 {
+        h3,
+        h4 {
             font-family: 'Libre Baskerville', serif;
         }
 
-        header {
-            padding: 20px 0;
-            background: var(--navy);
+        /* Navigation */
+        nav {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 40px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             color: var(--white);
-            text-align: center;
         }
 
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: inherit;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            opacity: 0.8;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 1;
+            color: var(--gold);
+        }
+
+        /* Hero */
         .hero {
-            padding: 120px 20px;
-            background: linear-gradient(rgba(26, 37, 47, 0.8), rgba(26, 37, 47, 0.8)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=2000');
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            background: linear-gradient(to right, rgba(15, 23, 42, 0.95) 30%, rgba(15, 23, 42, 0.3)), url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=2000');
             background-size: cover;
             background-position: center;
             color: var(--white);
-            text-align: center;
+            padding: 0 10%;
+        }
+
+        .hero-inner {
+            max-width: 650px;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
+            font-size: clamp(3rem, 6vw, 4.5rem);
+            line-height: 1.1;
+            margin-bottom: 30px;
+            font-weight: 700;
         }
 
         .hero p {
             font-size: 1.3rem;
-            max-width: 700px;
-            margin: 0 auto 40px;
             font-weight: 300;
+            margin-bottom: 50px;
+            opacity: 0.8;
         }
 
         .btn {
-            display: inline-block;
-            padding: 16px 40px;
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            padding: 18px 45px;
             background: var(--gold);
-            color: var(--white);
+            color: var(--navy);
             text-decoration: none;
             font-weight: 700;
+            transition: 0.4s;
+            text-transform: uppercase;
+            font-size: 0.85rem;
             letter-spacing: 1px;
-            transition: 0.3s;
-            border: 1px solid var(--gold);
         }
 
         .btn:hover {
-            background: transparent;
-            color: var(--gold);
+            background: var(--gold-light);
+            transform: translateY(-2px);
         }
 
-        .expertise {
-            padding: 100px 20px;
+        /* Trusted By Area */
+        .trusted {
+            padding: 40px 0;
+            background: #0c121e;
+            color: rgba(255, 255, 255, 0.4);
+            text-align: center;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        /* Sections */
+        .section {
+            padding: 140px 20px;
+        }
+
+        .container {
             max-width: 1200px;
             margin: 0 auto;
-            text-align: center;
         }
 
-        .expertise h2 {
-            font-size: 2.5rem;
-            margin-bottom: 60px;
+        .section-header {
+            margin-bottom: 80px;
         }
 
-        .expertise-grid {
+        .section-header h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--navy);
+        }
+
+        .section-header .line {
+            width: 60px;
+            height: 3px;
+            background: var(--gold);
+        }
+
+        /* Strategy Grid */
+        .strategy-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 40px;
         }
 
-        .expertise-card {
-            padding: 40px;
-            background: var(--light);
-            transition: 0.3s;
+        .strategy-card {
+            padding: 50px;
+            background: var(--slate);
             border-bottom: 4px solid transparent;
+            transition: 0.4s;
         }
 
-        .expertise-card:hover {
+        .strategy-card:hover {
             transform: translateY(-10px);
+            background: #fff;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.05);
             border-color: var(--gold);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
         }
 
-        .expertise-card i {
+        .strategy-card i {
             color: var(--gold);
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
-        .expertise-card h3 {
-            margin-bottom: 15px;
+        .strategy-card h3 {
+            margin-bottom: 20px;
             font-size: 1.4rem;
         }
 
-        .cta {
-            padding: 80px 20px;
-            background: var(--navy);
-            color: var(--white);
-            text-align: center;
+        /* Attorneys */
+        .attorney-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
         }
 
+        .attorney-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+
+        .attorney-img {
+            width: 100%;
+            aspect-ratio: 3/4;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        .attorney-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 30px;
+            background: linear-gradient(to top, var(--navy), transparent);
+            color: #fff;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: 0.4s;
+        }
+
+        .attorney-card:hover .attorney-info {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .attorney-card:hover .attorney-img {
+            transform: scale(1.05);
+        }
+
+        /* Contact/Consultation */
+        .consultation {
+            background: var(--navy);
+            color: #fff;
+            margin-top: 100px;
+        }
+
+        .consult-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .consult-form {
+            background: #fff;
+            padding: 60px;
+            color: var(--navy);
+            border-radius: 4px;
+            position: relative;
+            top: -60px;
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: #64748b;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #e2e8f0;
+            background: #f8fafc;
+            outline: none;
+        }
+
+        /* Footer */
         footer {
-            padding: 40px;
-            text-align: center;
+            background: #0a0e17;
+            padding: 100px 50px 50px;
+            color: #64748b;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 100px;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+            font-family: 'Montserrat';
+            font-weight: 700;
+        }
+
+        .footer-col li {
+            list-style: none;
+            margin-bottom: 15px;
             font-size: 0.9rem;
-            color: #777;
+        }
+
+        @media (max-width: 900px) {
+
+            .hero-inner,
+            .consult-grid,
+            .footer-grid,
+            .attorney-grid,
+            .strategy-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                padding: 30px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 0 5%;
+            }
+
+            .consult-form {
+                top: 0;
+                margin-bottom: 50px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <header>
-        <div class="logo" style="font-family: 'Libre Baskerville'; font-size: 1.5rem;">VALÉRY & ASSOCIES</div>
-    </header>
+    <nav>
+        <a href="#" class="logo">VALÉRY & ASSOCIÉS</a>
+        <ul class="nav-links">
+            <li><a href="#expertise">Domaines</a></li>
+            <li><a href="#cabinet">Le Cabinet</a></li>
+            <li><a href="#avocats">Équipe</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="tel:*" style="color: var(--gold); font-weight: 700; text-decoration: none;">URGENCE 24/7</a>
+    </nav>
 
     <section class="hero">
-        <h1>Défendre vos intérêts avec prestige</h1>
-        <p>Cabinet d'avocats spécialisé en Droit des Affaires et Droit Civil. Rigueur, Confidentialité et Excellence.
-        </p>
-        <a href="#contact" class="btn">Prendre Rendez-vous</a>
-    </section>
-
-    <section class="expertise">
-        <h2>Domaines d'Intervention</h2>
-        <div class="expertise-grid">
-            <div class="expertise-card">
-                <i data-lucide="briefcase" size="40"></i>
-                <h3>Droit Social</h3>
-                <p>Conseil et contentieux pour entreprises et salariés.</p>
-            </div>
-            <div class="expertise-card">
-                <i data-lucide="scale" size="40"></i>
-                <h3>Droit Civil</h3>
-                <p>Responsabilité, contrats et litiges du quotidien.</p>
-            </div>
-            <div class="expertise-card">
-                <i data-lucide="landmark" size="40"></i>
-                <h3>Patrimoine</h3>
-                <p>Stratégie de transmission et protection de vos actifs.</p>
+        <div class="hero-inner" data-aos="fade-right">
+            <h1>L'Indépendance au service de la Justice.</h1>
+            <p>Depuis plus de 40 ans, notre cabinet accompagne les entreprises et les particuliers dans leurs défis
+                juridiques les plus complexes.</p>
+            <div style="display: flex; gap: 20px;">
+                <a href="#contact" class="btn">Demander une Consultation</a>
+                <a href="#cabinet" class="btn"
+                    style="background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.3);">Voir le
+                    Cabinet</a>
             </div>
         </div>
     </section>
 
-    <section class="cta" id="contact">
-        <h2>Un litige ? Une question juridique ?</h2>
-        <p style="margin: 20px 0 35px; opacity: 0.8;">Nos experts vous rappellent sous 24 heures pour une première
-            analyse.</p>
-        <a href="tel:0140000000" class="btn">Appeler le Cabinet</a>
+    <div class="trusted">
+        <div class="container"
+            style="display: flex; justify-content: space-between; align-items: center; opacity: 0.6;">
+            <span>Inscrit au Barreau de Paris</span>
+            <span>Accompagnement International</span>
+            <span>Excellence Juridique 2025</span>
+            <span>Certification ISO 9001</span>
+        </div>
+    </div>
+
+    <section class="section container" id="expertise">
+        <div class="section-header" data-aos="fade-up">
+            <h2>Notre Approche Stratégique</h2>
+            <div class="line"></div>
+        </div>
+        <div class="strategy-grid">
+            <div class="strategy-card" data-aos="fade-up" data-aos-delay="100">
+                <i data-lucide="shield" size="40"></i>
+                <h3>Défense de Fer</h3>
+                <p>Nous construisons des boucliers juridiques inattaquables pour protéger vos actifs et votre
+                    réputation.</p>
+            </div>
+            <div class="strategy-card" data-aos="fade-up" data-aos-delay="200">
+                <i data-lucide="scale" size="40"></i>
+                <h3>Négociation d'Élite</h3>
+                <p>La victoire se gagne souvent avant le tribunal. Nos stratèges maîtrisent l'art du compromis
+                    avantageux.</p>
+            </div>
+            <div class="strategy-card" data-aos="fade-up" data-aos-delay="300">
+                <i data-lucide="landmark" size="40"></i>
+                <h3>Expertise Fiscale</h3>
+                <p>Optimisation et sécurisation de vos opérations financières au niveau national et européen.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: var(--slate);" id="avocats">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Les Associés</h2>
+                <div class="line"></div>
+            </div>
+            <div class="attorney-grid">
+                <div class="attorney-card" data-aos="zoom-in">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=600"
+                        class="attorney-img" alt="Avocat">
+                    <div class="attorney-info">
+                        <h3>Maitre Marc Valéry</h3>
+                        <p>Associé Fondateur • Droit des Affaires</p>
+                    </div>
+                </div>
+                <div class="attorney-card" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600"
+                        class="attorney-img" alt="Avocate">
+                    <div class="attorney-info">
+                        <h3>Maitre Sophie Durand</h3>
+                        <p>Associée • Droit de la Famille & Patrimoine</p>
+                    </div>
+                </div>
+                <div class="attorney-card" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=600"
+                        class="attorney-img" alt="Avocat">
+                    <div class="attorney-info">
+                        <h3>Maitre Thomas Leroy</h3>
+                        <p>Associé • Fiscalité Internationale</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section consultation">
+        <div class="container consult-grid">
+            <div class="consult-text" data-aos="fade-right">
+                <h2 style="color: #fff; font-size: 3.5rem; margin-bottom: 40px;">Parlons de votre dossier.</h2>
+                <p style="font-size: 1.2rem; opacity: 0.8; margin-bottom: 40px;">Chaque situation est unique. Nous vous
+                    offrons une première analyse stratégique de 15 minutes pour évaluer vos options juridiques et
+                    chances de succès.</p>
+                <div style="display: flex; flex-direction: column; gap: 30px;">
+                    <div style="display: flex; align-items: center; gap: 20px;">
+                        <div
+                            style="width: 50px; height: 50px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <i data-lucide="phone" size="20" color="var(--gold)"></i></div>
+                        <div>
+                            <span
+                                style="display: block; font-size: 0.8rem; opacity: 0.6; text-transform: uppercase;">Secrétariat</span>
+                            <span style="font-size: 1.2rem; font-weight: 700;">01 45 66 77 88</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 20px;">
+                        <div
+                            style="width: 50px; height: 50px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <i data-lucide="mail" size="20" color="var(--gold)"></i></div>
+                        <div>
+                            <span
+                                style="display: block; font-size: 0.8rem; opacity: 0.6; text-transform: uppercase;">Cabinet
+                                Email</span>
+                            <span style="font-size: 1.2rem; font-weight: 700;">contact@valery-associes.fr</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="consult-form" data-aos="fade-left">
+                <h3 style="margin-bottom: 40px; text-transform: uppercase; font-size: 1.2rem; letter-spacing: 2px;">
+                    Demande d'Analyse</h3>
+                <form>
+                    <div class="form-group">
+                        <label>Identité du dossier</label>
+                        <input type="text" placeholder="Nom Complet / Raison Sociale">
+                    </div>
+                    <div class="form-group">
+                        <label>Coordonnées Directes</label>
+                        <input type="text" placeholder="Email ou Téléphone">
+                    </div>
+                    <div class="form-group">
+                        <label>Nature du Litige</label>
+                        <select>
+                            <option>Droit des Affaires</option>
+                            <option>Droit Civil</option>
+                            <option>Droit de la Famille</option>
+                            <option>Fiscalité</option>
+                            <option>Autre</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Résumé de la situation</label>
+                        <textarea rows="4" placeholder="Description sommaire du dossier (Confidentiel)"></textarea>
+                    </div>
+                    <button class="btn"
+                        style="width: 100%; justify-content: center; border: none; cursor: pointer;">Envoyer au
+                        Cabinet</button>
+                </form>
+            </div>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 Cabinet Valéry. Tous droits réservés.</p>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <div class="logo" style="color: #fff; margin-bottom: 30px;">VALÉRY & ASSOCIÉS</div>
+                <p>Étude fondée en 1982. Cabinet regroupant 12 spécialités au service de l'excellence judiciaire.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Domaines</h4>
+                <li>Affaires</li>
+                <li>Pénal</li>
+                <li>Social</li>
+                <li>Immobilier</li>
+            </div>
+            <div class="footer-col">
+                <h4>Siège Social</h4>
+                <li>15 Avenue Montaigne</li>
+                <li>75008 Paris</li>
+                <li>France</li>
+            </div>
+            <div class="footer-col">
+                <h4>Mentions</h4>
+                <li>Règlement Intérieur</li>
+                <li>Confidentialité</li>
+                <li>Cookies</li>
+                <li>Honoraires</li>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 80px; font-size: 0.75rem; opacity: 0.4;">
+            &copy; 2025 Cabinet Valéry & Associés. Tous droits réservés. Photo Unsplash.
+        </div>
     </footer>
 
-    <script>lucide.createIcons();</script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+        lucide.createIcons();
+    </script>
 </body>
 
 </html>
