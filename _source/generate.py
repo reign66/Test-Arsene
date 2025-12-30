@@ -6,10 +6,11 @@ import random
 from datetime import datetime
 
 # CONFIGURATION
-SOURCE_DIR = os.path.dirname(os.path.abspath(__file__))
-OUTPUT_DIR = os.path.join(os.path.dirname(SOURCE_DIR), "output")
-TEMPLATE_PATH = os.path.join(SOURCE_DIR, "template.html")
-CSV_PATH = os.path.join(SOURCE_DIR, "villes.csv")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+OUTPUT_DIR = os.path.join(BASE_DIR, "../output")
+VILLES_PATH = os.path.join(BASE_DIR, "villes.csv")
+DEPARTEMENTS_PATH = os.path.join(BASE_DIR, "departements.json")
+TEMPLATE_PATH = os.path.join(BASE_DIR, "template.html")
 
 TEST_MODE = False  # Full generation enabled
 
@@ -53,8 +54,11 @@ def is_female_name(name):
 
 def load_data():
     villes = []
+    if not os.path.exists(VILLES_PATH):
+        print(f"❌ File not found: {VILLES_PATH}")
+        return villes
     csv.field_size_limit(1000000)
-    with open(CSV_PATH, mode='r', encoding='utf-8') as f:
+    with open(VILLES_PATH, mode='r', encoding='utf-8') as f:
         reader = csv.DictReader(f)
         for row in reader:
             villes.append(row)
@@ -123,6 +127,12 @@ def generate_site():
         os.makedirs(OUTPUT_DIR)
 
     villes = load_data()
+    
+    # Load departments for mapping
+    with open(DEPARTEMENTS_PATH, "r", encoding="utf-8") as f:
+        depts_data = json.load(f)
+    dept_name_to_slug = {d["nom"]: d["slug"] for d in depts_data}
+
     with open(TEMPLATE_PATH, "r", encoding="utf-8") as f:
         template = f.read()
 
@@ -140,6 +150,9 @@ def generate_site():
         content = template
         v_normalized = normalize_row(v)
         replacements = v_normalized.copy()
+        
+        dept_nom = v_normalized.get("departement_nom", "")
+        dept_slug = dept_name_to_slug.get(dept_nom, slugify(dept_nom))
         
         # Randomize stats (seeded by city for consistency)
         random.seed(v_normalized.get("ville", "default"))
@@ -198,7 +211,7 @@ def generate_site():
         replacements["faq_10_reponse"] = f"Aucun frais caché, c'est notre engagement. Le devis est ferme et définitif. Le tarif mensuel couvre tout : hébergement, maintenance, support technique illimité, mises à jour de sécurité. Pas d'engagement longue durée, résiliable à tout moment avec préavis de 30 jours."
         
         # Computed variables
-        replacements["slug_departement"] = slugify(v_normalized.get("departement_nom", ""))
+        replacements["slug_departement"] = dept_slug
         replacements["maillage_footer_france"] = maillage_footer
         replacements["timestamp_now"] = str(int(time.time()))
         replacements["year"] = "2025"
@@ -208,14 +221,20 @@ def generate_site():
             placeholder = "{{" + key + "}}"
             content = content.replace(placeholder, str(value))
             
-        # Write file
+        # Hierarchical Silo Structure: /output/dept-slug/creation-site-internet-ville-slug.html
+        dept_dir = os.path.join(OUTPUT_DIR, dept_slug)
+        if not os.path.exists(dept_dir):
+            os.makedirs(dept_dir)
+            
         filename = f"creation-site-internet-{v['slug']}.html"
-        output_path = os.path.join(OUTPUT_DIR, filename)
+        output_path = os.path.join(dept_dir, filename)
         
         with open(output_path, "w", encoding="utf-8") as f:
             f.write(content)
             
-        sitemap_entries.append(f"https://agence-web-locale.fr{v.get('url_page', '')}")
+        # SEO URL structure: /dept_slug/creation-site-internet-ville_slug
+        page_url = f"/{dept_slug}/creation-site-internet-{v['slug']}"
+        sitemap_entries.append(f"https://agence-web-locale.fr{page_url}")
         count += 1
 
         if count % 100 == 0:

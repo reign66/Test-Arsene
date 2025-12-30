@@ -1,141 +1,103 @@
+import csv
 import json
 import os
-import random
-import hashlib
-from datetime import datetime
+import re
+import unicodedata
 
-# Configuration
+# CONFIGURATION
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-template_path = os.path.join(BASE_DIR, "template.html")
-data_path = os.path.join(BASE_DIR, "departements.json")
-niche_path = os.path.join(BASE_DIR, "niche_data.json")
-output_dir = os.path.join(BASE_DIR, "../output_departements")
+OUTPUT_DIR = os.path.join(BASE_DIR, "../output")
+VILLES_PATH = os.path.join(BASE_DIR, "villes.csv")
+DEPARTEMENTS_PATH = os.path.join(BASE_DIR, "departements.json")
+TEMPLATE_PATH = os.path.join(BASE_DIR, "template_departement.html")
 
-def get_current_date():
-    return datetime.now().strftime("%Y-%m-%d")
+def slugify(text):
+    text = unicodedata.normalize('NFD', text).encode('ascii', 'ignore').decode('utf-8')
+    text = re.sub(r'[^\w\s-]', '', text).strip().lower()
+    return re.sub(r'[-\s]+', '-', text)
 
-def get_stable_random(seed_str, min_val, max_val):
-    period = datetime.now().isocalendar()[1] // 2
-    seed_data = f"{seed_str}-{period}"
-    seed_hash = int(hashlib.md5(seed_data.encode()).hexdigest(), 16)
-    random.seed(seed_hash)
-    val = random.randint(min_val, max_val)
-    random.seed()
-    return val
+def load_data():
+    villes = []
+    if not os.path.exists(VILLES_PATH):
+        print(f"❌ File not found: {VILLES_PATH}")
+        return villes
+    with open(VILLES_PATH, "r", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            villes.append(row)
+    return villes
 
-def generate_dept_pages():
-    if not os.path.exists(output_dir):
-        os.makedirs(output_dir)
-
-    with open(template_path, "r", encoding="utf-8") as f:
-        template_content = f.read()
-
-    with open(data_path, "r", encoding="utf-8") as f:
-        departements = json.load(f)
-
-    with open(niche_path, "r", encoding="utf-8") as f:
-        niche = json.load(f)
-
-    print(f"Generating department pages for niche: {niche['niche_name']}")
-    count = 0
+def generate_departements():
+    print("🚀 Starting Department Generation...")
     
-    # Generate common sections once
-    services_html = ""
-    for s in niche["services"]:
-        badge = f'<div class="card-badge">{s["badge"]}</div>' if "badge" in s else ""
-        services_html += f'''
-            <div class="service-card reveal">
-                {badge}
-                <div class="service-icon"><i data-lucide="{s["icon"].lower()}"></i></div>
-                <h3>{s["title"]}</h3>
-                <p>{s["description"]}</p>
-                <div class="service-price">{s["price"]}</div>
-            </div>
-        '''
+    if not os.path.exists(OUTPUT_DIR):
+        os.makedirs(OUTPUT_DIR)
 
-    process_html = ""
-    for p in niche["process"]:
-        process_html += f'''
-            <div class="process-step reveal">
-                <div class="step-num">{p["step"]}</div>
-                <div class="step-content">
-                    <h4>{p["title"]}</h4>
-                    <p>{p["text"]}</p>
-                </div>
-            </div>
-        '''
+    villes = load_data()
+    with open(DEPARTEMENTS_PATH, "r", encoding="utf-8") as f:
+        depts_data = json.load(f)
+    
+    with open(TEMPLATE_PATH, "r", encoding="utf-8") as f:
+        template = f.read()
 
-    pricing_html = ""
-    for pr in niche["pricing"]:
-        is_featured = "featured" if pr.get("badge") == "POPULAIRE" else ""
-        badge = f'<div class="card-badge" style="top:25px; right:-25px;">{pr["badge"]}</div>' if "badge" in pr else ""
-        features_html = "".join([f'<li><i data-lucide="check-circle"></i> {f}</li>' for f in pr["features"]])
-        pricing_html += f'''
-            <div class="price-card {is_featured} reveal">
-                {badge}
-                <div class="price-name">{pr["name"]}</div>
-                <div class="price-value">{pr["price"]}</div>
-                <div class="price-for">{pr["for"]}</div>
-                <ul class="price-features">
-                    {features_html}
-                </ul>
-                <a href="tel:01XX" class="btn {'btn-primary' if is_featured else ''}" style="width:100%; display:block; border: 1px solid var(--primary);">Choisir</a>
-            </div>
-        '''
+    # Group cities by department name
+    dept_to_villes = {}
+    for v in villes:
+        d_nom = v.get("departement_nom")
+        if d_nom:
+            if d_nom not in dept_to_villes:
+                dept_to_villes[d_nom] = []
+            dept_to_villes[d_nom].append(v)
 
-    for dept in departements:
-        nom = dept.get("nom", "")
-        slug = dept.get("slug", "").lower()
-        code = dept.get("code", "")
+    count = 0
+    for dept in depts_data:
+        nom = dept["nom"]
+        slug = dept["slug"]
+        code = dept["code"]
         
-        page_title = f"Agence Web {nom} ({code}) - Création de Site Internet & SEO - {niche['domain']}"
-
-        # Simple FAQ for departments
-        faq_html = ""
-        for item in niche["faq"][:3]: # Only use first 3 for dept pages
-            faq_html += f'''
-                <div class="faq-item">
-                    <button class="faq-btn">
-                        {item["q"].replace("{{ville}}", nom)}
-                        <i data-lucide="chevron-down" class="faq-icon"></i>
-                    </button>
-                    <div class="faq-content">
-                        <p>{item["a"].replace("{{ville}}", nom)}</p>
-                    </div>
-                </div>
+        dept_villes = dept_to_villes.get(nom, [])
+        if not dept_villes:
+            continue
+            
+        # Sort cities by population or name (defaulting to name for consistency)
+        dept_villes.sort(key=lambda x: x.get("ville", ""))
+        
+        villes_html = ""
+        for v in dept_villes:
+            # Important: Link to the SILO path /[dept_slug]/creation-site-internet-[ville_slug]
+            city_url = f"/{slug}/creation-site-internet-{v['slug']}"
+            villes_html += f'''
+            <div class="city-card">
+                <h3>{v['ville']}</h3>
+                <p style="font-size:0.85rem; color:#636e72; margin-bottom:15px;">Expertise web locale pour {v.get('gentile', 'les professionnels')} de {v['ville']}.</p>
+                <a href="{city_url}"><i data-lucide="external-link" size="16"></i> Voir l'offre</a>
+            </div>
             '''
-        
+
         replacements = {
-            "{{ville}}": nom,
-            "{{page_title}}": page_title,
-            "{{domain}}": niche["domain"],
-            "{{page_url}}": f"{niche['base_path']}/departement-{slug}.html",
-            "{{code_postal}}": code,
-            "{{telephone}}": niche["contact"]["phone"],
-            "{{date_modified}}": get_current_date(),
-            "{{services_html}}": services_html,
-            "{{process_html}}": process_html,
-            "{{pricing_html}}": pricing_html,
-            "{{faq_html}}": faq_html,
-            "{{maillage_interne}}": "", # Could add top cities of the dept here
-            "{{departement_nom}}": nom,
-            "{{image_url}}": f"https://{niche['domain']}/assets/dept-{slug}.jpg",
-            "{{year}}": datetime.now().year,
-            "{{words_json}}": json.dumps(niche["hero"]["words"], ensure_ascii=False)
+            "departement_nom": nom,
+            "departement_code": code,
+            "villes_maillage": villes_html,
+            "meta_title": f"Création de Site Internet en {nom} ({code}) | Agence Web Locale",
+            "meta_description": f"Besoin d'un site web professionnel en {nom} ? Nous créons des sites optimisés pour les TPE et artisans de toutes les communes du département {code}.",
+            "url_page": f"/departement-{slug}",
+            "dept_slug": slug
         }
 
-        content = template_content
+        content = template
         for key, value in replacements.items():
-            content = content.replace(key, str(value))
-
+            placeholder = "{{" + key + "}}"
+            content = content.replace(placeholder, str(value))
+            
+        # Write file as departement-[slug].html at root of output
         filename = f"departement-{slug}.html"
-        filepath = os.path.join(output_dir, filename)
+        output_path = os.path.join(OUTPUT_DIR, filename)
         
-        with open(filepath, "w", encoding="utf-8") as out:
-            out.write(content)
+        with open(output_path, "w", encoding="utf-8") as f:
+            f.write(content)
         count += 1
 
-    print(f"✅ Generated {count} department pages in {output_dir}")
+    print(f"🏁 Department Generation Complete! {count} pages in /output")
 
 if __name__ == "__main__":
-    generate_dept_pages()
+    generate_departements()

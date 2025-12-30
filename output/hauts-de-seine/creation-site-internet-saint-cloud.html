@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Création Site Internet Saint-Cloud | 0€ + 150€/mois | Agence Web</title>
+    <meta name="description" content="Agence web à Saint-Cloud. Création site internet pour TPE/PME Clodoaldiens. ✓ 0€ création ✓ 150€/mois tout compris ✓ En ligne en 2 semaines ✓ Devis gratuit">
+    <link rel="canonical" href="https://agence-web-locale.fr/creation-site-internet-saint-cloud">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Création Site Internet Saint-Cloud | 0€ + 150€/mois | Agence Web">
+    <meta property="og:description" content="Agence web à Saint-Cloud. Création site internet pour TPE/PME Clodoaldiens. ✓ 0€ création ✓ 150€/mois tout compris ✓ En ligne en 2 semaines ✓ Devis gratuit">
+    <meta property="og:url" content="https://agence-web-locale.fr/creation-site-internet-saint-cloud">
+    <meta property="og:image" content="https://agence-web-locale.fr/assets/og-image.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="Agence Web Locale">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Création Site Internet Saint-Cloud | 0€ + 150€/mois | Agence Web">
+    <meta name="twitter:description" content="Agence web à Saint-Cloud. Création site internet pour TPE/PME Clodoaldiens. ✓ 0€ création ✓ 150€/mois tout compris ✓ En ligne en 2 semaines ✓ Devis gratuit">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Critical CSS Inline -->
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --primary-light: #34495e;
+            --primary-dark: #1a252f;
+            --secondary: #e17055;
+            --secondary-light: #e88a73;
+            --secondary-dark: #c0392b;
+            --accent: #27ae60;
+            --accent-light: #2ecc71;
+            --dark: #1e272e;
+            --gray: #7f8c8d;
+            --gray-light: #bdc3c7;
+            --light: #fdfcfb;
+            --cream: #f8f5f2;
+            --white: #ffffff;
+            --shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
+            --radius: 12px;
+            --radius-sm: 8px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--dark);
+            background: var(--light);
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--primary);
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 600;
+            font-size: 15px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(225, 112, 85, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(225, 112, 85, 0.5);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-gray {
+            background: var(--cream);
+        }
+
+        .section-dark {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            padding: 15px 0;
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            padding: 10px 0;
+            box-shadow: var(--shadow);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--primary);
+            font-weight: 500;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .mobile-menu-btn span {
+            width: 25px;
+            height: 2px;
+            background: var(--primary);
+            transition: all 0.3s ease;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 140px 0 100px;
+            background: linear-gradient(135deg, var(--light) 0%, #e8f4f8 50%, var(--cream) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(225, 112, 85, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .badge-hero {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--white);
+            color: var(--accent);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            box-shadow: var(--shadow);
+        }
+
+        .badge-hero .stars {
+            color: #f1c40f;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .hero-accroche {
+            font-size: 1.2rem;
+            color: var(--gray);
+            margin-bottom: 12px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-sub {
+            font-size: 1.1rem;
+            color: var(--primary);
+            font-weight: 500;
+            margin-bottom: 40px;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--gray);
+        }
+
+        /* Description */
+        .description-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .description-content p {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+
+        .info-box {
+            background: var(--cream);
+            padding: 24px;
+            border-radius: var(--radius);
+            margin-top: 30px;
+            border-left: 4px solid var(--secondary);
+        }
+
+        .info-box p {
+            margin-bottom: 12px;
+        }
+
+        .info-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Section Spacing */
+        section+section {
+            margin-top: 20px;
+        }
+
+        .section-gray+section,
+        section+.section-gray {
+            margin-top: 0;
+        }
+
+
+        /* Services Cards */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 32px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-card.featured {
+            border: 2px solid var(--secondary);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--secondary);
+            color: var(--white);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .service-price {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-bottom: 24px;
+        }
+
+        .service-features li {
+            padding: 8px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .service-features li::before {
+            content: '✓';
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .promo-code {
+            text-align: center;
+            margin-top: 12px;
+            font-size: 0.9rem;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* Portfolio */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .portfolio-item {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .portfolio-item a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 24px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .portfolio-item:hover a {
+            color: var(--secondary);
+        }
+
+        .portfolio-icon {
+            font-size: 1.5rem;
+        }
+
+        /* Process Steps */
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            position: relative;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 10%;
+            right: 10%;
+            height: 2px;
+            background: var(--gray-light);
+            z-index: 0;
+        }
+
+        .step-item {
+            flex: 1;
+            min-width: 150px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--white);
+            border: 3px solid var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--secondary);
+            margin: 0 auto 16px;
+        }
+
+        .step-item:last-child .step-number {
+            background: var(--secondary);
+            color: var(--white);
+        }
+
+        .step-icon {
+            font-size: 1.5rem;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .step-item h4 {
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+
+        .step-item p {
+            font-size: 0.85rem;
+            color: var(--gray);
+        }
+
+        /* Testimonial */
+        .testimonial-card {
+            background: var(--white);
+            border-left: 5px solid var(--secondary);
+            padding: 40px;
+            box-shadow: var(--shadow);
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 0 var(--radius) var(--radius) 0;
+        }
+
+        .testimonial-text {
+            font-size: 1.15rem;
+            font-style: italic;
+            color: var(--dark);
+            margin-bottom: 24px;
+            line-height: 1.8;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .avatar-img {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--cream);
+        }
+
+        .author-info strong {
+            display: block;
+            color: var(--primary);
+            font-size: 1rem;
+        }
+
+        .author-info span {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .testimonial-stars {
+            margin-left: auto;
+            color: #f1c40f;
+            font-size: 1.2rem;
+        }
+
+        /* FAQ */
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        details {
+            background: var(--white);
+            margin-bottom: 12px;
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        summary {
+            padding: 20px 24px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--primary);
+            transition: all 0.3s ease;
+        }
+
+        summary:hover {
+            color: var(--secondary);
+        }
+
+        summary::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--secondary);
+            transition: transform 0.3s ease;
+        }
+
+        details[open] summary::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            padding: 0 24px 20px;
+            color: var(--gray);
+            line-height: 1.7;
+        }
+
+        /* Contact Form */
+        .contact-wrapper {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .form-input {
+            padding: 16px 20px;
+            border: 2px solid var(--gray-light);
+            border-radius: var(--radius-sm);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: var(--white);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 3px rgba(225, 112, 85, 0.1);
+        }
+
+        .form-input::placeholder {
+            color: var(--gray);
+        }
+
+        textarea.form-input {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Maillage */
+        .maillage-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 20px;
+        }
+
+        .maillage-links a {
+            color: var(--primary);
+            padding: 6px 12px;
+            background: var(--white);
+            border-radius: 50px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .maillage-links a:hover {
+            background: var(--secondary);
+            color: var(--white);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 16px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col p,
+        .footer-col li {
+            opacity: 0.8;
+            line-height: 2;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-departments {
+            font-size: 0.8rem;
+            opacity: 0.6;
+            text-align: justify;
+            line-height: 2;
+        }
+
+        .footer-departments a {
+            color: var(--white);
+            margin-right: 8px;
+        }
+
+        .footer-departments a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.6;
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            .hero {
+                padding: 120px 0 80px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-stats {
+                gap: 24px;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            .process-steps::before {
+                display: none;
+            }
+
+            .process-steps {
+                gap: 30px;
+            }
+
+            .step-item {
+                min-width: 100%;
+            }
+
+            .testimonial-author {
+                flex-wrap: wrap;
+            }
+
+            .testimonial-stars {
+                margin-left: 0;
+                margin-top: 16px;
+                width: 100%;
+            }
+        }
+    </style>
+
+    <!-- External CSS (non-critical) -->
+    <link rel="stylesheet" href="/assets/style.css?v=3">
+
+    <!-- Schema 1: LocalBusiness -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Agence Web Saint-Cloud",
+        "description": "Agence web à Saint-Cloud. Création site internet pour TPE/PME Clodoaldiens. ✓ 0€ création ✓ 150€/mois tout compris ✓ En ligne en 2 semaines ✓ Devis gratuit",
+        "image": "https://agence-web-locale.fr/assets/og-image.jpg",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Saint-Cloud",
+            "addressRegion": "Hauts-de-Seine",
+            "addressCountry": "FR"
+        },
+        "areaServed": [
+            {"@type": "City", "name": "Saint-Cloud"},
+            {"@type": "City", "name": "Boulogne-Billancourt"},
+            {"@type": "City", "name": "Nanterre"},
+            {"@type": "City", "name": "Asnières-sur-Seine"}
+        ],
+        "telephone": "+33123456789",
+        "priceRange": "€€",
+        "url": "https://agence-web-locale.fr/creation-site-internet-saint-cloud",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "149"
+        }
+    }
+    </script>
+
+    <!-- Schema 2: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://agence-web-locale.fr/"},
+            {"@type": "ListItem", "position": 2, "name": "Hauts-de-Seine", "item": "https://agence-web-locale.fr/departement/hauts-de-seine"},
+            {"@type": "ListItem", "position": 3, "name": "Saint-Cloud"}
+        ]
+    }
+    </script>
+
+    <!-- Schema 3: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": "Combien coûte un site internet à Saint-Cloud ?", "acceptedAnswer": {"@type": "Answer", "text": "À Saint-Cloud, nous proposons une offre transparente : 0€ de création et 150€/mois tout compris. Avec le code SAINTCLO, bénéficiez de -10% soit 135€/mois la première année. Contrairement aux agences qui demandent 2000-5000€ d'avance, vous gardez votre trésorerie. Hébergement, maintenance, modifications et support inclus."}},
+            {"@type": "Question", "name": "Quel délai pour créer un site web à Saint-Cloud ?", "acceptedAnswer": {"@type": "Answer", "text": "Votre site sera en ligne en 2 semaines maximum. Notre processus est simple : 1) Appel découverte de 20min 2) Maquette sous 5 jours 3) Vos retours 4) Mise en ligne. On gère tout de A à Z pendant que vous vous concentrez sur votre activité à Saint-Cloud."}},
+            {"@type": "Question", "name": "Pourquoi choisir une agence web locale à Saint-Cloud ?", "acceptedAnswer": {"@type": "Answer", "text": "Proximité = réactivité. On connaît Saint-Cloud, son économie, ses quartiers, la concurrence locale. On sait ce que cherchent les Clodoaldiens. Besoin d'une modification urgente ? On intervient sous 24h, pas dans 2 semaines. Et on parle la même langue que vos clients."}},
+            {"@type": "Question", "name": "Quels types de sites créez-vous à Saint-Cloud ?", "acceptedAnswer": {"@type": "Answer", "text": "Sites vitrines, sites de réservation, portfolios, landing pages. Tous optimisés pour le référencement local à Saint-Cloud et sa région. Responsive mobile, rapides (score Google > 90), sécurisés HTTPS. Parfaitement adaptés aux TPE, artisans, commerçants et indépendants Clodoaldiens."}},
+            {"@type": "Question", "name": "Mon site sera-t-il visible sur Google à Saint-Cloud ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, le SEO local est inclus. Chaque site est optimisé pour les recherches 'Saint-Cloud' : balises title/meta, Google Business Profile, vitesse optimisée, mobile-first. Nos clients Clodoaldiens apparaissent en première page sur leurs mots-clés locaux en 2-3 mois."}},
+            {"@type": "Question", "name": "Le site m'appartient-il vraiment après création à Saint-Cloud ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, à 100%. Contrairement aux plateformes de location comme Wix ou Squarespace, vous êtes propriétaire de votre nom de domaine et du code source. À Saint-Cloud, nous vous remettons tous les accès et fichiers sources à la fin du projet. Aucune dépendance."}},
+            {"@type": "Question", "name": "L'hébergement et le nom de domaine sont-ils inclus ?", "acceptedAnswer": {"@type": "Answer", "text": "Tout est inclus dans le forfait mensuel : hébergement haute performance sur serveurs français, nom de domaine (.fr ou .com), certificat SSL (cadenas vert HTTPS), sauvegardes automatiques quotidiennes, et monitoring 24/7. Vous n'avez rien à gérer techniquement."}},
+            {"@type": "Question", "name": "Mon site sera-t-il vraiment adapté aux mobiles ?", "acceptedAnswer": {"@type": "Answer", "text": "Absolument. En 2025, plus de 70% des recherches locales à Saint-Cloud se font sur smartphone. Nous appliquons une approche 'Mobile First' : votre site est conçu d'abord pour mobile, puis adapté aux tablettes et PC. Google privilégie les sites mobile-friendly dans ses résultats."}},
+            {"@type": "Question", "name": "Puis-je modifier le contenu de mon site moi-même ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, c'est vous qui décidez. Sur demande, nous intégrons un panneau d'administration simple et intuitif (type WordPress) qui vous permet de modifier vos horaires, ajouter des photos, publier des actualités ou créer des pages, sans toucher une ligne de code. Formation incluse."}},
+            {"@type": "Question", "name": "Y a-t-il des frais cachés ou des engagements ?", "acceptedAnswer": {"@type": "Answer", "text": "Aucun frais caché, c'est notre engagement. Le devis est ferme et définitif. Le tarif mensuel couvre tout : hébergement, maintenance, support technique illimité, mises à jour de sécurité. Pas d'engagement longue durée, résiliable à tout moment avec préavis de 30 jours."}}
+        ]
+    }
+    </script>
+</head>
+
+<body>
+    <!-- 1. HEADER -->
+    <header id="header">
+        <div class="container header-content">
+            <a href="/" class="logo">Agence Web <span>Locale</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Réalisations</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="btn btn-primary">Devis Gratuit</a>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- 2. BREADCRUMBS -->
+    <nav class="container" style="padding-top: 90px; font-size: 0.9rem; color: var(--gray);">
+        <a href="/" style="color: var(--gray);">Accueil</a> ›
+        <a href="/departement/hauts-de-seine" style="color: var(--gray);">Hauts-de-Seine</a> ›
+        <span style="color: var(--primary);">Saint-Cloud</span>
+    </nav>
+
+    <!-- 3. HERO -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content reveal">
+                <div class="badge-hero">
+                    <span class="stars">★★★★★</span>
+                    <span>4.9/5 - 149+ avis</span>
+                    <span style="margin-left: 8px; padding-left: 8px; border-left: 1px solid rgba(0,0,0,0.1);">Mis à
+                        jour décembre 2025</span>
+                </div>
+
+                <h1>Création de Site Internet à Saint-Cloud</h1>
+
+                <p class="hero-accroche">Solutions web sur mesure pour entreprises à Saint-Cloud, pour une visibilité locale renforcée et durable.</p>
+                <p class="hero-sub">Accompagnement digital pour artisans et commerçants de Saint-Cloud, avec des sites fonctionnels qui attirent de nouveaux clients.</p>
+
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">Lancer mon projet →</a>
+                    <a href="#portfolio" class="btn btn-outline">Voir nos réalisations</a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">43+</div>
+                        <div class="stat-label">Sites créés</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">14j</div>
+                        <div class="stat-label">Délai moyen</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">4.9/5</div>
+                        <div class="stat-label">Sur Google</div>
+                    </div>
+                </div>
+
+                <!-- FOMO Banner -->
+                <div
+                    style="margin-top: 30px; background: linear-gradient(135deg, #fff9e6 0%, #fff3cd 100%); border: 1px solid #ffc107; border-radius: 50px; padding: 12px 24px; display: inline-flex; align-items: center; gap: 12px; font-size: 0.9rem;">
+                    <span
+                        style="background: #e17055; color: white; padding: 4px 10px; border-radius: 20px; font-weight: 700; font-size: 0.8rem;">🔥
+                        3 places</span>
+                    <span>restantes ce mois à Saint-Cloud • <strong>Dernier site livré :
+                            décembre 2025</strong></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. DESCRIPTION VILLE -->
+    <section class="container reveal">
+        <div class="description-content">
+            <p>L'économie de Saint-Cloud est dynamique, portée par ses commerces de proximité et ses services, tout en bénéficiant de son cadre privilégié. Les TPE ont besoin d'une présence en ligne solide pour présenter leurs offres, rassurer leur clientèle locale et être facilement trouvées. Un site web est essentiel pour convertir les prospects et communiquer efficacement.</p>
+            <p>Notre agence se positionne comme un partenaire de proximité à Saint-Cloud. Nous comprenons les spécificités de votre marché local et vos ambitions. Nous concevons des stratégies digitales adaptées, par exemple pour les professionnels du quartier de Montretout, en offrant un support réactif et une expertise locale concrète.</p>
+
+            <div class="info-box">
+                <p><strong>🏘️ Quartiers desservis :</strong> Montretout, Val d'Or, Centre-ville, Coteaux, Les Milons</p>
+                <p><strong>💡 Le saviez-vous ?</strong> Le Domaine national de Saint-Cloud, ancien site d'un château royal, offre un vaste espace vert historique prisé des habitants et visiteurs.</p>
+            </div>
+
+            <!-- Thematic Portfolio Links for SEO -->
+            <div
+                style="margin-top: 30px; padding: 20px; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 12px;">
+                <p style="margin-bottom: 12px; font-weight: 600; color: var(--primary);">🎯 Nos réalisations pour les
+                    professionnels de Saint-Cloud :</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                    <a href="https://les-delices-du-sentier.sites-restaurants.fr" target="_blank" rel="noopener"
+                        style="background: white; padding: 8px 16px; border-radius: 50px; font-size: 0.9rem; color: var(--primary); box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: all 0.3s;">🍽️
+                        Restaurant à Saint-Cloud</a>
+                    <a href="https://sarl-dupuis-domo.sitesartisans.fr" target="_blank" rel="noopener"
+                        style="background: white; padding: 8px 16px; border-radius: 50px; font-size: 0.9rem; color: var(--primary); box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: all 0.3s;">🛠️
+                        Artisan à Saint-Cloud</a>
+                    <a href="https://chez-lea-coiffure.sites-beaute.fr" target="_blank" rel="noopener"
+                        style="background: white; padding: 8px 16px; border-radius: 50px; font-size: 0.9rem; color: var(--primary); box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: all 0.3s;">💇
+                        Salon beauté à Saint-Cloud</a>
+                    <a href="https://l-adresse-saint-cloud.sites-immobiliers.fr" target="_blank" rel="noopener"
+                        style="background: white; padding: 8px 16px; border-radius: 50px; font-size: 0.9rem; color: var(--primary); box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: all 0.3s;">🏠
+                        Agence immo à Saint-Cloud</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. SERVICES & TARIFS -->
+    <section id="services" class="section-gray reveal">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 50px;">Nos Offres Création de Site</h2>
+
+            <div class="services-grid">
+                <!-- Card 1: Vitrine -->
+                <div class="service-card">
+                    <h3>Site Vitrine</h3>
+                    <div class="service-price">0€ + 150€/mois</div>
+                    <ul class="service-features">
+                        <li>Design sur mesure</li>
+                        <li>Optimisé SEO Local</li>
+                        <li>Hébergement inclus</li>
+                        <li>Certificat SSL</li>
+                        <li>Support réactif</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline" style="width: 100%;">Choisir</a>
+                </div>
+
+                <!-- Card 2: Vitrine+ (Featured) -->
+                <div class="service-card featured">
+                    <span class="service-badge">Populaire</span>
+                    <h3>Vitrine +</h3>
+                    <div class="service-price">0€ + 250€/mois</div>
+                    <ul class="service-features">
+                        <li>Tout pack Vitrine</li>
+                        <li>Blog & Actualités</li>
+                        <li>1h maintenance/mois</li>
+                        <li>Statistiques avancées</li>
+                        <li>Priorité support</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary" style="width: 100%;">Choisir</a>
+                    <p class="promo-code">Code <strong>SAINTCLO</strong> = -10%</p>
+                </div>
+
+                <!-- Card 3: E-commerce -->
+                <div class="service-card">
+                    <h3>E-Commerce</h3>
+                    <div class="service-price">Sur Devis</div>
+                    <ul class="service-features">
+                        <li>Boutique en ligne</li>
+                        <li>Paiement sécurisé</li>
+                        <li>Click & Collect</li>
+                        <li>Gestion stocks</li>
+                        <li>Formation incluse</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline" style="width: 100%;">Demander</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. PORTFOLIO -->
+    <section id="portfolio" class="container reveal">
+        <h2 style="text-align: center; margin-bottom: 50px;">Nos Réalisations</h2>
+
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <a href="https://les-delices-du-sentier.sites-restaurants.fr" target="_blank" rel="noopener">
+                    <span class="portfolio-icon">🍽️</span>
+                    <span>Restaurant</span>
+                </a>
+            </div>
+            <div class="portfolio-item">
+                <a href="https://sarl-dupuis-domo.sitesartisans.fr" target="_blank" rel="noopener">
+                    <span class="portfolio-icon">🛠️</span>
+                    <span>Artisan</span>
+                </a>
+            </div>
+            <div class="portfolio-item">
+                <a href="https://chez-lea-coiffure.sites-beaute.fr" target="_blank" rel="noopener">
+                    <span class="portfolio-icon">💇</span>
+                    <span>Beauté</span>
+                </a>
+            </div>
+            <div class="portfolio-item">
+                <a href="https://l-adresse-saint-cloud.sites-immobiliers.fr" target="_blank" rel="noopener">
+                    <span class="portfolio-icon">🏠</span>
+                    <span>Immobilier</span>
+                </a>
+            </div>
+            <div class="portfolio-item">
+                <a href="https://nicolas-law.sites-avocats.fr" target="_blank" rel="noopener">
+                    <span class="portfolio-icon">⚖️</span>
+                    <span>Avocat</span>
+                </a>
+            </div>
+            <div class="portfolio-item">
+                <a href="https://centre-soins-saint-cloud.sites-sante.fr" target="_blank" rel="noopener">
+                    <span class="portfolio-icon">⚕️</span>
+                    <span>Santé</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. PROCESSUS -->
+    <section class="section-gray reveal">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 50px;">Votre projet en 5 étapes</h2>
+
+            <div class="process-steps">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <span class="step-icon">💬</span>
+                    <h4>Échange</h4>
+                    <p>15 min pour cibler vos besoins</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <span class="step-icon">📄</span>
+                    <h4>Devis</h4>
+                    <p>Gratuit et détaillé</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <span class="step-icon">🎨</span>
+                    <h4>Maquette</h4>
+                    <p>Validation du design</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <span class="step-icon">💻</span>
+                    <h4>Développement</h4>
+                    <p>Optimisé SEO & Mobile</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">5</div>
+                    <span class="step-icon">🚀</span>
+                    <h4>Lancement</h4>
+                    <p style="color: var(--secondary); font-weight: 600;">Mise en ligne !</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. TÉMOIGNAGE -->
+    <section id="temoignage" class="container reveal">
+        <h2 style="text-align: center; margin-bottom: 50px;">Ce que nos clients disent</h2>
+
+        <div class="testimonial-card">
+            <p class="testimonial-text">"Arnaud, ébéniste au Val d'Or, a vu son carnet de commandes se remplir après la refonte de son site internet. La clarté de sa vitrine digitale a grandement amélioré sa visibilité auprès de la clientèle locale."</p>
+
+            <div class="testimonial-author">
+                <img src="https://ui-avatars.com/api/?name=Arnaud&background=2c3e50&color=fff&size=150&font-size=0.4&bold=true" alt="Arnaud, client Ébéniste à Saint-Cloud"
+                    class="avatar-img" loading="lazy" style="background: #f0f0f0;">
+                <div class="author-info">
+                    <strong>Arnaud</strong>
+                    <span>Ébéniste à Val d'Or</span>
+                </div>
+                <div class="testimonial-stars">★★★★★</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. FAQ -->
+    <section id="faq" class="section-gray reveal">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 50px;">Questions Fréquentes</h2>
+
+            <div class="faq-list">
+                <!-- FAQ 1-5 from CSV -->
+                <details>
+                    <summary>Combien coûte un site internet à Saint-Cloud ?</summary>
+                    <div class="faq-answer">À Saint-Cloud, nous proposons une offre transparente : 0€ de création et 150€/mois tout compris. Avec le code SAINTCLO, bénéficiez de -10% soit 135€/mois la première année. Contrairement aux agences qui demandent 2000-5000€ d'avance, vous gardez votre trésorerie. Hébergement, maintenance, modifications et support inclus.</div>
+                </details>
+
+                <details>
+                    <summary>Quel délai pour créer un site web à Saint-Cloud ?</summary>
+                    <div class="faq-answer">Votre site sera en ligne en 2 semaines maximum. Notre processus est simple : 1) Appel découverte de 20min 2) Maquette sous 5 jours 3) Vos retours 4) Mise en ligne. On gère tout de A à Z pendant que vous vous concentrez sur votre activité à Saint-Cloud.</div>
+                </details>
+
+                <details>
+                    <summary>Pourquoi choisir une agence web locale à Saint-Cloud ?</summary>
+                    <div class="faq-answer">Proximité = réactivité. On connaît Saint-Cloud, son économie, ses quartiers, la concurrence locale. On sait ce que cherchent les Clodoaldiens. Besoin d'une modification urgente ? On intervient sous 24h, pas dans 2 semaines. Et on parle la même langue que vos clients.</div>
+                </details>
+
+                <details>
+                    <summary>Quels types de sites créez-vous à Saint-Cloud ?</summary>
+                    <div class="faq-answer">Sites vitrines, sites de réservation, portfolios, landing pages. Tous optimisés pour le référencement local à Saint-Cloud et sa région. Responsive mobile, rapides (score Google > 90), sécurisés HTTPS. Parfaitement adaptés aux TPE, artisans, commerçants et indépendants Clodoaldiens.</div>
+                </details>
+
+                <details>
+                    <summary>Mon site sera-t-il visible sur Google à Saint-Cloud ?</summary>
+                    <div class="faq-answer">Oui, le SEO local est inclus. Chaque site est optimisé pour les recherches 'Saint-Cloud' : balises title/meta, Google Business Profile, vitesse optimisée, mobile-first. Nos clients Clodoaldiens apparaissent en première page sur leurs mots-clés locaux en 2-3 mois.</div>
+                </details>
+
+                <!-- FAQ 6-10 dynamiques -->
+                <details>
+                    <summary>Le site m'appartient-il vraiment après création à Saint-Cloud ?</summary>
+                    <div class="faq-answer">Oui, à 100%. Contrairement aux plateformes de location comme Wix ou Squarespace, vous êtes propriétaire de votre nom de domaine et du code source. À Saint-Cloud, nous vous remettons tous les accès et fichiers sources à la fin du projet. Aucune dépendance.</div>
+                </details>
+
+                <details>
+                    <summary>L'hébergement et le nom de domaine sont-ils inclus ?</summary>
+                    <div class="faq-answer">Tout est inclus dans le forfait mensuel : hébergement haute performance sur serveurs français, nom de domaine (.fr ou .com), certificat SSL (cadenas vert HTTPS), sauvegardes automatiques quotidiennes, et monitoring 24/7. Vous n'avez rien à gérer techniquement.</div>
+                </details>
+
+                <details>
+                    <summary>Mon site sera-t-il vraiment adapté aux mobiles ?</summary>
+                    <div class="faq-answer">Absolument. En 2025, plus de 70% des recherches locales à Saint-Cloud se font sur smartphone. Nous appliquons une approche 'Mobile First' : votre site est conçu d'abord pour mobile, puis adapté aux tablettes et PC. Google privilégie les sites mobile-friendly dans ses résultats.</div>
+                </details>
+
+                <details>
+                    <summary>Puis-je modifier le contenu de mon site moi-même ?</summary>
+                    <div class="faq-answer">Oui, c'est vous qui décidez. Sur demande, nous intégrons un panneau d'administration simple et intuitif (type WordPress) qui vous permet de modifier vos horaires, ajouter des photos, publier des actualités ou créer des pages, sans toucher une ligne de code. Formation incluse.</div>
+                </details>
+
+                <details>
+                    <summary>Y a-t-il des frais cachés ou des engagements ?</summary>
+                    <div class="faq-answer">Aucun frais caché, c'est notre engagement. Le devis est ferme et définitif. Le tarif mensuel couvre tout : hébergement, maintenance, support technique illimité, mises à jour de sécurité. Pas d'engagement longue durée, résiliable à tout moment avec préavis de 30 jours.</div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. FORMULAIRE CONTACT -->
+    <section id="contact" class="container reveal">
+        <div class="contact-wrapper">
+            <h2 style="text-align: center; margin-bottom: 16px;">Lançons votre projet à Saint-Cloud</h2>
+            <p style="text-align: center; color: var(--gray); margin-bottom: 40px;">Réponse sous 24h • Devis gratuit •
+                Sans engagement</p>
+
+            <form class="contact-form" action="https://formsubmit.co/contact@agence-web-locale.fr" method="POST">
+                <input type="text" name="nom" placeholder="Votre nom complet" required class="form-input">
+                <input type="email" name="email" placeholder="Email professionnel" required class="form-input">
+                <input type="tel" name="telephone" placeholder="Téléphone" required class="form-input">
+
+                <select name="projet" class="form-input" required>
+                    <option value="">Type de projet...</option>
+                    <option value="vitrine">Site Vitrine</option>
+                    <option value="vitrine-plus">Site Vitrine +</option>
+                    <option value="ecommerce">E-commerce</option>
+                    <option value="refonte">Refonte de site</option>
+                </select>
+
+                <textarea name="message" placeholder="Décrivez votre projet... (activité, objectifs, budget)"
+                    class="form-input" rows="5"></textarea>
+
+                <!-- Hidden fields -->
+                <input type="hidden" name="ville" value="Saint-Cloud">
+                <input type="hidden" name="_subject" value="Nouveau contact - Saint-Cloud">
+                <input type="hidden" name="_captcha" value="false">
+
+                <!-- Anti-spam -->
+                <div style="display: none;">
+                    <input type="text" name="_honey">
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 18px;">
+                    Obtenir mon devis gratuit →
+                </button>
+
+                <p style="text-align: center; font-size: 0.85rem; color: var(--gray); margin-top: 16px;">
+                    🔒 Vos données restent confidentielles. Pas de spam.
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <!-- 11. MAILLAGE INTERNE -->
+    <section class="section-gray">
+        <div class="container">
+            <h3 style="margin-bottom: 8px;">Création de site internet en Hauts-de-Seine</h3>
+            <p style="color: var(--gray); margin-bottom: 20px;">Nous intervenons également dans ces villes proches de
+                Saint-Cloud :</p>
+
+            <div class="maillage-links">
+                <a href="/creation-site-internet-boulogne-billancourt">Boulogne-Billancourt</a>
+                <a href="/creation-site-internet-nanterre">Nanterre</a>
+                <a href="/creation-site-internet-asnieres-sur-seine">Asnières-sur-Seine</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Agence Web Locale</h4>
+                    <p>Création de sites internet professionnels pour TPE, PME, artisans et commerçants.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li>Création de site vitrine</li>
+                        <li>Site e-commerce</li>
+                        <li>SEO Local</li>
+                        <li>Maintenance web</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>📧 contact@agence-web-locale.fr</p>
+                    <p>📞 01 23 45 67 89</p>
+                    <p>🕐 Lun-Ven : 9h-18h</p>
+                </div>
+            </div>
+
+            <hr style="opacity: 0.1; margin: 30px 0;">
+
+            <!-- Maillage départements -->
+            <div class="footer-departments">
+                
+            </div>
+
+            <div class="footer-bottom">
+                © 2025 Agence Web Locale. Tous droits réservés. |
+                <a href="/mentions-legales" style="color: inherit;">Mentions légales</a> |
+                <a href="/politique-confidentialite" style="color: inherit;">Confidentialité</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Reveal on scroll
+        const reveals = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        reveals.forEach(el => revealObserver.observe(el));
+
+        // FAQ accordion enhancement
+        document.querySelectorAll('details').forEach(detail => {
+            detail.addEventListener('toggle', () => {
+                if (detail.open) {
+                    document.querySelectorAll('details[open]').forEach(d => {
+                        if (d !== detail) d.open = false;
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
