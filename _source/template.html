@@ -166,48 +166,76 @@
             left: 0;
             right: 0;
             z-index: 1000;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-            padding: 15px 0;
+            padding: 12px 0;
             transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         }
 
         header.scrolled {
             padding: 10px 0;
-            box-shadow: var(--shadow);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
 
         .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
         .logo {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--primary);
             display: flex;
             align-items: center;
             gap: 8px;
+            text-decoration: none;
         }
 
-        .logo span {
-            color: var(--secondary);
+        .logo img {
+            height: 40px;
+            width: auto;
+        }
+
+        .nav-main {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .nav-secondary {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .nav-secondary a {
+            font-size: 0.85rem;
+            color: var(--gray);
+            opacity: 0.5;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-secondary a:hover {
+            opacity: 0.8;
         }
 
         .nav-links {
             display: flex;
             gap: 32px;
             list-style: none;
+            margin: 0;
+            padding: 0;
         }
 
         .nav-links a {
             color: var(--primary);
             font-weight: 500;
             position: relative;
+            font-size: 0.95rem;
         }
 
         .nav-links a::after {
@@ -244,7 +272,7 @@
 
         /* Breadcrumbs */
         .breadcrumb-container {
-            padding-top: 100px;
+            padding-top: 80px;
             padding-bottom: 5px;
         }
 
@@ -280,7 +308,7 @@
 
         /* Hero */
         .hero {
-            padding: 140px 0 100px;
+            padding: 120px 0 100px;
             background: linear-gradient(135deg, var(--light) 0%, #e8f4f8 50%, var(--cream) 100%);
             position: relative;
             overflow: hidden;
@@ -460,10 +488,57 @@
         }
 
         .service-price {
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             font-weight: 700;
-            color: var(--secondary);
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .service-price-sub {
+            font-size: 0.9rem;
+            color: var(--gray);
+            font-weight: 400;
             margin-bottom: 20px;
+        }
+
+        .price-card {
+            background: var(--white);
+            padding: 32px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            position: relative;
+            border: 2px solid transparent;
+        }
+
+        .price-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .price-card.featured {
+            border: 2px solid var(--secondary);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .price-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--secondary);
+            color: var(--white);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .price-for {
+            font-size: 0.85rem;
+            color: var(--gray);
+            margin-bottom: 24px;
         }
 
         .service-features {
@@ -495,8 +570,8 @@
         /* Portfolio */
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
         }
 
         .portfolio-item {
@@ -505,44 +580,87 @@
             overflow: hidden;
             box-shadow: var(--shadow);
             transition: all 0.3s ease;
+            position: relative;
+            cursor: pointer;
         }
 
         .portfolio-item:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
             box-shadow: var(--shadow-lg);
         }
 
-        .portfolio-item a {
+        .portfolio-item-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .portfolio-item-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.7) 100%);
             display: flex;
+            align-items: flex-end;
+            padding: 20px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .portfolio-item:hover .portfolio-item-overlay {
+            opacity: 1;
+        }
+
+        .portfolio-item-content {
+            color: var(--white);
+            width: 100%;
+        }
+
+        .portfolio-item-content h3 {
+            color: var(--white);
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        .portfolio-item-content .portfolio-link {
+            color: var(--white);
+            font-size: 0.9rem;
+            display: inline-flex;
             align-items: center;
-            justify-content: center;
-            gap: 12px;
-            padding: 24px;
-            font-weight: 600;
-            color: var(--primary);
-        }
-
-        .portfolio-item:hover a {
-            color: var(--secondary);
-        }
-
-        .portfolio-icon {
-            font-size: 1.5rem;
+            gap: 8px;
+            text-decoration: underline;
         }
 
         /* Process Steps */
+        .process-section-title {
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        .process-section-subtitle {
+            text-align: center;
+            color: var(--gray);
+            margin-bottom: 50px;
+            font-size: 1rem;
+        }
+
         .process-steps {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
             gap: 20px;
             position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
         }
 
         .process-steps::before {
             content: '';
             position: absolute;
-            top: 40px;
+            top: 50px;
             left: 10%;
             right: 10%;
             height: 2px;
@@ -559,19 +677,20 @@
         }
 
         .step-number {
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             background: var(--white);
             border: 3px solid var(--secondary);
-            border-radius: 50%;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-family: 'DM Sans', sans-serif;
             font-weight: 700;
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             color: var(--secondary);
             margin: 0 auto 16px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
         .step-item:last-child .step-number {
@@ -580,19 +699,21 @@
         }
 
         .step-icon {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
         }
 
         .step-item h4 {
-            font-size: 1rem;
-            margin-bottom: 4px;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: var(--primary);
         }
 
         .step-item p {
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             color: var(--gray);
+            line-height: 1.5;
         }
 
         /* Testimonial */
@@ -819,7 +940,15 @@
 
         /* Responsive */
         @media (max-width: 768px) {
+            .nav-main {
+                gap: 20px;
+            }
+
             .nav-links {
+                display: none;
+            }
+
+            .nav-secondary {
                 display: none;
             }
 
@@ -827,8 +956,16 @@
                 display: flex;
             }
 
+            .header-content {
+                padding: 0 15px;
+            }
+
+            .logo img {
+                height: 32px;
+            }
+
             .hero {
-                padding: 120px 0 80px;
+                padding: 100px 0 80px;
             }
 
             .hero h1 {
@@ -848,12 +985,21 @@
                 padding: 60px 0;
             }
 
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
             .process-steps::before {
                 display: none;
             }
 
             .process-steps {
                 gap: 30px;
+                flex-direction: column;
             }
 
             .step-item {
@@ -868,6 +1014,11 @@
                 margin-left: 0;
                 margin-top: 16px;
                 width: 100%;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
             }
         }
     </style>
@@ -895,7 +1046,7 @@
             {"@type": "City", "name": "{{commune_proche_2}}"},
             {"@type": "City", "name": "{{commune_proche_3}}"}
         ],
-        "telephone": "+33123456789",
+        "telephone": "+33613690646",
         "priceRange": "€€",
         "url": "https://agence-web-locale.fr{{url_page}}",
         "aggregateRating": {
@@ -941,33 +1092,43 @@
 </head>
 
 <body>
-    <!-- 1. HERO SECTION -->
-    <header class="hero">
-        <div class="breadcrumb-container container">
-            <nav class="breadcrumb" aria-label="Breadcrumb">
-                <ol>
-                    <li><a href="/">Accueil</a></li>
-                    <li><a href="/departement/{{slug_departement}}">{{departement_nom}}</a></li>
-                    <li aria-current="page">{{ville}}</li>
-                </ol>
-            </nav>
-        </div>
-        <div class="container hero-content">
-            <a href="/" class="logo">Agence Web <span>Locale</span></a>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Réalisations</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <a href="#contact" class="btn btn-primary">Devis Gratuit</a>
+    <!-- HEADER -->
+    <header id="header">
+        <div class="header-content">
+            <a href="/" class="logo">
+                <img src="/assets/logo.svg" alt="Agence Web Locale" />
+            </a>
+            <div class="nav-main">
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Réalisations</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="nav-secondary">
+                    <a href="/">Accueil</a>
+                    <a href="/departement/{{slug_departement}}">{{departement_nom}}</a>
+                </div>
+                <a href="#contact" class="btn btn-primary">Devis Gratuit</a>
+            </div>
             <button class="mobile-menu-btn" aria-label="Menu">
                 <span></span><span></span><span></span>
             </button>
         </div>
     </header>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb-container container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/departement/{{slug_departement}}">{{departement_nom}}</a></li>
+                <li aria-current="page">{{ville}}</li>
+            </ol>
+        </nav>
+    </div>
 
     <!-- 3. HERO -->
     <section class="hero">
@@ -1059,47 +1220,55 @@
 
             <div class="services-grid">
                 <!-- Card 1: Vitrine -->
-                <div class="service-card">
+                <div class="price-card">
                     <h3>Site Vitrine</h3>
-                    <div class="service-price">{{prix_creation}}€ + {{prix_mensuel}}€/mois</div>
+                    <div class="service-price">{{prix_creation}}€ création</div>
+                    <div class="service-price-sub">{{prix_vitrine_mensuel}}€/mois</div>
+                    <div class="price-for">Pour indépendants, TPE</div>
                     <ul class="service-features">
-                        <li>Design sur mesure</li>
-                        <li>Optimisé SEO Local</li>
-                        <li>Hébergement inclus</li>
-                        <li>Certificat SSL</li>
-                        <li>Support réactif</li>
+                        <li>1-5 pages</li>
+                        <li>Design sur-mesure</li>
+                        <li>Responsive mobile</li>
+                        <li>SEO local</li>
+                        <li>Formulaire contact</li>
+                        <li>SSL + Hébergement</li>
                     </ul>
                     <a href="#contact" class="btn btn-outline" style="width: 100%;">Choisir</a>
                 </div>
 
                 <!-- Card 2: Vitrine+ (Featured) -->
-                <div class="service-card featured">
-                    <span class="service-badge">Populaire</span>
-                    <h3>Vitrine +</h3>
-                    <div class="service-price">0€ + 250€/mois</div>
+                <div class="price-card featured">
+                    <div class="price-badge">★ POPULAIRE</div>
+                    <h3>Site Vitrine +</h3>
+                    <div class="service-price">{{prix_creation}}€ création</div>
+                    <div class="service-price-sub">{{prix_vitrine_plus_mensuel}}€/mois</div>
+                    <div class="price-for">Pour PME, Commerces</div>
                     <ul class="service-features">
-                        <li>Tout pack Vitrine</li>
-                        <li>Blog & Actualités</li>
-                        <li>1h maintenance/mois</li>
-                        <li>Statistiques avancées</li>
-                        <li>Priorité support</li>
+                        <li>Tout Vitrine +</li>
+                        <li>5-10 pages</li>
+                        <li>Blog intégré</li>
+                        <li>1h modifs/mois</li>
+                        <li>Analytics avancé</li>
+                        <li>Support prioritaire</li>
                     </ul>
                     <a href="#contact" class="btn btn-primary" style="width: 100%;">Choisir</a>
-                    <p class="promo-code">Code <strong>{{code_promo}}</strong> = -{{reduction_pct}}%</p>
                 </div>
 
                 <!-- Card 3: E-commerce -->
-                <div class="service-card">
-                    <h3>E-Commerce</h3>
-                    <div class="service-price">Sur Devis</div>
+                <div class="price-card">
+                    <h3>E-commerce</h3>
+                    <div class="service-price">0€ création</div>
+                    <div class="service-price-sub">Sur devis</div>
+                    <div class="price-for">Pour boutiques en ligne</div>
                     <ul class="service-features">
-                        <li>Boutique en ligne</li>
-                        <li>Paiement sécurisé</li>
+                        <li>Boutique complète</li>
+                        <li>Paiement CB sécurisé</li>
                         <li>Click & Collect</li>
-                        <li>Gestion stocks</li>
-                        <li>Formation incluse</li>
+                        <li>Gestion des stocks</li>
+                        <li>Formation complète</li>
+                        <li>Support dédié</li>
                     </ul>
-                    <a href="#contact" class="btn btn-outline" style="width: 100%;">Demander</a>
+                    <a href="#contact" class="btn btn-outline" style="width: 100%;">Demander un devis</a>
                 </div>
             </div>
         </div>
@@ -1111,40 +1280,58 @@
 
         <div class="portfolio-grid">
             <div class="portfolio-item">
-                <a href="{{url_resto}}" target="_blank" rel="noopener">
-                    <span class="portfolio-icon">🍽️</span>
-                    <span>Restaurant</span>
-                </a>
+                <img src="/assets/realisations/restaurant.jpg" alt="Restaurant" class="portfolio-item-image" />
+                <div class="portfolio-item-overlay">
+                    <div class="portfolio-item-content">
+                        <h3>Restaurant</h3>
+                        <a href="{{url_resto}}" target="_blank" rel="noopener" class="portfolio-link">Voir le site →</a>
+                    </div>
+                </div>
             </div>
             <div class="portfolio-item">
-                <a href="{{url_artisan}}" target="_blank" rel="noopener">
-                    <span class="portfolio-icon">🛠️</span>
-                    <span>Artisan</span>
-                </a>
+                <img src="/assets/realisations/artisan.jpg" alt="Artisan" class="portfolio-item-image" />
+                <div class="portfolio-item-overlay">
+                    <div class="portfolio-item-content">
+                        <h3>Artisan</h3>
+                        <a href="{{url_artisan}}" target="_blank" rel="noopener" class="portfolio-link">Voir le site →</a>
+                    </div>
+                </div>
             </div>
             <div class="portfolio-item">
-                <a href="{{url_beaute}}" target="_blank" rel="noopener">
-                    <span class="portfolio-icon">💇</span>
-                    <span>Beauté</span>
-                </a>
+                <img src="/assets/realisations/beaute.jpg" alt="Beauté" class="portfolio-item-image" />
+                <div class="portfolio-item-overlay">
+                    <div class="portfolio-item-content">
+                        <h3>Beauté</h3>
+                        <a href="{{url_beaute}}" target="_blank" rel="noopener" class="portfolio-link">Voir le site →</a>
+                    </div>
+                </div>
             </div>
             <div class="portfolio-item">
-                <a href="{{url_immo}}" target="_blank" rel="noopener">
-                    <span class="portfolio-icon">🏠</span>
-                    <span>Immobilier</span>
-                </a>
+                <img src="/assets/realisations/immo.jpg" alt="Immobilier" class="portfolio-item-image" />
+                <div class="portfolio-item-overlay">
+                    <div class="portfolio-item-content">
+                        <h3>Immobilier</h3>
+                        <a href="{{url_immo}}" target="_blank" rel="noopener" class="portfolio-link">Voir le site →</a>
+                    </div>
+                </div>
             </div>
             <div class="portfolio-item">
-                <a href="{{url_avocat}}" target="_blank" rel="noopener">
-                    <span class="portfolio-icon">⚖️</span>
-                    <span>Avocat</span>
-                </a>
+                <img src="/assets/realisations/avocat.jpg" alt="Avocat" class="portfolio-item-image" />
+                <div class="portfolio-item-overlay">
+                    <div class="portfolio-item-content">
+                        <h3>Avocat</h3>
+                        <a href="{{url_avocat}}" target="_blank" rel="noopener" class="portfolio-link">Voir le site →</a>
+                    </div>
+                </div>
             </div>
             <div class="portfolio-item">
-                <a href="{{url_sante}}" target="_blank" rel="noopener">
-                    <span class="portfolio-icon">⚕️</span>
-                    <span>Santé</span>
-                </a>
+                <img src="/assets/realisations/sante.jpg" alt="Santé" class="portfolio-item-image" />
+                <div class="portfolio-item-overlay">
+                    <div class="portfolio-item-content">
+                        <h3>Santé</h3>
+                        <a href="{{url_sante}}" target="_blank" rel="noopener" class="portfolio-link">Voir le site →</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1152,38 +1339,39 @@
     <!-- 7. PROCESSUS -->
     <section class="section-gray reveal">
         <div class="container">
-            <h2 style="text-align: center; margin-bottom: 50px;">Votre projet en 5 étapes</h2>
+            <h2 class="process-section-title">Votre site en 5 étapes simples</h2>
+            <p class="process-section-subtitle">Un processus simple et transparent, du premier échange au lancement</p>
 
             <div class="process-steps">
                 <div class="step-item">
-                    <div class="step-number">1</div>
+                    <div class="step-number">01</div>
                     <span class="step-icon">💬</span>
                     <h4>Échange</h4>
-                    <p>15 min pour cibler vos besoins</p>
+                    <p>Appel de 15 min pour comprendre vos besoins</p>
                 </div>
                 <div class="step-item">
-                    <div class="step-number">2</div>
+                    <div class="step-number">02</div>
                     <span class="step-icon">📄</span>
                     <h4>Devis</h4>
-                    <p>Gratuit et détaillé</p>
+                    <p>Proposition détaillée sous 24h</p>
                 </div>
                 <div class="step-item">
-                    <div class="step-number">3</div>
+                    <div class="step-number">03</div>
                     <span class="step-icon">🎨</span>
                     <h4>Maquette</h4>
-                    <p>Validation du design</p>
+                    <p>Design validé ensemble avant développement</p>
                 </div>
                 <div class="step-item">
-                    <div class="step-number">4</div>
+                    <div class="step-number">04</div>
                     <span class="step-icon">💻</span>
                     <h4>Développement</h4>
-                    <p>Optimisé SEO & Mobile</p>
+                    <p>Création optimisée SEO et mobile</p>
                 </div>
                 <div class="step-item">
-                    <div class="step-number">5</div>
+                    <div class="step-number">05</div>
                     <span class="step-icon">🚀</span>
                     <h4>Lancement</h4>
-                    <p style="color: var(--secondary); font-weight: 600;">Mise en ligne !</p>
+                    <p>Votre site est en ligne ! Formation incluse</p>
                 </div>
             </div>
         </div>
@@ -1346,8 +1534,11 @@
                 <div class="footer-col">
                     <h4>Contact</h4>
                     <p>📧 contact@agence-web-locale.fr</p>
-                    <p>📞 01 23 45 67 89</p>
-                    <p>🕐 Lun-Ven : 9h-18h</p>
+                    <p>📞 <a href="tel:0613690646" style="color: inherit;">06 13 69 06 46</a></p>
+                    <p>🕐 Lun-Ven : 8h-21h</p>
+                </div>
+                <div class="footer-col">
+                    <img src="/assets/logo.svg" alt="Agence Web Locale" style="height: 50px; margin-bottom: 16px; opacity: 0.9;" />
                 </div>
             </div>
 
@@ -1370,9 +1561,11 @@
     <script>
         // Header scroll effect
         const header = document.getElementById('header');
-        window.addEventListener('scroll', () => {
-            header.classList.toggle('scrolled', window.scrollY > 50);
-        });
+        if (header) {
+            window.addEventListener('scroll', () => {
+                header.classList.toggle('scrolled', window.scrollY > 50);
+            });
+        }
 
         // Reveal on scroll
         const reveals = document.querySelectorAll('.reveal');

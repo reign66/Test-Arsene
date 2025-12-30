@@ -101,7 +101,7 @@ def generate_schema(v, dept_slug, current_url):
         "name": f"Agence Web Locale {ville}",
         "description": f"Agence de création de sites internet à {ville}. Expert en SEO et design web.",
         "url": f"https://agence-web-locale.fr{current_url}",
-        "telephone": "+33123456789",
+        "telephone": "+33613690646",
         "address": {
             "@type": "PostalAddress",
             "addressLocality": ville,
@@ -193,6 +193,11 @@ def generate_site():
         random.seed(v['slug'] + str(now.month))
         replacements["places_restantes"] = str(random.randint(2, 4))
 
+        # Pricing (dynamique mais avec valeurs par défaut)
+        replacements["prix_vitrine_mensuel"] = str(v_normalized.get("prix_mensuel", 289))
+        replacements["prix_vitrine_plus_mensuel"] = str(v_normalized.get("prix_mensuel_plus", 350))
+        replacements["prix_creation"] = "0"
+        
         # Defaults for others
         replacements["url_page"] = page_url
         replacements["slug_departement"] = dept_slug
