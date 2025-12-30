@@ -1,14 +1,15 @@
 import http.server
 import socketserver
 import os
-import shutil
-import cgi
 import subprocess
 import sys
+from email.message import Message
+import io
 
-# Agence Web Locale - Dashboard (No-dependency Edition)
+# Agence Web Locale - Dashboard (Python 3.13+ Compatible, No-dependency)
 PORT = 8080
 SOURCE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 UPLOAD_PAGE = """
 <!DOCTYPE html>
 <html lang="fr">
@@ -21,35 +22,34 @@ UPLOAD_PAGE = """
         body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--primary); display: flex; justify-content: center; align-items: center; height: 100vh; margin:0; }
         .card { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; max-width: 400px; width: 100%; }
         h1 { margin-bottom: 24px; font-size: 1.5rem; }
-        .upload-area { border: 2px dashed #cbd5e0; padding: 30px; border-radius: 12px; margin-bottom: 24px; cursor: pointer; transition: 0.3s; }
+        .upload-area { border: 2px dashed #cbd5e0; padding: 30px; border-radius: 12px; margin-bottom: 24px; cursor: pointer; transition: 0.3s; display: block; }
         .upload-area:hover { border-color: var(--secondary); background: #fffaf0; }
         input[type="file"] { display: none; }
-        .btn { background: var(--secondary); color: white; padding: 12px 24px; border-radius: 8px; font-weight: 700; text-decoration: none; display: inline-block; cursor: pointer; border: none; width: 100%; }
+        .btn { background: var(--secondary); color: white; padding: 12px 24px; border-radius: 8px; font-weight: 700; text-decoration: none; display: inline-block; cursor: pointer; border: none; width: 100%; font-size: 1rem; }
         .btn:hover { background: #d35400; transform: translateY(-2px); }
         .status { margin-top: 20px; font-size: 0.9rem; color: #718096; }
     </style>
 </head>
 <body>
     <div class="card">
-        <h1>🚀 Générateur Agence Web</h1>
-        <p>Déposez votre fichier <strong>villes.csv</strong> pour lancer la génération.</p>
+        <h1>🚀 Dashboard Agence Web</h1>
+        <p>Déposez votre fichier <strong>.csv</strong> ici.</p>
         <form action="/upload" method="post" enctype="multipart/form-data">
-            <label class="upload-area" id="drop-area">
-                <span id="file-label">Cliquez ou glissez le CSV ici</span>
+            <label class="upload-area">
+                <span id="file-label">Cliquez pour choisir le CSV</span>
                 <input type="file" name="file" accept=".csv" onchange="updateLabel(this)" required>
             </label>
-            <button type="submit" class="btn">Générer le Site</button>
+            <button type="submit" class="btn">Analyser & Générer</button>
         </form>
-        <div class="status" id="status">En attente de fichier...</div>
+        <div class="status" id="status">Prêt pour l'analyse.</div>
     </div>
     <script>
         function updateLabel(input) {
             const label = document.getElementById('file-label');
-            const status = document.getElementById('status');
             if (input.files.length > 0) {
                 label.innerText = input.files[0].name;
-                status.innerText = "Fichier prêt pour la génération !";
-                status.style.color = "#27ae60";
+                label.style.color = "#e17055";
+                label.style.fontWeight = "bold";
             }
         }
     </script>
@@ -69,55 +69,52 @@ class DashboardHandler(http.server.SimpleHTTPRequestHandler):
 
     def do_POST(self):
         if self.path == '/upload':
-            form = cgi.FieldStorage(
-                fp=self.rfile,
-                headers=self.headers,
-                environ={'REQUEST_METHOD': 'POST'}
-            )
+            try:
+                content_type = self.headers.get('Content-Type')
+                if not content_type or 'multipart/form-data' not in content_type:
+                    self.send_error(400, "Bad Request: Content-Type must be multipart/form-data")
+                    return
 
-            if 'file' in form:
-                file_item = form['file']
-                if file_item.filename:
-                    # Save the uploaded file as villes.csv
+                boundary = content_type.split("boundary=")[1].encode()
+                content_length = int(self.headers.get('Content-Length'))
+                body = self.rfile.read(content_length)
+
+                # Split parts by boundary
+                parts = body.split(b'--' + boundary)
+                file_content = None
+                
+                for part in parts:
+                    if b'filename=' in part:
+                        # Extract headers and body of the part
+                        header_end = part.find(b'\r\n\r\n')
+                        if header_end != -1:
+                            file_content = part[header_end+4:].rstrip(b'\r\n--')
+                            break
+
+                if file_content:
                     upload_path = os.path.join(SOURCE_DIR, "villes.csv")
                     with open(upload_path, 'wb') as f:
-                        f.write(file_item.file.read())
-                    
-                    print(f"📂 Fichier {file_item.filename} reçu et enregistré en tant que villes.csv")
+                        f.write(file_content)
+                    print(f"✅ CSV enregistré avec succès.")
 
-                    # Trigger scripts
-                    try:
-                        print("⚙️ Lancement de csv_to_json.py...")
-                        subprocess.run([sys.executable, os.path.join(SOURCE_DIR, "csv_to_json.py")], check=True)
-                        
-                        print("⚙️ Lancement de generate.py...")
-                        subprocess.run([sys.executable, os.path.join(SOURCE_DIR, "generate.py")], check=True)
-                        
-                        self.send_response(200)
-                        self.send_header('Content-type', 'text/html')
-                        self.end_headers()
-                        success_html = """
-                        <html><body style="font-family:sans-serif; text-align:center; padding-top:100px;">
-                            <h1 style="color:#27ae60">✅ Génération terminée avec succès !</h1>
-                            <p>Toutes les pages ont été générées dans le dossier <code>output/</code>.</p>
-                            <a href="/" style="color:#e17055; text-decoration:none; font-weight:bold;">← Retour au dashboard</a>
-                            <br><br>
-                            <p>Vous pouvez prévisualiser le site sur <code>http://localhost:8000</code></p>
-                        </body></html>
-                        """
-                        self.wfile.write(success_html.encode('utf-8'))
-                    except Exception as e:
-                        self.send_error(500, f"Erreur lors de la génération: {str(e)}")
+                    # Try to run generation (just one example first if needed, but here we run full for simplicity in this script)
+                    # We will modify generate.py later to just do a test if preferred.
+                    subprocess.run([sys.executable, os.path.join(SOURCE_DIR, "csv_to_json.py")], check=True)
+                    
+                    self.send_response(200)
+                    self.send_header('Content-type', 'text/html')
+                    self.end_headers()
+                    self.wfile.write(b"<html><body><h1 style='color:green'>Fichier recu !</h1><p>Analyse en cours... revenez sur le chat Gemini.</p></body></html>")
                 else:
-                    self.send_error(400, "Aucun fichier sélectionné.")
-            else:
-                self.send_error(400, "Champ 'file' manquant.")
+                    self.send_error(400, "Aucun fichier trouve dans le formulaire.")
+
+            except Exception as e:
+                self.send_error(500, f"Erreur serveur: {str(e)}")
 
 if __name__ == "__main__":
     with socketserver.TCPServer(("", PORT), DashboardHandler) as httpd:
-        print(f"🎉 Dashboard Agence Web lancé sur http://localhost:{PORT}")
-        print(f"👉 Déposez votre CSV ici pour tout automatiser.")
+        print(f"🎉 Dashboard lance sur http://localhost:{PORT}")
         try:
             httpd.serve_forever()
         except KeyboardInterrupt:
-            print("\n👋 Dashboard arrêté.")
+            print("\n👋 Arret.")
