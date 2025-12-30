@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L'Écrin des Sens | Restaurant Gastronomique 3* Paris</title>
+    <title>{{demo_brand_name}} | Restaurant Gastronomique {{ville}}</title>
     <meta name="description"
-        content="Découvrez une expérience culinaire unique au cœur de Paris. Cuisine d'auteur par le Chef Marc-André Valéry. Réservez votre table d'exception.">
+        content="Découvrez une expérience culinaire unique à {{ville}}. Cuisine d'auteur par le Chef {{demo_owner_name}}. Réservez votre table d'exception.">
 
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -631,8 +631,8 @@
 
     <header id="header">
         <a href="#" class="logo-box">
-            <span class="logo-main">L'ÉCRIN</span>
-            <span class="logo-sub">DES SENS</span>
+            <span class="logo-main">{{demo_brand_main}}</span>
+            <span class="logo-sub">{{demo_brand_sub}}</span>
         </a>
         <ul class="nav-links">
             <li><a href="#vibe">Expérience</a></li>
@@ -641,7 +641,8 @@
             <li><a href="#contact">Privatisation</a></li>
         </ul>
         <div class="header-actions">
-            <a href="tel:+33142251515" class="phone-link"><i data-lucide="phone-call" size="18"></i> 01 42 25 15 15</a>
+            <a href="tel:{{demo_phone}}" class="phone-link"><i data-lucide="phone-call" size="18"></i>
+                {{demo_phone}}</a>
             <a href="#booking" class="btn-gold" style="padding: 12px 30px; font-size: 0.7rem;">Réserver Directement</a>
         </div>
     </header>
@@ -683,7 +684,7 @@
             <span
                 style="color: var(--gold); letter-spacing: 3px; font-weight: 700; text-transform: uppercase; font-size: 0.8rem;">La
                 Vision</span>
-            <h2 style="font-size: 3.5rem; margin-top: 15px; margin-bottom: 30px;">Marc-André Valéry</h2>
+            <h2 style="font-size: 3.5rem; margin-top: 15px; margin-bottom: 30px;">{{demo_owner_name}}</h2>
             <p style="font-size: 1.2rem; font-style: italic; color: #888; margin-bottom: 30px;">"Un plat n'existe que
                 par l'émotion qu'il provoque. Je ne cherche pas à nourrir, mais à émerveiller les mémoires."</p>
             <p>Ancien disciple des plus grands, Marc-André a bâti L'Écrin comme un sanctuaire. Ici, pas de compromis.
@@ -826,7 +827,7 @@
                 <a href="#" class="f-logo">L'ÉCRIN</a>
                 <p>Maison fondée en 1982. Épicurisme, rigueur et émotion. Membre émérite des Grandes Tables du Monde.
                 </p>
-                <div class="f-siret">SARL AU CAPITAL DE 500 000€ • SIRET: 452 368 791 00054</div>
+                <div class="f-siret">SARL AU CAPITAL DE 500 000€ • SIRET: {{demo_siret}}</div>
                 <div style="display: flex; gap: 20px; margin-top: 30px;">
                     <a href="#" style="color: #fff;"><i data-lucide="instagram"></i></a>
                     <a href="#" style="color: #fff;"><i data-lucide="facebook"></i></a>
@@ -845,10 +846,10 @@
             <div class="f-col">
                 <h4 class="f-title">Conciergerie</h4>
                 <ul class="f-links">
-                    <li>12 Rue du Colisée, 75008 Paris</li>
-                    <li>Réservations : 01 42 25 15 15</li>
-                    <li>Events : event@lecrin.paris</li>
-                    <li>Presse : press@lecrin.paris</li>
+                    <li>{{demo_address}}</li>
+                    <li>Réservations : {{demo_phone}}</li>
+                    <li>Events : {{demo_email}}</li>
+                    <li>Presse : contact@{{demo_brand_name}}</li>
                 </ul>
             </div>
             <div class="f-col">
@@ -865,7 +866,7 @@
             </div>
         </div>
         <div class="container f-legal">
-            <p>&copy; 2025 L'Écrin des Sens. Site créé par l'Agence Web Locale. Haute Gastronomie Française.</p>
+            <p>&copy; 2025 {{demo_brand_name}}. Site créé par l'Agence Web Locale. Haute Gastronomie Française.</p>
             <div style="display: flex; gap: 30px;">
                 <a href="#" style="color: inherit; text-decoration: none;">RGPD</a>
                 <a href="#" style="color: inherit; text-decoration: none;">Mentions Légales</a>

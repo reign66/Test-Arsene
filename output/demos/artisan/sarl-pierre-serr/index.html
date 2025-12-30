@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarl Pierre Serr | Rénovation Immobilière & Maçonnerie de Prestige Bruay-la-Buissière</title>
+    <meta name="description"
+        content="Artisans certifiés Qualibat à Bruay-la-Buissière pour vos rénovations totales et travaux de maçonnerie. Devis gratuit sous 48h. Garantie décennale incluse.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root {
+            --primary: #ff5e00;
+            --primary-dark: #cc4b00;
+            --secondary: #121821;
+            --navy-light: #1c2636;
+            --gray: #64748b;
+            --white: #ffffff;
+            --light: #f8fafc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: var(--white);
+            color: var(--secondary);
+            line-height: 1.6;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Barlow', sans-serif;
+            text-transform: uppercase;
+            font-weight: 900;
+        }
+
+        /* Navigation Professional */
+        .top-bar {
+            background: var(--secondary);
+            color: #fff;
+            padding: 10px 60px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .top-bar-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .badge-pro {
+            background: var(--primary);
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-size: 0.65rem;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid var(--secondary);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+        }
+
+        .logo {
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--secondary);
+        }
+
+        .logo b {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--secondary);
+            font-size: 0.9rem;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Artisan */
+        .hero {
+            padding: 120px 20px 100px;
+            background: linear-gradient(rgba(18, 24, 33, 0.8), rgba(18, 24, 33, 0.8)), url('https://images.unsplash.com/photo-1541604193435-22287d32c2c2?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+
+        .hero-grid {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 5.5rem);
+            line-height: 0.95;
+            margin-bottom: 30px;
+            letter-spacing: -2px;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero-p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        /* Trust TrustPilot / Assurance */
+        .trust-row {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .tp-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        /* Quick Quote Form */
+        .hero-form {
+            background: var(--white);
+            padding: 50px;
+            border-radius: 8px;
+            color: var(--secondary);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-form h3 {
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            color: var(--secondary);
+        }
+
+        .f-input {
+            width: 100%;
+            padding: 18px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            width: 100%;
+            padding: 20px;
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-weight: 800;
+            font-size: 1rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: scale(1.02);
+        }
+
+        /* Stats */
+        .stats {
+            background: #f1f5f9;
+            padding: 40px 0;
+        }
+
+        .stats-grid {
+            display: flex;
+            justify-content: space-around;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-item h4 {
+            font-size: 2.5rem;
+            color: var(--secondary);
+        }
+
+        .stat-item p {
+            font-size: 0.8rem;
+            color: var(--gray);
+            font-weight: 700;
+        }
+
+        /* Services Grid */
+        .section {
+            padding: 140px 20px;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-header h2 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .service-card {
+            border: 1px solid #eee;
+            padding: 50px;
+            transition: 0.4s;
+            position: relative;
+        }
+
+        .service-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+        }
+
+        .service-card i {
+            color: var(--primary);
+            margin-bottom: 30px;
+        }
+
+        .service-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .service-card .link {
+            color: var(--primary);
+            font-weight: 800;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: block;
+            margin-top: 30px;
+        }
+
+        /* Timeline / Process */
+        .process-bg {
+            background: var(--secondary);
+            color: #fff;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .p-item {
+            text-align: center;
+        }
+
+        .p-num {
+            font-size: 5rem;
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.05);
+            line-height: 1;
+            margin-bottom: -40px;
+        }
+
+        .p-title {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        /* Insurance / Accreditation */
+        .certs-row {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            padding: 60px 0;
+            filter: grayscale(1);
+            opacity: 0.5;
+        }
+
+        .certs-row img {
+            height: 60px;
+        }
+
+        /* Real Feed Section */
+        .feed-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .feed-item {
+            aspect-ratio: 1;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feed-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        .feed-item:hover img {
+            transform: scale(1.1);
+            filter: brightness(0.6);
+        }
+
+        /* Footer Ultimate */
+        footer {
+            background: #0c1116;
+            padding: 120px 60px 50px;
+            color: #64748b;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 80px;
+        }
+
+        .f-logo {
+            font-size: 2.22rem;
+            font-family: 'Barlow';
+            font-weight: 900;
+            color: #fff;
+            margin-bottom: 30px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .f-col h4 {
+            color: #fff;
+            margin-bottom: 30px;
+            font-size: 1rem;
+        }
+
+        .f-links {
+            list-style: none;
+        }
+
+        .f-links li {
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+
+        .f-links a {
+            color: inherit;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .f-links a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+
+        .f-legal {
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 40px;
+            margin-top: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.75rem;
+        }
+
+        .siret-tag {
+            margin-top: 10px;
+            opacity: 0.5;
+            font-size: 0.65rem;
+        }
+
+        /* Floating Widgets */
+        .floating-cta {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 2000;
+        }
+
+        .f-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .f-whatsapp {
+            background: #25d366;
+        }
+
+        .f-phone {
+            background: var(--primary);
+        }
+
+        .f-btn:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 1000px) {
+
+            .hero-grid,
+            .service-grid,
+            .process-grid,
+            .footer-grid,
+            .feed-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav,
+            .top-bar {
+                padding: 15px 20px;
+            }
+
+            .nav-links,
+            .top-bar-item:nth-child(2) {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <div class="top-bar-item"><i data-lucide="shield-check" size="14"></i> Garantie Décennale AXA
+            N°AXA-317148</div>
+        <div class="top-bar-item"><span class="badge-pro">QUALIBAT RGE 2025</span> Intervention Bruay-la-Buissière &
+            Pas-de-Calais
+        </div>
+    </div>
+
+    <nav>
+        <a href="#" class="logo"><b>SARL</b>PIERRE SERR</a>
+        <ul class="nav-links">
+            <li><a href="#services">Prestations</a></li>
+            <li><a href="#process">Rigueur</a></li>
+            <li><a href="#chantiers">Chantier LIVE</a></li>
+            <li><a href="#avis">Avis Vérifiés</a></li>
+        </ul>
+        <div style="font-weight: 900; color: var(--primary); font-size: 1.4rem;">03 93 22 23 28</div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-grid">
+            <div data-aos="fade-right">
+                <h1>Expertise <span>Bâtiment</span> Bruay-la-Buissière.</h1>
+                <p class="hero- p">Depuis 2008, nous réalisons vos rêves de rénovation à Bruay-la-Buissière avec la précision
+                    d'une orfèvrerie
+                    et la structure d'une ingénierie.</p>
+
+                <div class="trust-row">
+                    <div class="tp-box">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Trustpilot_logo.svg" width="90"
+                            style="filter: brightness(0) invert(1);">
+                        <div style="font-weight: 800; font-size: 1.1rem;">4.9/5</div>
+                    </div>
+                    <div style="font-size: 0.8rem; line-height: 1.2; opacity: 0.7;">
+                        Certifié **Maître Artisan**<br>Assurance Décennale MAAF
+                    </div>
+                </div>
+            </div>
+            <div class="hero-form" data-aos="fade-left">
+                <h3>Calculateur de Devis</h3>
+                <form>
+                    <select class="f-input">
+                        <option>Type de Travaux : Rénovation Totale</option>
+                        <option>Maçonnerie / Gros Oeuvre</option>
+                        <option>Peinture & Décoration</option>
+                        <option>Aménagement Combles</option>
+                    </select>
+                    <div style="display: flex; gap: 10px;">
+                        <input type="text" placeholder="Surface m²" class="f-input" style="width: 50%;">
+                        <input type="text" placeholder="Ville" class="f-input" style="width: 50%;">
+                    </div>
+                    <input type="text" placeholder="Téléphone Portable" class="f-input">
+                    <button class="btn-primary">Estimer mon Projet <i data-lucide="calculator"></i></button>
+                </form>
+                <p style="font-size: 0.65rem; color: #999; text-align: center; margin-top: 15px;">Réponse en 48h
+                    garantie après visite technique.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="stats">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h4>15+</h4>
+                <p>Ans d'expérience</p>
+            </div>
+            <div class="stat-item">
+                <h4>500+</h4>
+                <p>Chantiers livrés</p>
+            </div>
+            <div class="stat-item">
+                <h4>0</h4>
+                <p>Litiges juridiques</p>
+            </div>
+            <div class="stat-item">
+                <h4>100%</h4>
+                <p>Satisfaction Client</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="section container" id="services">
+        <div class="section-header" data-aos="fade-up">
+            <span
+                style="color: var(--primary); text-transform: uppercase; font-weight: 800; letter-spacing: 4px; display: block; margin-bottom: 15px;">Notre
+                Univers</span>
+            <h2>Concevoir & Construire</h2>
+        </div>
+        <div class="service-grid">
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                <i data-lucide="layout" size="50"></i>
+                <h3>Rénovation Lourde</h3>
+                <p>Plus qu'une simple peinture : nous repensons les volumes, les porteurs et l'énergie de votre habitat.
+                </p>
+                <a href="#" class="link">Étude de faisabilité gratuite →</a>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <i data-lucide="construction" size="50"></i>
+                <h3>Extension & Surélévation</h3>
+                <p>Maîtrise complète de la maçonnerie structurante pour agrandir votre patrimoine sans déménager.</p>
+                <a href="#" class="link">Voir nos réalisations →</a>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                <i data-lucide="palette" size="50"></i>
+                <h3>Prestige & Finition</h3>
+                <p>Des matériaux de source (marbre, chêne massif, stucco) posés par nos compagnons experts.</p>
+                <a href="#" class="link">Catalogue matériaux →</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section process-bg" id="process">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 style="color: #fff;">Un Protocole de Rigueur</h2>
+                <p style="color: rgba(255,255,255,0.4);">Tout commence par une structure solide</p>
+            </div>
+            <div class="process-grid">
+                <div class="p-item" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="p-num">01</div>
+                    <h4 class="p-title">Audit Technique</h4>
+                    <p style="font-size: 0.9rem; opacity: 0.6;">Analyse des porteurs, de l'humidité et de l'existant
+                        électrique.</p>
+                </div>
+                <div class="p-item" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="p-num">02</div>
+                    <h4 class="p-title">Pilotage Digital</h4>
+                    <p style="font-size: 0.9rem; opacity: 0.6;">Un espace client dédié pour suivre l'avancée du planning
+                        J+1.</p>
+                </div>
+                <div class="p-item" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="p-num">03</div>
+                    <h4 class="p-title">Double Contrôle</h4>
+                    <p style="font-size: 0.9rem; opacity: 0.6;">Chaque lot est validé par un inspecteur indépendant en
+                        fin de phase.</p>
+                </div>
+                <div class="p-item" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="p-num">04</div>
+                    <h4 class="p-title">Dossier Ouvrage</h4>
+                    <p style="font-size: 0.9rem; opacity: 0.6;">Remise des DOE complets et activation de la garantie 10
+                        ans.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section container" id="chantiers">
+        <div class="section-header" data-aos="fade-up">
+            <h2>Chantiers en cours (LIVE)</h2>
+            <p>Transparence totale : voici le quotidien de nos équipes sur le terrain.</p>
+        </div>
+        <div class="feed-grid">
+            <div class="feed-item"><img
+                    src="https://images.unsplash.com/photo-1541604193435-22287d32c2c2?auto=format&fit=crop&q=80&w=400"
+                    alt="Chantier"></div>
+            <div class="feed-item"><img
+                    src="https://images.unsplash.com/photo-1503387762-592dea58ef23?auto=format&fit=crop&q=80&w=400"
+                    alt="Chantier"></div>
+            <div class="feed-item"><img
+                    src="https://images.unsplash.com/photo-1590059300589-9a674558509c?auto=format&fit=crop&q=80&w=400"
+                    alt="Chantier"></div>
+            <div class="feed-item"><img
+                    src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=400"
+                    alt="Chantier"></div>
+        </div>
+    </section>
+
+    <div class="certs-row">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Logo_Qualibat.svg" alt="Qualibat">
+        <span style="font-weight: 900; font-size: 2rem;">MAAF ASSURANCE</span>
+        <span style="font-weight: 900; font-size: 2rem;">VICAT CIMENT</span>
+        <span style="font-weight: 900; font-size: 2rem;">SAINT-GOBAIN</span>
+    </div>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="f-col">
+                <a href="#" class="f-logo">SARL<span>PIERRE SERR</span></a>
+                <p>Leader de la rénovation de confiance à Bruay-la-Buissière. Nous marions savoir-faire traditionnel et gestion
+                    de
+                    projet moderne.</p>
+                <div class="siret-tag">SIRET: 574112804 44769 • SASU CAPITAL DE 100 000€</div>
+            </div>
+            <div class="f-col">
+                <h4>Expertises</h4>
+                <ul class="f-links">
+                    <li><a href="#">Maçonnerie Générale</a></li>
+                    <li><a href="#">Peinture & Sols</a></li>
+                    <li><a href="#">Plomberie & Chauffage</a></li>
+                    <li><a href="#">Électricité Normée</a></li>
+                </ul>
+            </div>
+            <div class="f-col">
+                <h4>L'Entreprise</h4>
+                <ul class="f-links">
+                    <li><a href="#">Notre Histoire</a></li>
+                    <li><a href="#">Nos Certifications</a></li>
+                    <li><a href="#">Recrutement</a></li>
+                    <li><a href="#">Espace Partenaires</a></li>
+                </ul>
+            </div>
+            <div class="f-col">
+                <h4>Siège & Contact</h4>
+                <ul class="f-links">
+                    <li>51 Boulevard de la République, 22000 Bruay-la-Buissière</li>
+                    <li>contact@bruay-la-buissiere-artisan.fr</li>
+                    <li>03 93 22 23 28</li>
+                    <li>Intervention 24/7 Urgences Bruay-la-Buissière</li>
+                </ul>
+            </div>
+        </div>
+        <div class="f-legal container">
+            <p>&copy; 2025 BatiPro Excellence Construction. Tous droits réservés.</p>
+            <div style="display: flex; gap: 30px;">
+                <a href="#" style="color: inherit;">Politique RGPD</a>
+                <a href="#" style="color: inherit;">Assurance Décennale (Attestation)</a>
+                <a href="#" style="color: inherit;">Mentions Légales</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-cta">
+        <a href="https://wa.me/33600000000" class="f-btn f-whatsapp"><i data-lucide="message-circle"></i></a>
+        <a href="tel:+33145889900" class="f-btn f-phone"><i data-lucide="phone"></i></a>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

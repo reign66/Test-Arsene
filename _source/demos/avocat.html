@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valéry & Associés | Cabinet d'Avocats à la Cour - Paris</title>
+    <title>{{demo_brand_name}} | Cabinet d'Avocats à la Cour - {{ville}}</title>
     <meta name="description"
-        content="Cabinet d'avocats spécialisé en droit des affaires, fiscalité et défense pénale. Expertise, indépendance et secret professionnel garanti. Plus de 40 ans au service du droit.">
+        content="Cabinet d'avocats à {{ville}} spécialisé en droit des affaires, fiscalité et défense pénale. Expertise, indépendance et secret professionnel garanti par {{demo_owner_name}}.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link
@@ -495,15 +495,15 @@
 <body>
 
     <div class="top-info">
-        <span><i data-lucide="map-pin" size="14"></i> 15 Avenue Montaigne, 75008 Paris</span>
+        <span><i data-lucide="map-pin" size="14"></i> {{demo_address}}</span>
         <span><i data-lucide="lock" size="14"></i> Site Sécurisé (Chiffrement AES-256) • Secret Professionnel
             Absolu</span>
     </div>
 
     <header>
         <a href="#" class="logo">
-            <span class="logo-main">VALÉRY & ASSOCIÉS</span>
-            <span class="logo-sub">Cabinet d'Avocats au Barreau de Paris</span>
+            <span class="logo-main">{{demo_brand_main}} {{demo_brand_sub}}</span>
+            <span class="logo-sub">Cabinet d'Avocats au Barreau de {{departement_nom}}</span>
         </a>
         <ul class="nav-links">
             <li><a href="#expertise">Expertises</a></li>
@@ -513,8 +513,8 @@
         </ul>
         <div style="display: flex; gap: 20px; align-items: center;">
             <a href="#" class="btn-client"><i data-lucide="user-plus" size="16"></i> Espace Client</a>
-            <a href="tel:+33145667788" style="color: var(--gold); font-weight: 800; text-decoration: none;">01 45 66 77
-                88</a>
+            <a href="tel:{{demo_phone}}"
+                style="color: var(--gold); font-weight: 800; text-decoration: none;">{{demo_phone}}</a>
         </div>
     </header>
 
@@ -655,8 +655,8 @@
                 <div class="f-logo-box">
                     <span style="font-size: 1.8rem; font-weight: 800; color: #fff;">VALÉRY & ASSOCIÉS</span>
                 </div>
-                <p>Cabinet d'affaires indépendant fondé en 1982. Labellisé "Excellent" par Décideurs Magazine.</p>
-                <div class="siret-line">Cabinet Valéry • SIRET 452 368 791 00054 • TVA FR 45 452 368 791</div>
+                <p>Cabinet d'affaires indépendant fondé à {{ville}}. Labellisé "Excellent" par Décideurs Magazine.</p>
+                <div class="siret-line">Cabinet {{demo_owner_name}} • SIRET {{demo_siret}} • TVA {{demo_tva}}</div>
             </div>
             <div class="f-col">
                 <h4 class="f-title">Expertises</h4>
@@ -670,10 +670,9 @@
             <div class="f-col">
                 <h4>Bureaux</h4>
                 <ul class="f-links">
-                    <li>Paris : 15 Avenue Montaigne</li>
-                    <li>Bruxelles : 12 Rue de la Loi</li>
-                    <li>Tel : 01 45 66 77 88</li>
-                    <li>Email : cabinet@valery-associes.fr</li>
+                    <li>{{ville}} : {{demo_address}}</li>
+                    <li>Tel : {{demo_phone}}</li>
+                    <li>Email : {{demo_email}}</li>
                 </ul>
             </div>
             <div class="f-col">

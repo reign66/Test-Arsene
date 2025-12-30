@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chalon Sur Saone Immo | Immobilier d'Exception & Villas de Luxe Chalon-sur-Saône</title>
+    <meta name="description"
+        content="Découvrez une sélection exclusive de villas de luxe et appartements d'exception à Chalon-sur-Saône et ses environs. Agence immobilière de prestige Chalon Sur Saone Immo.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@200;300;400;500;600;700&family=Tenor+Sans&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root {
+            --gold: #bca37d;
+            --navy: #0f1621;
+            --navy-light: #1c2636;
+            --cream: #f9f7f2;
+            --white: #ffffff;
+            --gray: #94a3b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--white);
+            color: var(--navy);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Tenor Sans', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Premium Nav */
+        .top-nav {
+            background: var(--navy);
+            color: rgba(255, 255, 255, 0.4);
+            padding: 10px 60px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 25px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            letter-spacing: 8px;
+            font-family: 'Tenor Sans';
+            text-decoration: none;
+            color: var(--navy);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo span {
+            font-size: 0.6rem;
+            letter-spacing: 4px;
+            color: var(--gold);
+            margin-top: -5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--navy);
+            text-decoration: none;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        /* Selection Cart (Visual only) */
+        .selection-cart {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: var(--gold);
+            color: #fff;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.6rem;
+            font-weight: 800;
+        }
+
+        /* Hero Boutique */
+        .hero {
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(15, 22, 33, 0.3), rgba(15, 22, 33, 0.3)), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+        }
+
+        .hero-inner {
+            max-width: 1300px;
+            margin: 0 auto;
+            width: 100%;
+            padding: 0 60px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 5.5rem);
+            margin-bottom: 30px;
+            line-height: 1;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            opacity: 0.8;
+            margin-bottom: 60px;
+            font-weight: 300;
+        }
+
+        /* Search Console */
+        .search-console {
+            background: #fff;
+            border-radius: 4px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr) 0.5fr;
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4);
+            max-width: 1100px;
+            overflow: hidden;
+        }
+
+        .search-field {
+            padding: 30px;
+            border-right: 1px solid #eee;
+        }
+
+        .search-field:last-of-type {
+            border-bottom: none;
+        }
+
+        .search-field label {
+            display: block;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            font-weight: 800;
+            color: var(--gray);
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .search-field select,
+        .search-field input {
+            width: 100%;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+            font-family: inherit;
+            color: var(--navy);
+            font-weight: 500;
+        }
+
+        .btn-search {
+            background: var(--navy);
+            color: #fff;
+            border: none;
+            padding: 20px;
+            font-weight: 800;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-search:hover {
+            background: var(--gold);
+        }
+
+        /* Collection Grid */
+        .section {
+            padding: 140px 20px;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 100px;
+        }
+
+        .section-header h2 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .section-header p {
+            font-family: 'Cormorant Garamond';
+            font-style: italic;
+            font-size: 1.6rem;
+            color: var(--gold);
+        }
+
+        .collection-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .prop-card {
+            position: relative;
+            background: var(--white);
+            border: 1px solid #f1f1f1;
+            transition: 0.5s;
+            overflow: hidden;
+        }
+
+        .prop-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 40px 100px rgba(0, 0, 0, 0.05);
+        }
+
+        .prop-img-box {
+            height: 450px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .prop-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.8s ease-out;
+        }
+
+        .prop-card:hover .prop-img-box img {
+            transform: scale(1.08);
+        }
+
+        .prop-badge {
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 5px 15px;
+            font-size: 0.65rem;
+            letter-spacing: 2px;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .prop-like {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .prop-like:hover {
+            background: var(--white);
+            color: #e11d48;
+        }
+
+        .prop-info {
+            padding: 35px;
+        }
+
+        .prop-info h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+        }
+
+        .prop-loc {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.8rem;
+            color: var(--gray);
+            margin-bottom: 25px;
+        }
+
+        .prop-price {
+            font-family: 'Tenor Sans';
+            font-size: 1.8rem;
+            color: var(--navy);
+            margin-bottom: 30px;
+            border-bottom: 1px solid #f1f1f1;
+            padding-bottom: 20px;
+        }
+
+        .prop-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: var(--gray);
+            font-weight: 600;
+        }
+
+        .prop-meta span {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Neighborhood Spotlight */
+        .nb-section {
+            background: var(--cream);
+            padding: 100px 0;
+        }
+
+        .nb-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 0 40px;
+        }
+
+        .nb-card {
+            height: 500px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+            padding: 40px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nb-card img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+            transition: 0.7s;
+        }
+
+        .nb-card:hover img {
+            transform: scale(1.1);
+            filter: brightness(0.65);
+        }
+
+        .nb-card-content {
+            position: relative;
+            z-index: 2;
+            transition: 0.3s;
+        }
+
+        .nb-card h4 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .nb-card span {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        /* Valuation Funnel UI */
+        .valuation-cta {
+            background: var(--navy);
+            color: #fff;
+            padding: 140px 20px;
+            position: relative;
+        }
+
+        .val-grid {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 100px;
+            align-items: center;
+        }
+
+        .val-form-box {
+            background: #fff;
+            padding: 60px;
+            color: var(--navy);
+            border-radius: 4px;
+            box-shadow: 0 50px 100px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer Ultimate */
+        footer {
+            background: #fff;
+            border-top: 1px solid #eee;
+            padding: 120px 60px 50px;
+            color: var(--gray);
+        }
+
+        .f-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 100px;
+        }
+
+        .f-logo-box {
+            margin-bottom: 30px;
+        }
+
+        .f-title {
+            color: var(--navy);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 800;
+            font-size: 0.8rem;
+            margin-bottom: 35px;
+        }
+
+        .f-links {
+            list-style: none;
+        }
+
+        .f-links li {
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+
+        .f-links a {
+            color: inherit;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .f-links a:hover {
+            color: var(--gold);
+            padding-left: 5px;
+        }
+
+        .f-legal {
+            border-top: 1px solid #f1f1f1;
+            margin-top: 80px;
+            padding-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .siret-line {
+            font-size: 0.65rem;
+            opacity: 0.5;
+            margin-top: 15px;
+        }
+
+        /* Floating WhatsApp Agent */
+        .floating-agent {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: #fff;
+            padding: 10px 25px 10px 10px;
+            border-radius: 50px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            border: 1px solid #eee;
+            z-index: 2000;
+            text-decoration: none;
+        }
+
+        .agent-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .agent-status {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: #25d366;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            top: 35px;
+            left: 40px;
+        }
+
+        @media (max-width: 1100px) {
+
+            nav,
+            .top-nav {
+                padding: 15px 25px;
+            }
+
+            .nav-links,
+            .top-nav span:first-child {
+                display: none;
+            }
+
+            .hero-inner {
+                padding: 0 25px;
+            }
+
+            .search-console,
+            .collection-grid,
+            .nb-grid,
+            .val-grid,
+            .f-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .search-field {
+                border-right: none;
+                border-bottom: 1px solid #eee;
+            }
+
+            .prop-img-box {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="top-nav">
+        <span>Agence Agréée FNAIM • Carte Pro N°CPI 1901 2023 000 0785 • Chalon-sur-Saône</span>
+        <div style="display: flex; gap: 30px;">
+            <span>FR / EN / RU</span>
+            <span>Estimation Gratuite sous 24h</span>
+        </div>
+    </div>
+
+    <nav>
+        <a href="#" class="logo">CHALON<span>SUR SAONE IMMO</span></a>
+        <ul class="nav-links">
+            <li><a href="#villas">Collection Villas</a></li>
+            <li><a href="#apartments">Appartements</a></li>
+            <li><a href="#neighbourhood">Quartiers</a></li>
+            <li><a href="#val">Estimation</a></li>
+        </ul>
+        <div style="display: flex; gap: 20px; align-items: center;">
+            <div class="selection-cart">
+                <i data-lucide="heart" size="22"></i>
+                <div class="cart-count">3</div>
+            </div>
+            <a href="tel:03 82 26 23 32"
+                style="font-weight: 800; text-decoration: none; color: var(--navy);">03 82 26 23 32</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-inner" data-aos="fade-up">
+            <p>Curateurs de l'irréprochable à Chalon-sur-Saône</p>
+            <h1>L'Art de Vivre <br>à Chalon-sur-Saône.</h1>
+
+            <div class="search-console">
+                <div class="search-field">
+                    <label>Secteur Géographique</label>
+                    <select>
+                        <option>Saint-Tropez & Ramatuelle</option>
+                        <option>Cannes & Cap d'Antibes</option>
+                        <option>Monaco & Environs</option>
+                    </select>
+                </div>
+                <div class="search-field">
+                    <label>Type de résidence</label>
+                    <select>
+                        <option>Propriété Pied d'eau</option>
+                        <option>Villa Contemporaine</option>
+                        <option>Palais Vénitien</option>
+                    </select>
+                </div>
+                <div class="search-field">
+                    <label>Chambres</label>
+                    <select>
+                        <option>+4 Suites</option>
+                        <option>+6 Suites</option>
+                        <option>+10 Suites (Domaine)</option>
+                    </select>
+                </div>
+                <div class="search-field">
+                    <label>Budget Minimal</label>
+                    <input type="text" placeholder="5 000 000 €">
+                </div>
+                <button class="btn-search"><i data-lucide="search" size="28"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="section container" id="villas">
+        <div class="section-header" data-aos="fade-up">
+            <h2>La Collection Exclusive</h2>
+            <p>Une sélection confidentielle de propriétés hors marché</p>
+        </div>
+
+        <div class="collection-grid">
+            <div class="prop-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="prop-img-box">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800"
+                        alt="Villa">
+                    <div class="prop-badge">À Vendre</div>
+                    <div class="prop-like"><i data-lucide="heart" size="18"></i></div>
+                </div>
+                <div class="prop-info">
+                    <div class="prop-loc"><i data-lucide="map-pin" size="14"></i> Cap d'Antibes, France</div>
+                    <h3>Villa Bel-Air Prestige</h3>
+                    <div class="prop-price">12 450 000 €</div>
+                    <div class="prop-meta">
+                        <span><i data-lucide="maximize" size="16"></i> 650 m²</span>
+                        <span><i data-lucide="bed" size="16"></i> 7 Ch.</span>
+                        <span><i data-lucide="waves" size="16"></i> Piscine Infinie</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="prop-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="prop-img-box">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=800"
+                        alt="Villa">
+                    <div class="prop-badge" style="background: var(--navy); color: #fff;">Sous Compromis</div>
+                    <div class="prop-like"><i data-lucide="heart" size="18" fill="red"></i></div>
+                </div>
+                <div class="prop-info">
+                    <div class="prop-loc"><i data-lucide="map-pin" size="14"></i> Saint-Tropez Town</div>
+                    <h3>Hôtel Particulier Provencal</h3>
+                    <div class="prop-price">7 800 000 €</div>
+                    <div class="prop-meta">
+                        <span><i data-lucide="maximize" size="16"></i> 320 m²</span>
+                        <span><i data-lucide="bed" size="16"></i> 5 Ch.</span>
+                        <span><i data-lucide="shield" size="16"></i> Haute Sécurité</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="prop-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="prop-img-box">
+                    <img src="https://images.unsplash.com/photo-1600607687940-4e5a994e57b6?auto=format&fit=crop&q=80&w=800"
+                        alt="Villa">
+                    <div class="prop-badge">Nouveauté</div>
+                    <div class="prop-like"><i data-lucide="heart" size="18"></i></div>
+                </div>
+                <div class="prop-info">
+                    <div class="prop-loc"><i data-lucide="map-pin" size="14"></i> Cannes Californie</div>
+                    <h3>L'Attique Suspendu</h3>
+                    <div class="prop-price">5 200 000 €</div>
+                    <div class="prop-meta">
+                        <span><i data-lucide="maximize" size="16"></i> 240 m²</span>
+                        <span><i data-lucide="bed" size="16"></i> 4 Ch.</span>
+                        <span><i data-lucide="sun" size="16"></i> Terrasse 150m²</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="nb-section" id="neighbourhood">
+        <div class="section-header" data-aos="fade-up">
+            <h2>Les Adresses d'Exception</h2>
+            <p>Vivre là où le monde entier rêve d'être</p>
+        </div>
+        <div class="nb-grid">
+            <a href="#" class="nb-card" data-aos="zoom-in" data-aos-delay="100">
+                <img src="https://images.unsplash.com/photo-1549488344-1f9b8d2ed1f3?auto=format&fit=crop&q=80&w=600"
+                    alt="Saint-Tropez">
+                <div class="nb-card-content"><span>La Légende</span>
+                    <h4>Saint-Tropez</h4>
+                </div>
+            </a>
+            <a href="#" class="nb-card" data-aos="zoom-in" data-aos-delay="200">
+                <img src="https://images.unsplash.com/photo-1590471926671-5f048d88e08d?auto=format&fit=crop&q=80&w=600"
+                    alt="Nice">
+                <div class="nb-card-content"><span>Prestige Azuréen</span>
+                    <h4>Nice • Cimiez</h4>
+                </div>
+            </a>
+            <a href="#" class="nb-card" data-aos="zoom-in" data-aos-delay="300">
+                <img src="https://images.unsplash.com/photo-1493246507139-91e8bef99c02?auto=format&fit=crop&q=80&w=600"
+                    alt="Monaco">
+                <div class="nb-card-content"><span>Carré d'Or</span>
+                    <h4>Monaco</h4>
+                </div>
+            </a>
+            <a href="#" class="nb-card" data-aos="zoom-in" data-aos-delay="400">
+                <img src="https://images.unsplash.com/photo-1506929431574-4ec5893d5675?auto=format&fit=crop&q=80&w=600"
+                    alt="Antibes">
+                <div class="nb-card-content"><span>Sanctuaire</span>
+                    <h4>Cap d'Antibes</h4>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section class="valuation-cta" id="val">
+        <div class="val-grid">
+            <div data-aos="fade-right">
+                <h2 style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 40px; color: #fff;">Quelle est la valeur
+                    réelle de votre bien ?</h2>
+                <p style="font-size: 1.25rem; opacity: 0.7; margin-bottom: 50px;">Notre département Expertise réalise
+                    des avis de valeur certifiés pour vos cessions, successions ou arbitrages de patrimoine. Analyse
+                    comparative confidentielle sous 48h.</p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+                    <div style="display: flex; gap: 15px;">
+                        <i data-lucide="check" color="var(--gold)"></i>
+                        <div>
+                            <h5 style="color:var(--gold)">Secret Absolu</h5>
+                            <p style="font-size: 0.8rem; opacity: 0.6;">Discrétion totale sur votre projet de vente.</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 15px;">
+                        <i data-lucide="check" color="var(--gold)"></i>
+                        <div>
+                            <h5 style="color:var(--gold)">Audit technique</h5>
+                            <p style="font-size: 0.8rem; opacity: 0.6;">Diagnostic du potentiel de valorisation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="val-form-box" data-aos="fade-left">
+                <h3 style="margin-bottom: 30px; font-size: 1.4rem;">Audit Express</h3>
+                <form>
+                    <div style="margin-bottom: 20px;">
+                        <label
+                            style="font-size: 0.7rem; font-weight: 800; text-transform: uppercase; color: var(--gray);">Adresse
+                            du bien</label>
+                        <input type="text" placeholder="Boulevard de la Croisette, Cannes..."
+                            style="width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 4px; font-family: inherit;">
+                    </div>
+                    <div style="display: flex; gap: 20px; margin-bottom: 20px;">
+                        <div style="flex: 1;">
+                            <label
+                                style="font-size: 0.7rem; font-weight: 800; text-transform: uppercase; color: var(--gray);">Type</label>
+                            <select
+                                style="width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 4px; font-family: inherit;">
+                                <option>Villa</option>
+                                <option>Appartement</option>
+                            </select>
+                        </div>
+                        <div style="flex: 1;">
+                            <label
+                                style="font-size: 0.7rem; font-weight: 800; text-transform: uppercase; color: var(--gray);">Surface
+                                m²</label>
+                            <input type="text" placeholder="ex: 250"
+                                style="width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 4px; font-family: inherit;">
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 30px;">
+                        <label
+                            style="font-size: 0.7rem; font-weight: 800; text-transform: uppercase; color: var(--gray);">Vos
+                            coordonnées</label>
+                        <input type="text" placeholder="Email ou Téléphone"
+                            style="width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 4px; font-family: inherit;">
+                    </div>
+                    <button
+                        style="width: 100%; padding: 22px; background: var(--navy); color: #fff; border: none; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; cursor: pointer;">Demander
+                        mon Estimation</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container f-grid">
+            <div class="f-col">
+                <a href="#" class="logo"
+                    style="margin-bottom: 35px; align-items: flex-start;">CHALON<span>SUR SAONE IMMO</span></a>
+                <p>Le partenaire de confiance des acquéreurs internationaux à Chalon-sur-Saône. Excellence, Intégrité et
+                    Discrétion totale.</p>
+                <div class="siret-line">© 2025 Chalon Sur Saone Immo • SIRET: 834212982 98584 • CARTE TRANSACTION N°
+                    CPI 1901 2023 000 0785</div>
+                <div style="display: flex; gap: 20px; margin-top: 30px;">
+                    <a href="#" style="color: var(--navy);"><i data-lucide="instagram" size="20"></i></a>
+                    <a href="#" style="color: var(--navy);"><i data-lucide="linkedin" size="20"></i></a>
+                    <a href="#" style="color: var(--navy);"><i data-lucide="facebook" size="20"></i></a>
+                </div>
+            </div>
+            <div class="f-col">
+                <h4 class="f-title">Ventes</h4>
+                <ul class="f-links">
+                    <li><a href="#">Villas de Luxe</a></li>
+                    <li><a href="#">Propriétés de Caractère</a></li>
+                    <li><a href="#">Pieds dans l'eau</a></li>
+                    <li><a href="#">Dossiers Confidentiels</a></li>
+                </ul>
+            </div>
+            <div class="f-col">
+                <h4 class="f-title">Services</h4>
+                <ul class="f-links">
+                    <li><a href="#">Chasse Immobilière</a></li>
+                    <li><a href="#">Gestion Locative</a></li>
+                    <li><a href="#">Valuation Immobilière</a></li>
+                    <li><a href="#">Conciergerie Management</a></li>
+                </ul>
+            </div>
+            <div class="f-col">
+                <h4 class="f-title">Bureaux</h4>
+                <ul class="f-links">
+                    <li>Siège : 6 Boulevard de la République, 44000 Chalon-sur-Saône</li>
+                    <li>Email : contact@chalon-sur-saone-immo.fr</li>
+                    <li>Tel : 03 82 26 23 32</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container f-legal">
+            <p>&copy; 2025 Riviera Prestige Real Estate International Agency. Adhérent FNAIM.</p>
+            <div style="display: flex; gap: 30px; font-weight: 600; font-size: 0.75rem; color: var(--navy);">
+                <a href="#" style="color: inherit; text-decoration: none;">RGPD</a>
+                <a href="#" style="color: inherit; text-decoration: none;">MENTIONS LÉGALES</a>
+                <a href="#" style="color: inherit; text-decoration: none;">HONORAIRES</a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/33645667788" class="floating-agent">
+        <div style="position: relative;">
+            <img src="https://randomuser.me/api/portraits/women/65.jpg" class="agent-avatar" alt="Agent">
+            <div class="agent-status"></div>
+        </div>
+        <div>
+            <div style="font-size: 0.6rem; text-transform: uppercase; color: #94a3b8; font-weight: 800;">Agent en Ligne
+            </div>
+            <div style="font-size: 0.9rem; font-weight: 800; color: var(--navy);">Léa • WhatsApp</div>
+        </div>
+    </a>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

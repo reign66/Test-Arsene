@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Riviera Prestige | Immobilier d'Exception & Villas de Luxe Côte d'Azur</title>
+    <title>{{demo_brand_name}} | Immobilier d'Exception & Villas de Luxe {{ville}}</title>
     <meta name="description"
-        content="Découvrez une sélection exclusive de villas de luxe et appartements d'exception à Cannes, Saint-Tropez et Monaco. Agence immobilière de prestige depuis 1995.">
+        content="Découvrez une sélection exclusive de villas de luxe et appartements d'exception à {{ville}} et ses environs. Agence immobilière de prestige {{demo_brand_name}}.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link
@@ -249,7 +249,7 @@
 
         .section-header p {
             font-family: 'Cormorant Garamond';
-            italic;
+            font-style: italic;
             font-size: 1.6rem;
             color: var(--gold);
         }
@@ -585,7 +585,7 @@
 <body>
 
     <div class="top-nav">
-        <span>Agence Agréée FNAIM • Assurance Garantie Financière GALIAN 1.2M€</span>
+        <span>Agence Agréée FNAIM • Carte Pro N°{{demo_carte_pro}} • {{ville}}</span>
         <div style="display: flex; gap: 30px;">
             <span>FR / EN / RU</span>
             <span>Estimation Gratuite sous 24h</span>
@@ -593,7 +593,7 @@
     </div>
 
     <nav>
-        <a href="#" class="logo">RIVIERA<span>PRESTIGE</span></a>
+        <a href="#" class="logo">{{demo_brand_main}}<span>{{demo_brand_sub}}</span></a>
         <ul class="nav-links">
             <li><a href="#villas">Collection Villas</a></li>
             <li><a href="#apartments">Appartements</a></li>
@@ -605,15 +605,15 @@
                 <i data-lucide="heart" size="22"></i>
                 <div class="cart-count">3</div>
             </div>
-            <a href="tel:+33493456677" style="font-weight: 800; text-decoration: none; color: var(--navy);">04 93 45 66
-                77</a>
+            <a href="tel:{{demo_phone}}"
+                style="font-weight: 800; text-decoration: none; color: var(--navy);">{{demo_phone}}</a>
         </div>
     </nav>
 
     <section class="hero">
         <div class="hero-inner" data-aos="fade-up">
-            <p>Curateurs de l'irréprochable depuis 1995</p>
-            <h1>L'Art de Vivre <br>sur la Riviera.</h1>
+            <p>Curateurs de l'irréprochable à {{ville}}</p>
+            <h1>L'Art de Vivre <br>à {{ville}}.</h1>
 
             <div class="search-console">
                 <div class="search-field">
@@ -824,11 +824,11 @@
         <div class="container f-grid">
             <div class="f-col">
                 <a href="#" class="logo"
-                    style="margin-bottom: 35px; align-items: flex-start;">RIVIERA<span>PRESTIGE</span></a>
-                <p>Le partenaire de confiance des acquéreurs internationaux sur la Côte d'Azur. Excellence, Intégrité et
+                    style="margin-bottom: 35px; align-items: flex-start;">{{demo_brand_main}}<span>{{demo_brand_sub}}</span></a>
+                <p>Le partenaire de confiance des acquéreurs internationaux à {{ville}}. Excellence, Intégrité et
                     Discrétion totale.</p>
-                <div class="siret-line">SAS AU CAPITAL DE 250 000€ • SIRET: 452 368 791 00054 • CARTE TRANSACTION N° CPI
-                    0605 2018 000 034 125 CCI NICE</div>
+                <div class="siret-line">© 2025 {{demo_brand_name}} • SIRET: {{demo_siret}} • CARTE TRANSACTION N°
+                    {{demo_carte_pro}}</div>
                 <div style="display: flex; gap: 20px; margin-top: 30px;">
                     <a href="#" style="color: var(--navy);"><i data-lucide="instagram" size="20"></i></a>
                     <a href="#" style="color: var(--navy);"><i data-lucide="linkedin" size="20"></i></a>
@@ -856,10 +856,9 @@
             <div class="f-col">
                 <h4 class="f-title">Bureaux</h4>
                 <ul class="f-links">
-                    <li>Cannes : 2 Boulevard de la Croisette</li>
-                    <li>Saint-Tropez : Place des Lices</li>
-                    <li>Nice : Cimiez / Promenade</li>
-                    <li>Email : contact@riviera-prestige.fr</li>
+                    <li>Siège : {{demo_address}}</li>
+                    <li>Email : {{demo_email}}</li>
+                    <li>Tel : {{demo_phone}}</li>
                 </ul>
             </div>
         </div>

@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BatiPro Excellence | Rénovation Immobilière & Maçonnerie de Prestige</title>
+    <title>{{demo_brand_name}} | Rénovation Immobilière & Maçonnerie de Prestige {{ville}}</title>
     <meta name="description"
-        content="Artisans certifiés Qualibat pour vos rénovations totales et travaux de maçonnerie. Devis gratuit sous 48h. Garantie décennale incluse.">
+        content="Artisans certifiés Qualibat à {{ville}} pour vos rénovations totales et travaux de maçonnerie. Devis gratuit sous 48h. Garantie décennale incluse.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link
@@ -503,27 +503,30 @@
 <body>
 
     <div class="top-bar">
-        <div class="top-bar-item"><i data-lucide="shield-check" size="14"></i> Garantie Décennale AXA N°4589221X</div>
-        <div class="top-bar-item"><span class="badge-pro">QUALIBAT RGE 2025</span> Intervention Région Parisienne +60km
+        <div class="top-bar-item"><i data-lucide="shield-check" size="14"></i> Garantie Décennale AXA
+            N°{{demo_assurance}}</div>
+        <div class="top-bar-item"><span class="badge-pro">QUALIBAT RGE 2025</span> Intervention {{ville}} &
+            {{departement_nom}}
         </div>
     </div>
 
     <nav>
-        <a href="#" class="logo"><b>BATI</b>PRO</a>
+        <a href="#" class="logo"><b>{{demo_brand_main}}</b>{{demo_brand_sub}}</a>
         <ul class="nav-links">
             <li><a href="#services">Prestations</a></li>
             <li><a href="#process">Rigueur</a></li>
             <li><a href="#chantiers">Chantier LIVE</a></li>
             <li><a href="#avis">Avis Vérifiés</a></li>
         </ul>
-        <div style="font-weight: 900; color: var(--primary); font-size: 1.4rem;">01 45 88 99 00</div>
+        <div style="font-weight: 900; color: var(--primary); font-size: 1.4rem;">{{demo_phone}}</div>
     </nav>
 
     <section class="hero">
         <div class="hero-grid">
             <div data-aos="fade-right">
-                <h1>Expertise <span>Bâtiment</span> Excellence Immobilière.</h1>
-                <p class="hero-p">Depuis 2008, nous réalisons vos rêves de rénovation avec la précision d'une orfèvrerie
+                <h1>Expertise <span>Bâtiment</span> {{ville}}.</h1>
+                <p class="hero- p">Depuis 2008, nous réalisons vos rêves de rénovation à {{ville}} avec la précision
+                    d'une orfèvrerie
                     et la structure d'une ingénierie.</p>
 
                 <div class="trust-row">
@@ -676,10 +679,11 @@
     <footer>
         <div class="container footer-grid">
             <div class="f-col">
-                <a href="#" class="f-logo">BATI<span>PRO</span></a>
-                <p>Leader de la rénovation de confiance en France. Nous marions savoir-faire traditionnel et gestion de
+                <a href="#" class="f-logo">{{demo_brand_main}}<span>{{demo_brand_sub}}</span></a>
+                <p>Leader de la rénovation de confiance à {{ville}}. Nous marions savoir-faire traditionnel et gestion
+                    de
                     projet moderne.</p>
-                <div class="siret-tag">SIRET: 452 368 791 00054 • SASU CAPITAL DE 100 000€</div>
+                <div class="siret-tag">SIRET: {{demo_siret}} • SASU CAPITAL DE 100 000€</div>
             </div>
             <div class="f-col">
                 <h4>Expertises</h4>
@@ -702,10 +706,10 @@
             <div class="f-col">
                 <h4>Siège & Contact</h4>
                 <ul class="f-links">
-                    <li>15 Rue de l'Artisanat, 75012 Paris</li>
-                    <li>contact@batipro-excellence.fr</li>
-                    <li>01 45 88 99 00</li>
-                    <li>Intervention 24/7 Urgences</li>
+                    <li>{{demo_address}}</li>
+                    <li>{{demo_email}}</li>
+                    <li>{{demo_phone}}</li>
+                    <li>Intervention 24/7 Urgences {{ville}}</li>
                 </ul>
             </div>
         </div>

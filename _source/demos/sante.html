@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centre Médical Kléber | Expertise Santé & Pôle d'Excellence Pluridisciplinaire</title>
+    <title>{{demo_brand_name}} | Expertise Santé & Pôle d'Excellence Pluridisciplinaire {{ville}}</title>
     <meta name="description"
-        content="Le Centre Médical Kléber regroupe plus de 40 praticiens experts dans un environnement de pointe au cœur du 16e arrondissement de Paris.">
+        content="Le {{demo_brand_name}} regroupe plus de 40 praticiens experts dans un environnement de pointe à {{ville}}.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;800;900&display=swap"
@@ -465,7 +465,7 @@
     </div>
 
     <nav>
-        <a href="#" class="logo"><b>CENTRE</b>KLÉBER</a>
+        <a href="#" class="logo"><b>{{demo_brand_main}}</b>{{demo_brand_sub}}</a>
         <ul class="nav-links">
             <li><a href="#poles">Pôles Médicaux</a></li>
             <li><a href="#tech">Plateau Technique</a></li>
@@ -473,7 +473,7 @@
             <li><a href="#contact">Contact & Accès</a></li>
         </ul>
         <div style="display: flex; gap: 20px; align-items: center;">
-            <span style="font-weight: 900; font-size: 1.1rem; color: var(--blue);">01 44 55 66 77</span>
+            <span style="font-weight: 900; font-size: 1.1rem; color: var(--blue);">{{demo_phone}}</span>
             <a href="#rdv" class="btn-medical">Prendre rendez-vous</a>
         </div>
     </nav>
@@ -481,8 +481,9 @@
     <section class="hero">
         <div class="hero-grid">
             <div data-aos="fade-right">
-                <h1>L'expertise médicale, <span>au cœur du 16e.</span></h1>
-                <p>Un pôle pluridisciplinaire d'excellence regroupant 42 spécialistes référents autour d'un plateau
+                <h1>L'expertise médicale, <span>à {{ville}}.</span></h1>
+                <p>Un pôle pluridisciplinaire d'excellence regroupant 42 spécialistes référents à {{ville}} autour d'un
+                    plateau
                     technique de dernière génération.</p>
                 <div style="display: flex; gap: 20px;">
                     <a href="#rdv" class="btn-medical" style="padding: 20px 50px; font-size: 0.9rem;">RDV en Ligne</a>
@@ -501,10 +502,10 @@
                 </div>
                 <div style="margin-top: 30px; border-top: 1px solid var(--border); padding-top: 20px;">
                     <div style="display: flex; gap: 15px; align-items: center;">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg"
+                        <img src="https://i.pravatar.cc/150?u={{demo_owner_name}}"
                             style="width:50px; height:50px; border-radius:50%;" alt="Doctor">
                         <div>
-                            <div style="font-weight: 800; font-size: 0.9rem;">Dr. Antoine Morel</div>
+                            <div style="font-weight: 800; font-size: 0.9rem;">Dr. {{demo_owner_name}}</div>
                             <div
                                 style="font-size: 0.7rem; color: var(--blue); font-weight: 700; text-transform: uppercase;">
                                 Médecine Générale</div>
@@ -599,11 +600,12 @@
     <footer>
         <div class="container f-grid">
             <div class="f-col">
-                <a href="#" class="logo" style="margin-bottom: 35px;"><b>CENTRE</b>KLÉBER</a>
-                <p>Établissement médical agréé accueillant plus de 500 patients par jour. Engagement pour une santé
+                <a href="#" class="logo" style="margin-bottom: 35px;"><b>{{demo_brand_main}}</b>{{demo_brand_sub}}</a>
+                <p>Établissement médical agréé accueillant plus de 500 patients par jour à {{ville}}. Engagement pour
+                    une santé
                     accessible et experte.</p>
-                <div class="legal-line">SELAS MÉDICALE KLÉBER • SIRET 452 368 791 00054 • RPPS 10004568912 • TVA FR 45
-                    452 368 791</div>
+                <div class="legal-line">{{demo_brand_name}} • SIRET {{demo_siret}} • RPPS {{demo_rpps}} • TVA
+                    {{demo_tva}}</div>
                 <div style="display: flex; gap: 20px; margin-top: 30px;">
                     <i data-lucide="linkedin"></i>
                     <i data-lucide="facebook"></i>
@@ -631,10 +633,10 @@
             <div class="f-col">
                 <h4 class="f-title">Accès</h4>
                 <ul class="f-links">
-                    <li>12 Avenue Kléber, 75016 Paris</li>
-                    <li>Métro : Kléber (Ligne 6)</li>
-                    <li>Parking Souterrain Privé</li>
-                    <li>urgences@centre-kleber.fr</li>
+                    <li>{{demo_address}}</li>
+                    <li>Tel : {{demo_phone}}</li>
+                    <li>Email : {{demo_email}}</li>
+                    <li>Lu-Sa : 08h00 - 20h30</li>
                 </ul>
             </div>
         </div>
@@ -648,9 +650,9 @@
         </div>
     </footer>
 
-    <a href="tel:+33144556677" class="floating-emergency">
+    <a href="tel:{{demo_phone}}" class="floating-emergency">
         <i data-lucide="phone-forwarded"></i>
-        <span>URGENCE : 01 44 55 66 77</span>
+        <span>URGENCE : {{demo_phone}}</span>
     </a>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

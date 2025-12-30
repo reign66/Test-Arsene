@@ -25,6 +25,7 @@ def run_script(script_name):
 if __name__ == "__main__":
     if run_script("generate.py"):
         run_script("generate_departements.py")
+        run_script("generate_demos.py")
         run_script("generate_sitemap.py")
         print("🏁 Full site refresh complete.")
     else:

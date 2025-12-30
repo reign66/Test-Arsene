@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maison Sélène | Institut de Beauté & Spa de Luxe Paris</title>
+    <title>{{demo_brand_name}} | Institut de Beauté & Spa de Luxe {{ville}}</title>
     <meta name="description"
-        content="Vivez une parenthèse de bien-être absolue chez Maison Sélène. Soins visage haute performance, massages du monde et rituels spa confidentiels.">
+        content="Vivez une parenthèse de bien-être absolue chez {{demo_brand_name}} à {{ville}}. Soins visage haute performance, massages du monde et rituels spa confidentiels.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link
@@ -461,7 +461,7 @@
     </div>
 
     <nav>
-        <a href="#" class="logo">MAISON<span>SÉLÈNE</span></a>
+        <a href="#" class="logo">{{demo_brand_main}}<span>{{demo_brand_sub}}</span></a>
         <ul class="nav-links">
             <li><a href="#rituels">Rituels</a></li>
             <li><a href="#tarifs">Tarifs</a></li>
@@ -473,8 +473,8 @@
 
     <section class="hero">
         <div class="hero-inner" data-aos="zoom-out">
-            <h1>L'Harmonie Intérieure</h1>
-            <p>Un sanctuaire confidentiel au cœur du triangle d'or, dédié à la beauté de l'âme et du corps.</p>
+            <h1>L'Harmonie Intérieure à {{ville}}</h1>
+            <p>Un sanctuaire confidentiel au cœur de {{ville}}, dédié à la beauté de l'âme et du corps.</p>
             <div style="display: flex; gap: 20px; justify-content: center;">
                 <a href="#rituels" class="btn-booking" style="padding: 20px 50px;">Explorer les Soins</a>
                 <a href="#cadeaux" class="btn-booking"
@@ -592,7 +592,8 @@
                 MAISON SÉLÈNE</div>
             <div style="font-family: 'Cormorant Garamond'; font-size: 1.4rem; color: var(--taupe);">Rituel
                 d'Inspirations • 150€</div>
-            <div style="font-size: 0.6rem; color: var(--taupe); opacity: 0.5;">Valable 1 an dans notre institut parisien
+            <div style="font-size: 0.6rem; color: var(--taupe); opacity: 0.5;">Valable 1 an dans notre institut à
+                {{ville}}
             </div>
         </div>
     </section>
@@ -601,9 +602,9 @@
         <div class="container f-grid">
             <div class="f-col">
                 <a href="#" class="logo"
-                    style="align-items: flex-start; margin-bottom: 35px;">MAISON<span>SÉLÈNE</span></a>
-                <p>Maison fondée en 2012. Expertise dermatologique, éthique environnementale et luxe holistique.</p>
-                <div class="siret-tag">MAISON SÉLÈNE PARIS • SIRET 452 368 791 00054 • CAPITAL 50 000€</div>
+                    style="align-items: flex-start; margin-bottom: 35px;">{{demo_brand_main}}<span>{{demo_brand_sub}}</span></a>
+                <p>Maison fondée à {{ville}}. Expertise dermatologique, éthique environnementale et luxe holistique.</p>
+                <div class="siret-tag">{{demo_brand_name}} {{ville}} • SIRET {{demo_siret}}</div>
                 <div style="display: flex; gap: 20px; margin-top: 30px;">
                     <i data-lucide="instagram"></i>
                     <i data-lucide="facebook"></i>
@@ -631,9 +632,9 @@
             <div class="f-col">
                 <h4 class="f-title">Contact</h4>
                 <ul class="f-links">
-                    <li>25 Rue de la Paix, 75001 Paris</li>
-                    <li>Réservations : 01 42 25 15 15</li>
-                    <li>Email : spa@maison-selene.fr</li>
+                    <li>{{demo_address}}</li>
+                    <li>Réservations : {{demo_phone}}</li>
+                    <li>Email : {{demo_email}}</li>
                     <li>Lu-Sa : 09h00 - 20h00</li>
                 </ul>
             </div>
