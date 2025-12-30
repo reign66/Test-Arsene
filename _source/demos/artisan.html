@@ -4,21 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BatiPro Excellence | Maçonnerie & Rénovation Haut de Gamme</title>
+    <title>BatiPro Excellence | Rénovation Immobilière & Maçonnerie de Prestige</title>
+    <meta name="description"
+        content="Artisans certifiés Qualibat pour vos rénovations totales et travaux de maçonnerie. Devis gratuit sous 48h. Garantie décennale incluse.">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link
-        href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://unpkg.com/lucide@latest"></script>
+
     <style>
         :root {
-            --primary: #f39c12;
-            --primary-dark: #d35400;
-            --secondary: #1e272e;
-            --text: #2d3436;
-            --light: #f4f7f6;
+            --primary: #ff5e00;
+            --primary-dark: #cc4b00;
+            --secondary: #121821;
+            --navy-light: #1c2636;
+            --gray: #64748b;
             --white: #ffffff;
+            --light: #f8fafc;
         }
 
         * {
@@ -34,42 +39,67 @@
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
             background: var(--white);
-            color: var(--text);
+            color: var(--secondary);
             line-height: 1.6;
         }
 
         h1,
         h2,
-        h3 {
-            font-family: 'Oswald', sans-serif;
+        h3,
+        h4 {
+            font-family: 'Barlow', sans-serif;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            font-weight: 900;
         }
 
-        /* Navigation */
+        /* Navigation Professional */
+        .top-bar {
+            background: var(--secondary);
+            color: #fff;
+            padding: 10px 60px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .top-bar-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .badge-pro {
+            background: var(--primary);
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-size: 0.65rem;
+        }
+
         nav {
-            position: fixed;
-            width: 100%;
+            position: sticky;
             top: 0;
             z-index: 1000;
-            padding: 20px 50px;
+            padding: 20px 60px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
-            border-bottom: 2px solid var(--primary);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border-bottom: 2px solid var(--secondary);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
         }
 
         .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--secondary);
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
             text-decoration: none;
+            color: var(--secondary);
         }
 
-        .logo span {
+        .logo b {
             color: var(--primary);
         }
 
@@ -80,8 +110,8 @@
         }
 
         .nav-links a {
-            color: var(--secondary);
             text-decoration: none;
+            color: var(--secondary);
             font-size: 0.9rem;
             font-weight: 700;
             transition: 0.3s;
@@ -91,72 +121,142 @@
             color: var(--primary);
         }
 
-        /* Hero */
+        /* Hero Artisan */
         .hero {
-            padding: 180px 20px 100px;
-            background: linear-gradient(135deg, rgba(30, 39, 46, 0.95) 0%, rgba(30, 39, 46, 0.8) 100%), url('https://images.unsplash.com/photo-1504307651254-35680f3366d4?auto=format&fit=crop&q=80&w=2000');
+            padding: 120px 20px 100px;
+            background: linear-gradient(rgba(18, 24, 33, 0.8), rgba(18, 24, 33, 0.8)), url('https://images.unsplash.com/photo-1541604193435-22287d32c2c2?auto=format&fit=crop&q=80&w=2000');
             background-size: cover;
             background-position: center;
-            color: var(--white);
-            position: relative;
+            color: #fff;
         }
 
-        .hero-content {
-            max-width: 1200px;
+        .hero-grid {
+            max-width: 1300px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1.2fr 1fr;
-            gap: 50px;
+            gap: 80px;
             align-items: center;
         }
 
         .hero h1 {
-            font-size: 4.5rem;
-            line-height: 1.1;
+            font-size: clamp(2.5rem, 5vw, 5.5rem);
+            line-height: 0.95;
             margin-bottom: 30px;
+            letter-spacing: -2px;
         }
 
         .hero h1 span {
             color: var(--primary);
         }
 
-        .hero p {
-            font-size: 1.25rem;
+        .hero-p {
+            font-size: 1.3rem;
             margin-bottom: 40px;
-            opacity: 0.9;
             font-weight: 300;
+            opacity: 0.9;
         }
 
-        .btn {
-            display: inline-flex;
+        /* Trust TrustPilot / Assurance */
+        .trust-row {
+            display: flex;
+            gap: 40px;
             align-items: center;
-            gap: 15px;
-            padding: 20px 45px;
-            background: var(--primary);
-            color: var(--white);
-            text-decoration: none;
-            font-weight: 700;
+            margin-top: 50px;
+        }
+
+        .tp-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        /* Quick Quote Form */
+        .hero-form {
+            background: var(--white);
+            padding: 50px;
+            border-radius: 8px;
+            color: var(--secondary);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-form h3 {
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            color: var(--secondary);
+        }
+
+        .f-input {
+            width: 100%;
+            padding: 18px;
+            border: 1px solid #ddd;
             border-radius: 4px;
-            transition: 0.3s;
-            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-family: inherit;
             font-size: 1rem;
+        }
+
+        .btn-primary {
+            width: 100%;
+            padding: 20px;
+            background: var(--primary);
+            color: #fff;
             border: none;
+            border-radius: 4px;
+            font-weight: 800;
+            font-size: 1rem;
+            text-transform: uppercase;
             cursor: pointer;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
         }
 
-        .btn:hover {
+        .btn-primary:hover {
             background: var(--primary-dark);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(243, 156, 18, 0.3);
+            transform: scale(1.02);
         }
 
-        /* Services */
+        /* Stats */
+        .stats {
+            background: #f1f5f9;
+            padding: 40px 0;
+        }
+
+        .stats-grid {
+            display: flex;
+            justify-content: space-around;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-item h4 {
+            font-size: 2.5rem;
+            color: var(--secondary);
+        }
+
+        .stat-item p {
+            font-size: 0.8rem;
+            color: var(--gray);
+            font-weight: 700;
+        }
+
+        /* Services Grid */
         .section {
-            padding: 120px 20px;
+            padding: 140px 20px;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1300px;
             margin: 0 auto;
         }
 
@@ -166,42 +266,26 @@
         }
 
         .section-header h2 {
-            font-size: 3rem;
-            position: relative;
-            display: inline-block;
-            padding-bottom: 15px;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
         }
 
-        .section-header h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: var(--primary);
-        }
-
-        .services-grid {
+        .service-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
         }
 
         .service-card {
+            border: 1px solid #eee;
             padding: 50px;
-            background: var(--light);
-            border-radius: 8px;
             transition: 0.4s;
             position: relative;
-            overflow: hidden;
         }
 
         .service-card:hover {
-            transform: translateY(-10px);
-            background: var(--white);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
         }
 
         .service-card i {
@@ -210,195 +294,206 @@
         }
 
         .service-card h3 {
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             margin-bottom: 20px;
         }
 
-        .service-card ul {
-            list-style: none;
-            padding-top: 20px;
-            border-top: 1px solid #ddd;
-        }
-
-        .service-card li {
-            margin-bottom: 10px;
+        .service-card .link {
+            color: var(--primary);
+            font-weight: 800;
+            text-decoration: none;
             font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            display: block;
+            margin-top: 30px;
         }
 
-        .service-card li i {
-            margin-bottom: 0;
-            font-size: 14px;
+        /* Timeline / Process */
+        .process-bg {
+            background: var(--secondary);
+            color: #fff;
         }
 
-        /* Process */
         .process-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 40px;
-            margin-top: 60px;
-        }
-
-        .process-step {
-            text-align: center;
-            position: relative;
-        }
-
-        .step-num {
-            width: 80px;
-            height: 80px;
-            background: var(--secondary);
-            color: var(--primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            font-weight: 700;
-            font-family: 'Oswald';
-            margin: 0 auto 25px;
-            border: 4px solid var(--white);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .process-step h4 {
-            margin-bottom: 15px;
-            font-size: 1.2rem;
-        }
-
-        /* Gallery/Before-After */
-        .project-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
             gap: 30px;
         }
 
-        .project-item {
-            position: relative;
-            border-radius: 10px;
-            overflow: hidden;
-            height: 500px;
+        .p-item {
+            text-align: center;
         }
 
-        .project-img {
+        .p-num {
+            font-size: 5rem;
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.05);
+            line-height: 1;
+            margin-bottom: -40px;
+        }
+
+        .p-title {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        /* Insurance / Accreditation */
+        .certs-row {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            padding: 60px 0;
+            filter: grayscale(1);
+            opacity: 0.5;
+        }
+
+        .certs-row img {
+            height: 60px;
+        }
+
+        /* Real Feed Section */
+        .feed-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .feed-item {
+            aspect-ratio: 1;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feed-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: 0.5s;
         }
 
-        .project-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            padding: 40px;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-            color: #fff;
-            transform: translateY(20px);
-            opacity: 0;
-            transition: 0.4s;
+        .feed-item:hover img {
+            transform: scale(1.1);
+            filter: brightness(0.6);
         }
 
-        .project-item:hover .project-overlay {
-            transform: translateY(0);
-            opacity: 1;
-        }
-
-        /* Contact Form Area */
-        .contact-area {
-            background: var(--secondary);
-            color: #fff;
-            padding: 100px 20px;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 100px;
-            max-width: 1200px;
-            margin: 0 auto;
-            align-items: center;
-        }
-
-        .contact-form {
-            background: var(--white);
-            padding: 50px;
-            border-radius: 10px;
-            color: var(--text);
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            outline: none;
-            font-family: inherit;
-        }
-
-        .form-group input:focus {
-            border-color: var(--primary);
-        }
-
-        /* Footer */
+        /* Footer Ultimate */
         footer {
-            padding: 80px 20px;
-            background: #151b1f;
-            color: #7f8c8d;
+            background: #0c1116;
+            padding: 120px 60px 50px;
+            color: #64748b;
         }
 
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
+        .footer-grid {
             display: grid;
-            grid-template-columns: 1.5fr 1fr 1fr 1fr;
-            gap: 50px;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 80px;
         }
 
-        .footer-col h4 {
+        .f-logo {
+            font-size: 2.22rem;
+            font-family: 'Barlow';
+            font-weight: 900;
+            color: #fff;
+            margin-bottom: 30px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .f-col h4 {
             color: #fff;
             margin-bottom: 30px;
             font-size: 1rem;
         }
 
-        .footer-col p {
-            font-size: 0.9rem;
-            margin-bottom: 15px;
+        .f-links {
+            list-style: none;
         }
 
-        @media (max-width: 900px) {
+        .f-links li {
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
 
-            .hero-content,
-            .contact-grid,
-            .footer-content,
-            .project-grid,
-            .process-grid {
+        .f-links a {
+            color: inherit;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .f-links a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+
+        .f-legal {
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 40px;
+            margin-top: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.75rem;
+        }
+
+        .siret-tag {
+            margin-top: 10px;
+            opacity: 0.5;
+            font-size: 0.65rem;
+        }
+
+        /* Floating Widgets */
+        .floating-cta {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 2000;
+        }
+
+        .f-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .f-whatsapp {
+            background: #25d366;
+        }
+
+        .f-phone {
+            background: var(--primary);
+        }
+
+        .f-btn:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 1000px) {
+
+            .hero-grid,
+            .service-grid,
+            .process-grid,
+            .footer-grid,
+            .feed-grid {
                 grid-template-columns: 1fr;
             }
 
-            .hero h1 {
-                font-size: 3rem;
-            }
-
-            nav {
+            nav,
+            .top-bar {
                 padding: 15px 20px;
             }
 
-            .nav-links {
+            .nav-links,
+            .top-bar-item:nth-child(2) {
                 display: none;
             }
         }
@@ -407,219 +502,227 @@
 
 <body>
 
+    <div class="top-bar">
+        <div class="top-bar-item"><i data-lucide="shield-check" size="14"></i> Garantie Décennale AXA N°4589221X</div>
+        <div class="top-bar-item"><span class="badge-pro">QUALIBAT RGE 2025</span> Intervention Région Parisienne +60km
+        </div>
+    </div>
+
     <nav>
-        <a href="#" class="logo">BATI<span>PRO</span></a>
+        <a href="#" class="logo"><b>BATI</b>PRO</a>
         <ul class="nav-links">
             <li><a href="#services">Prestations</a></li>
-            <li><a href="#projets">Réalisations</a></li>
-            <li><a href="#expert">Expertise</a></li>
-            <li><a href="#contact">Devis</a></li>
+            <li><a href="#process">Rigueur</a></li>
+            <li><a href="#chantiers">Chantier LIVE</a></li>
+            <li><a href="#avis">Avis Vérifiés</a></li>
         </ul>
-        <div style="font-weight: 800; color: var(--primary);">📞 06 XX XX XX XX</div>
+        <div style="font-weight: 900; color: var(--primary); font-size: 1.4rem;">01 45 88 99 00</div>
     </nav>
 
     <section class="hero">
-        <div class="hero-content" data-aos="fade-right">
-            <div>
-                <h1>L'Excellence de la <span>Rénovation</span></h1>
-                <p>Depuis 2008, nous transformons vos espaces avec une exigence artisanale rare et des matériaux nobles.
-                </p>
-                <div style="display: flex; gap: 20px;">
-                    <a href="#contact" class="btn">Obtenir mon Devis</a>
-                    <a href="#projets" class="btn" style="background: transparent; border: 2px solid var(--white);">Nos
-                        Projets</a>
+        <div class="hero-grid">
+            <div data-aos="fade-right">
+                <h1>Expertise <span>Bâtiment</span> Excellence Immobilière.</h1>
+                <p class="hero-p">Depuis 2008, nous réalisons vos rêves de rénovation avec la précision d'une orfèvrerie
+                    et la structure d'une ingénierie.</p>
+
+                <div class="trust-row">
+                    <div class="tp-box">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Trustpilot_logo.svg" width="90"
+                            style="filter: brightness(0) invert(1);">
+                        <div style="font-weight: 800; font-size: 1.1rem;">4.9/5</div>
+                    </div>
+                    <div style="font-size: 0.8rem; line-height: 1.2; opacity: 0.7;">
+                        Certifié **Maître Artisan**<br>Assurance Décennale MAAF
+                    </div>
                 </div>
             </div>
-            <div
-                style="background: rgba(255,255,255,0.1); padding: 40px; border-radius: 20px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
-                <h3 style="margin-bottom: 20px; color: var(--primary);">Urgence Intervention</h3>
-                <p style="font-size: 0.9rem; margin-bottom: 20px;">Un dégât à traiter rapidement ? Notre équipe de garde
-                    intervient sous 4h.</p>
-                <a href="tel:*" style="color: #fff; font-size: 1.5rem; font-weight: 700; text-decoration: none;">Tel: 01
-                    45 88 99 00</a>
+            <div class="hero-form" data-aos="fade-left">
+                <h3>Calculateur de Devis</h3>
+                <form>
+                    <select class="f-input">
+                        <option>Type de Travaux : Rénovation Totale</option>
+                        <option>Maçonnerie / Gros Oeuvre</option>
+                        <option>Peinture & Décoration</option>
+                        <option>Aménagement Combles</option>
+                    </select>
+                    <div style="display: flex; gap: 10px;">
+                        <input type="text" placeholder="Surface m²" class="f-input" style="width: 50%;">
+                        <input type="text" placeholder="Ville" class="f-input" style="width: 50%;">
+                    </div>
+                    <input type="text" placeholder="Téléphone Portable" class="f-input">
+                    <button class="btn-primary">Estimer mon Projet <i data-lucide="calculator"></i></button>
+                </form>
+                <p style="font-size: 0.65rem; color: #999; text-align: center; margin-top: 15px;">Réponse en 48h
+                    garantie après visite technique.</p>
             </div>
         </div>
     </section>
+
+    <div class="stats">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h4>15+</h4>
+                <p>Ans d'expérience</p>
+            </div>
+            <div class="stat-item">
+                <h4>500+</h4>
+                <p>Chantiers livrés</p>
+            </div>
+            <div class="stat-item">
+                <h4>0</h4>
+                <p>Litiges juridiques</p>
+            </div>
+            <div class="stat-item">
+                <h4>100%</h4>
+                <p>Satisfaction Client</p>
+            </div>
+        </div>
+    </div>
 
     <section class="section container" id="services">
         <div class="section-header" data-aos="fade-up">
             <span
-                style="color: var(--primary); text-transform: uppercase; font-weight: 700; letter-spacing: 3px; display: block; margin-bottom: 10px;">Notre
-                Savoir-Faire</span>
-            <h2>Vôtre projet, nos solutions</h2>
+                style="color: var(--primary); text-transform: uppercase; font-weight: 800; letter-spacing: 4px; display: block; margin-bottom: 15px;">Notre
+                Univers</span>
+            <h2>Concevoir & Construire</h2>
         </div>
-        <div class="services-grid">
+        <div class="service-grid">
             <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                <i data-lucide="home" size="50"></i>
-                <h3>Rénovation Totale</h3>
-                <p>Nous gérons votre projet de A à Z : démolition, électricité, plomberie et finitions.</p>
-                <ul>
-                    <li><i data-lucide="check-circle-2"></i> Coordination tous corps d'état</li>
-                    <li><i data-lucide="check-circle-2"></i> Respect strict des NF DTU</li>
-                    <li><i data-lucide="check-circle-2"></i> Nettoyage de fin de chantier</li>
-                </ul>
+                <i data-lucide="layout" size="50"></i>
+                <h3>Rénovation Lourde</h3>
+                <p>Plus qu'une simple peinture : nous repensons les volumes, les porteurs et l'énergie de votre habitat.
+                </p>
+                <a href="#" class="link">Étude de faisabilité gratuite →</a>
             </div>
             <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                <i data-lucide="hammer" size="50"></i>
-                <h3>Maçonnerie Générale</h3>
-                <p>Extensions, murs de clôture, dalles béton et ouvertures de murs porteurs (IPN).</p>
-                <ul>
-                    <li><i data-lucide="check-circle-2"></i> Fondations haute résistance</li>
-                    <li><i data-lucide="check-circle-2"></i> Étanchéité certifiée</li>
-                    <li><i data-lucide="check-circle-2"></i> Garanties de structure</li>
-                </ul>
+                <i data-lucide="construction" size="50"></i>
+                <h3>Extension & Surélévation</h3>
+                <p>Maîtrise complète de la maçonnerie structurante pour agrandir votre patrimoine sans déménager.</p>
+                <a href="#" class="link">Voir nos réalisations →</a>
             </div>
             <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-                <i data-lucide="brush" size="408"></i>
-                <h3>Embellissement</h3>
-                <p>Peintures décoratives, pose de carrelage grand format et parquets massifs.</p>
-                <ul>
-                    <li><i data-lucide="check-circle-2"></i> Préparation soignée des supports</li>
-                    <li><i data-lucide="check-circle-2"></i> Matériaux éco-responsables</li>
-                    <li><i data-lucide="check-circle-2"></i> Design contemporain</li>
+                <i data-lucide="palette" size="50"></i>
+                <h3>Prestige & Finition</h3>
+                <p>Des matériaux de source (marbre, chêne massif, stucco) posés par nos compagnons experts.</p>
+                <a href="#" class="link">Catalogue matériaux →</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section process-bg" id="process">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 style="color: #fff;">Un Protocole de Rigueur</h2>
+                <p style="color: rgba(255,255,255,0.4);">Tout commence par une structure solide</p>
+            </div>
+            <div class="process-grid">
+                <div class="p-item" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="p-num">01</div>
+                    <h4 class="p-title">Audit Technique</h4>
+                    <p style="font-size: 0.9rem; opacity: 0.6;">Analyse des porteurs, de l'humidité et de l'existant
+                        électrique.</p>
+                </div>
+                <div class="p-item" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="p-num">02</div>
+                    <h4 class="p-title">Pilotage Digital</h4>
+                    <p style="font-size: 0.9rem; opacity: 0.6;">Un espace client dédié pour suivre l'avancée du planning
+                        J+1.</p>
+                </div>
+                <div class="p-item" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="p-num">03</div>
+                    <h4 class="p-title">Double Contrôle</h4>
+                    <p style="font-size: 0.9rem; opacity: 0.6;">Chaque lot est validé par un inspecteur indépendant en
+                        fin de phase.</p>
+                </div>
+                <div class="p-item" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="p-num">04</div>
+                    <h4 class="p-title">Dossier Ouvrage</h4>
+                    <p style="font-size: 0.9rem; opacity: 0.6;">Remise des DOE complets et activation de la garantie 10
+                        ans.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section container" id="chantiers">
+        <div class="section-header" data-aos="fade-up">
+            <h2>Chantiers en cours (LIVE)</h2>
+            <p>Transparence totale : voici le quotidien de nos équipes sur le terrain.</p>
+        </div>
+        <div class="feed-grid">
+            <div class="feed-item"><img
+                    src="https://images.unsplash.com/photo-1541604193435-22287d32c2c2?auto=format&fit=crop&q=80&w=400"
+                    alt="Chantier"></div>
+            <div class="feed-item"><img
+                    src="https://images.unsplash.com/photo-1503387762-592dea58ef23?auto=format&fit=crop&q=80&w=400"
+                    alt="Chantier"></div>
+            <div class="feed-item"><img
+                    src="https://images.unsplash.com/photo-1590059300589-9a674558509c?auto=format&fit=crop&q=80&w=400"
+                    alt="Chantier"></div>
+            <div class="feed-item"><img
+                    src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=400"
+                    alt="Chantier"></div>
+        </div>
+    </section>
+
+    <div class="certs-row">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Logo_Qualibat.svg" alt="Qualibat">
+        <span style="font-weight: 900; font-size: 2rem;">MAAF ASSURANCE</span>
+        <span style="font-weight: 900; font-size: 2rem;">VICAT CIMENT</span>
+        <span style="font-weight: 900; font-size: 2rem;">SAINT-GOBAIN</span>
+    </div>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="f-col">
+                <a href="#" class="f-logo">BATI<span>PRO</span></a>
+                <p>Leader de la rénovation de confiance en France. Nous marions savoir-faire traditionnel et gestion de
+                    projet moderne.</p>
+                <div class="siret-tag">SIRET: 452 368 791 00054 • SASU CAPITAL DE 100 000€</div>
+            </div>
+            <div class="f-col">
+                <h4>Expertises</h4>
+                <ul class="f-links">
+                    <li><a href="#">Maçonnerie Générale</a></li>
+                    <li><a href="#">Peinture & Sols</a></li>
+                    <li><a href="#">Plomberie & Chauffage</a></li>
+                    <li><a href="#">Électricité Normée</a></li>
+                </ul>
+            </div>
+            <div class="f-col">
+                <h4>L'Entreprise</h4>
+                <ul class="f-links">
+                    <li><a href="#">Notre Histoire</a></li>
+                    <li><a href="#">Nos Certifications</a></li>
+                    <li><a href="#">Recrutement</a></li>
+                    <li><a href="#">Espace Partenaires</a></li>
+                </ul>
+            </div>
+            <div class="f-col">
+                <h4>Siège & Contact</h4>
+                <ul class="f-links">
+                    <li>15 Rue de l'Artisanat, 75012 Paris</li>
+                    <li>contact@batipro-excellence.fr</li>
+                    <li>01 45 88 99 00</li>
+                    <li>Intervention 24/7 Urgences</li>
                 </ul>
             </div>
         </div>
-    </section>
-
-    <section class="section" style="background: var(--light);" id="expert">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2>Notre Méthode</h2>
+        <div class="f-legal container">
+            <p>&copy; 2025 BatiPro Excellence Construction. Tous droits réservés.</p>
+            <div style="display: flex; gap: 30px;">
+                <a href="#" style="color: inherit;">Politique RGPD</a>
+                <a href="#" style="color: inherit;">Assurance Décennale (Attestation)</a>
+                <a href="#" style="color: inherit;">Mentions Légales</a>
             </div>
-            <div class="process-grid">
-                <div class="process-step" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="step-num">01</div>
-                    <h4>Étude & Devis</h4>
-                    <p style="font-size: 0.9rem;">Visite technique sous 48h et chiffrage détaillé poste par poste.</p>
-                </div>
-                <div class="process-step" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="step-num">02</div>
-                    <h4>Planification</h4>
-                    <p style="font-size: 0.9rem;">Validation des matériaux et calendrier d'exécution précis.</p>
-                </div>
-                <div class="process-step" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="step-num">03</div>
-                    <h4>Chantier</h4>
-                    <p style="font-size: 0.9rem;">Suivi hebdomadaire avec photos et point de situation.</p>
-                </div>
-                <div class="process-step" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="step-num">04</div>
-                    <h4>Réception</h4>
-                    <p style="font-size: 0.9rem;">PV de réception et remise des garanties décennales.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section container" id="projets">
-        <div class="section-header" data-aos="fade-up">
-            <h2>Dernières Réalisations</h2>
-        </div>
-        <div class="project-grid">
-            <div class="project-item" data-aos="fade-right">
-                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1000"
-                    class="project-img" alt="Projet 1">
-                <div class="project-overlay">
-                    <h3>Rénovation Villa Moderne</h3>
-                    <p>Paris 16e - Transformation complète d'un duplex de 120m².</p>
-                </div>
-            </div>
-            <div class="project-item" data-aos="fade-left">
-                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1000"
-                    class="project-img" alt="Projet 2">
-                <div class="project-overlay">
-                    <h3>Extension Contemporaine</h3>
-                    <p>Neuilly - Création d'une structure verre et acier de 45m².</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="contact-area" id="contact">
-        <div class="contact-grid">
-            <div data-aos="fade-right">
-                <h2 style="font-size: 3.5rem; color: var(--primary); margin-bottom: 30px;">Prêt à lancer vos travaux ?
-                </h2>
-                <p style="font-size: 1.2rem; margin-bottom: 40px;">Contactez-nous pour une étude gratuite. Notre
-                    expertise à votre service pour valoriser votre patrimoine.</p>
-                <div style="display: flex; flex-direction: column; gap: 20px;">
-                    <div style="display: flex; align-items: center; gap: 15px;">
-                        <i data-lucide="check" color="var(--primary)"></i> <span>Garantie Décennale AXA</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 15px;">
-                        <i data-lucide="check" color="var(--primary)"></i> <span>Certification Qualibat 2025</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 15px;">
-                        <i data-lucide="check" color="var(--primary)"></i> <span>Assurance RCE incluse</span>
-                    </div>
-                </div>
-            </div>
-            <div class="contact-form" data-aos="fade-left">
-                <h3 style="margin-bottom: 30px;">Demande de Devis Rapide</h3>
-                <form>
-                    <div class="form-group">
-                        <label>Nom complet</label>
-                        <input type="text" placeholder="Jean Dupont">
-                    </div>
-                    <div class="form-group">
-                        <label>Email & Téléphone</label>
-                        <input type="text" placeholder="jean@exemple.fr / 06 00 00 00 00">
-                    </div>
-                    <div class="form-group">
-                        <label>Type de projet</label>
-                        <select
-                            style="width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 5px; outline: none;">
-                            <option>Rénovation Totale</option>
-                            <option>Maçonnerie</option>
-                            <option>Peinture / Déco</option>
-                            <option>Autre</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Description (optionnel)</label>
-                        <textarea rows="4" placeholder="Dites-nous en plus..."></textarea>
-                    </div>
-                    <button class="btn" style="width: 100%; justify-content: center;">Envoyer ma demande</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-col">
-                <a href="#" class="logo"
-                    style="color: #fff; display: block; margin-bottom: 30px;">BATI<span>PRO</span></a>
-                <p>Expert en bâtiment depuis 2008. Nous intervenons sur l'ensemble de la région pour tous vos projets de
-                    rénovation et construction.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Services</h4>
-                <p>Maçonnerie</p>
-                <p>Extensions</p>
-                <p>Rénovation</p>
-                <p>Isolation</p>
-            </div>
-            <div class="footer-col">
-                <h4>Contact</h4>
-                <p>15 Rue de l'Artisanat, 75012 Paris</p>
-                <p>01 45 66 77 88</p>
-                <p>contact@batipro.fr</p>
-            </div>
-            <div class="footer-col">
-                <h4>Suivez-nous</h4>
-                <div style="display: flex; gap: 15px;">
-                    <i data-lucide="instagram"></i>
-                    <i data-lucide="facebook"></i>
-                    <i data-lucide="linkedin"></i>
-                </div>
-            </div>
-        </div>
-        <div style="text-align: center; padding-top: 50px; font-size: 0.8rem;">
-            &copy; 2025 BatiPro Excellence. Siège Social : Paris.
         </div>
     </footer>
+
+    <div class="floating-cta">
+        <a href="https://wa.me/33600000000" class="f-btn f-whatsapp"><i data-lucide="message-circle"></i></a>
+        <a href="tel:+33145889900" class="f-btn f-phone"><i data-lucide="phone"></i></a>
+    </div>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
