@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://agence-web-locale.fr/sitemap.xml

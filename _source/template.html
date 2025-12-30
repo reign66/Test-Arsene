@@ -5,8 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{meta_title}}</title>
+    <meta name="robots" content="index, follow">
     <meta name="description" content="{{meta_description}}">
     <link rel="canonical" href="https://agence-web-locale.fr{{url_page}}">
+
+    <!-- Schema.org JSON-LD -->
+    {{schema_json_ld}}
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
@@ -236,6 +240,42 @@
             height: 2px;
             background: var(--primary);
             transition: all 0.3s ease;
+        }
+
+        /* Breadcrumbs */
+        .breadcrumb-container {
+            padding-top: 100px;
+            padding-bottom: 5px;
+        }
+
+        .breadcrumb ol {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: 0.85rem;
+            color: var(--gray);
+        }
+
+        .breadcrumb li:not(:last-child)::after {
+            content: "/";
+            margin: 0 10px;
+            color: var(--gray-light);
+        }
+
+        .breadcrumb a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--secondary);
+        }
+
+        .breadcrumb li[aria-current="page"] {
+            color: var(--primary);
+            font-weight: 600;
         }
 
         /* Hero */
@@ -901,9 +941,18 @@
 </head>
 
 <body>
-    <!-- 1. HEADER -->
-    <header id="header">
-        <div class="container header-content">
+    <!-- 1. HERO SECTION -->
+    <header class="hero">
+        <div class="breadcrumb-container container">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="/">Accueil</a></li>
+                    <li><a href="/departement/{{slug_departement}}">{{departement_nom}}</a></li>
+                    <li aria-current="page">{{ville}}</li>
+                </ol>
+            </nav>
+        </div>
+        <div class="container hero-content">
             <a href="/" class="logo">Agence Web <span>Locale</span></a>
             <nav>
                 <ul class="nav-links">
@@ -919,13 +968,6 @@
             </button>
         </div>
     </header>
-
-    <!-- 2. BREADCRUMBS -->
-    <nav class="container" style="padding-top: 90px; font-size: 0.9rem; color: var(--gray);">
-        <a href="/" style="color: var(--gray);">Accueil</a> ›
-        <a href="/departement/{{slug_departement}}" style="color: var(--gray);">{{departement_nom}}</a> ›
-        <span style="color: var(--primary);">{{ville}}</span>
-    </nav>
 
     <!-- 3. HERO -->
     <section class="hero">
@@ -1275,13 +1317,11 @@
     <section class="section-gray">
         <div class="container">
             <h3 style="margin-bottom: 8px;">Création de site internet en {{departement_nom}}</h3>
-            <p style="color: var(--gray); margin-bottom: 20px;">Nous intervenons également dans ces villes proches de
-                {{ville}} :</p>
+            <p style="color: var(--gray); margin-bottom: 20px;">Nos experts interviennent dans toute la région et
+                notamment à :</p>
 
             <div class="maillage-links">
-                <a href="/{{slug_departement}}/creation-site-internet-{{slug_proche_1}}">{{commune_proche_1}}</a>
-                <a href="/{{slug_departement}}/creation-site-internet-{{slug_proche_2}}">{{commune_proche_2}}</a>
-                <a href="/{{slug_departement}}/creation-site-internet-{{slug_proche_3}}">{{commune_proche_3}}</a>
+                {{villes_proches_html}}
             </div>
         </div>
     </section>

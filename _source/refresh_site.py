@@ -27,6 +27,7 @@ if __name__ == "__main__":
         run_script("generate_departements.py")
         run_script("generate_demos.py")
         run_script("generate_sitemap.py")
+        run_script("generate_niche_sitemaps.py")
         print("🏁 Full site refresh complete.")
     else:
         print("❌ Site generation failed.")
